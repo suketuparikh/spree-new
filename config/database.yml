@@ -17,9 +17,9 @@ development:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: spreecommercetest
+  #database: spreecommercetest
   pool: 5
-  password:
+  #password: postgres
 
 test:
   <<: *default
@@ -27,7 +27,7 @@ test:
   encoding: unicode
   database: spreecommercedev
   pool: 5
-  password:
+  #password: postgres
 
 production:
   <<: *default
@@ -35,4 +35,4 @@ production:
   encoding: unicode
   database: spreecommerceprod
   pool: 5
-  password:  
+  #password:  
