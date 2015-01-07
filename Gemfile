@@ -8,6 +8,10 @@ gem 'rails', '4.1.8'
 #gem 'sqlite3'
 gem 'pg'
 
+# Paperclip and aws
+gem 'paperclip'
+gem 'aws-sdk'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
