@@ -10,7 +10,8 @@ default: &default
   encoding: unicode
   database: spreecommercetest
   pool: 5
-  password:
+  user: postgres
+  password: postgres
 
 development:
   <<: *default
