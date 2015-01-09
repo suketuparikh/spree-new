@@ -53,5 +53,6 @@ gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: 
 
 gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', branch: '2-4-stable'
 gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', branch: '2-4-stable'
+gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: '2-4-stable'
 
 gem 'rails_12factor', group: :production

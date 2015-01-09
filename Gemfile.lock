@@ -16,6 +16,14 @@ GIT
       spree_backend (~> 2.4.0)
 
 GIT
+  remote: git://github.com/spree-contrib/spree_related_products.git
+  revision: d3452dbba6a748e75354fd912a893e6669b72063
+  branch: 2-4-stable
+  specs:
+    spree_related_products (3.2)
+      spree_backend (~> 2.4.0)
+
+GIT
   remote: git://github.com/spree-contrib/spree_wishlist.git
   revision: c5312cc7015e3eee6a9e4cd73435aa5a60a14e88
   branch: 2-4-stable
@@ -370,6 +378,7 @@ DEPENDENCIES
   spree_fancy!
   spree_gateway!
   spree_mail_settings!
+  spree_related_products!
   spree_wishlist!
   turbolinks
   tzinfo-data
