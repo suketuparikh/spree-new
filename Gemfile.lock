@@ -24,6 +24,14 @@ GIT
       spree_backend (~> 2.4.0)
 
 GIT
+  remote: git://github.com/spree-contrib/spree_reviews.git
+  revision: 10ef5117cf8d1a06eff624527f22f545c3019c12
+  branch: 2-4-stable
+  specs:
+    spree_reviews (1.0.0)
+      spree_core (~> 2.4.0)
+
+GIT
   remote: git://github.com/spree-contrib/spree_social.git
   revision: f61c5b2ce9f2c7d25307e8149237d24792d42b40
   branch: 2-4-stable
@@ -424,6 +432,7 @@ DEPENDENCIES
   spree_gateway!
   spree_mail_settings!
   spree_related_products!
+  spree_reviews!
   spree_social!
   turbolinks
   tzinfo-data

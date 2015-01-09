@@ -10,4 +10,5 @@
  *= require spree/fancy
  *= require spree/frontend/spree_wishlist
  *= require spree/frontend/spree_social
+ *= require spree/frontend/spree_reviews
 */
