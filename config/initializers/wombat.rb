@@ -15,8 +15,12 @@ Spree::Wombat::Config.configure do |config|
 end
 
 # in config/initializers/wombat.rb:
-Rails.application.config.to_prepare do
-  WebhookController.error_notifier = ->(responder) do
-    Honeybadger.notify(responder.exception)
-  end
+#Rails.application.config.to_prepare do
+#  WebhookController.error_notifier = ->(responder) do
+#    Honeybadger.notify(responder.exception)
+#  end
+#end
+
+Spree::Wombat::Config[:push_objects].each do |object|
+  Spree::Wombat::Client.push_batches(object)
 end
