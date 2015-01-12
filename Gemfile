@@ -58,6 +58,6 @@ gem 'spree_social', github: 'spree-contrib/spree_social', branch: '2-4-stable'
 gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: '2-4-stable'
 
 #Sales force integration
-gem 'spree_wombat', git: 'git@github.com:spree/spree_wombat.git', branch: '2-4-stable'
+gem 'spree_wombat', github: 'spree/spree_wombat', branch: '2-4-stable'
 
 gem 'rails_12factor', group: :production
