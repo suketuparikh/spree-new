@@ -10,5 +10,6 @@
 
 //= require_tree .
 //= require spree/fancy
-//= require spree/frontend/spree_wishlist
 //= require spree/frontend/spree_reviews
+//= require simple.carousel
+//= require simple.carousel.slider
