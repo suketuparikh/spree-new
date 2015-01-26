@@ -1,2 +1,2 @@
 <!-- insert_before 'div#content' -->
-<!-- %= render :partial=> 'spree/shared/bannerslider' % -->
+<%= render :partial=> 'spree/shared/bannerslider' %>
