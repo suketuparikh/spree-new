@@ -58,6 +58,6 @@ gem 'spree_social', github: 'spree-contrib/spree_social', branch: '2-4-stable'
 gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: '2-4-stable'
 
 #slider integration
-gem 'spree_slider', github: 'priviterag/spree_slider'
+#gem 'spree_slider', github: 'priviterag/spree_slider'
 
 gem 'rails_12factor', group: :production
