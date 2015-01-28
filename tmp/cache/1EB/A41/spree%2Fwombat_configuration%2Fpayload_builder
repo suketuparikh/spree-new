@@ -1,1 +1,1 @@
-o: ActiveSupport::Cache::Entry:@value{I"Spree::Order:ET{:serializerI"#Spree::Wombat::OrderSerializer;T:	rootI"orders;T:filterI"complete;TI"Spree::Product;T{;I"%Spree::Wombat::ProductSerializer;T;	I"products;T:@created_atf1421583316.103712:@expires_in0
+o: ActiveSupport::Cache::Entry:@value{I"Spree::Order:ET{:serializerI"#Spree::Wombat::OrderSerializer;T:	rootI"orders;T:filterI"complete;TI"Spree::Product;T{;I"%Spree::Wombat::ProductSerializer;T;	I"products;T:@created_atf1422429728.649652:@expires_in0
