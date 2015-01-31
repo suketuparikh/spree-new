@@ -28,7 +28,7 @@ body {
       color: $c_orange;
 
       &:hover {
-        color: $c_green !important;
+        color: #231f20 !important; //$c_green !important;
       }
     }
   }
@@ -38,7 +38,7 @@ body {
   h3 { color: $c_orange }
   hr { border-bottom-color: lighten($c_orange, 40) }
 
-  .product-image a { border-color: lighten($c_orange, 40) }
+  .product-image a { border-color: #808e8e; }
   .product-name { color: $c_orange !important; }
 
   .bx-pager.bx-default-pager a.active,
@@ -51,7 +51,8 @@ body {
   h3 { color: $c_blue }
   hr { border-bottom-color: lighten($c_blue, 30) }
 
-  .product-image a { border-color: lighten($c_blue, 30) }
+  .product-image a { border-color: #ff671c; //lighten($c_blue, 30) 
+  }
 
   .bx-pager.bx-default-pager a.active,
   .bx-pager.bx-default-pager a:hover {
@@ -171,7 +172,7 @@ footer#footer {
   // background: image-url("spree/fancy/footer-bg.png") repeat center;
   background-color: #dadbd8 ;//lighten($c_blue, 5);
   margin-top: 30px;
-  border-top: 5px solid lighten($c_blue, 30);
+  border-top: 3px solid #ff671d; //lighten($c_blue, 30);
   padding-top: 30px;
   font-size: 14px;
   line-height: 24px;
@@ -181,12 +182,12 @@ footer#footer {
   }
 
   a:hover {
-    color: lighten($c_orange, 30) !important;
+    color: #ff671d; //lighten($c_orange, 30) !important;
   }
 
   h5 {
     text-transform: uppercase;
-    line-height: 52px;
+    line-height: 34px;
     margin-bottom: 23px;
     font-size: 17px;
   }
