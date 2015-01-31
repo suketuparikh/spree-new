@@ -29,7 +29,7 @@ a:hover{color:#ff671c !important;}
 #welcome-message h1 a:hover{color: #ff671c !important;}
 
 img#footer-logo {
-width: 180px;
+width: 180px !important;
 }
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{bottom:-40px !important;}
 hr{border-bottom: 1px solid #d9d9db !important;}
