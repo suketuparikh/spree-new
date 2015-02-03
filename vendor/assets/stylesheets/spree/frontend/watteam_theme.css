@@ -68,3 +68,4 @@ body fieldset{border-top: 2px solid #dadbd8 !important;}
 #wrapper h3, #wrapper .search-results-title{border-bottom: 2px solid #dadbd8 !important;}
 #checkout-summary tr[data-hook="order_total"] td{border-top: 2px solid #dadbd8 !important;color: #969495 !important;}
 table tbody tr td{color: #969495 !important;}
+#subheader div.container {width:100%; padding:0px;}
