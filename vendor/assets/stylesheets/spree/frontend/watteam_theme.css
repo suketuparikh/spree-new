@@ -71,3 +71,14 @@ table tbody tr td{color: #969495 !important;}
 /*#subheader div.container {width:100%; padding:0px;}
 #subheader .subheader-wrapper{ padding:0 !important;}
 #subheader .subheader-wrapper .bx-wrapper .bx-viewport{ left:0 !important;}*/
+
+.benefits-main{ float:left; width:100%; margin:20px 0 0 0;}
+.benefits-inner{ padding:5px; background:#f2f2f2; overflow:hidden;box-shadow: 0 15px 15px -22px #000;-webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.55);box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.55);}
+.benefits-main h2{ text-align:center; margin-bottom:20px;color: #ff671c;}
+.left-benefits,.right-benefits{ float:left;width: 33%;margin: 0 8%;}
+.benefits-main p{ padding:0; margin:0; margin-bottom: 18px;padding-left: 22px;position: relative; color: #333333;font-size: 14px;line-height: 15px;}
+.benefits-main p:before {background: url("bullets.png") no-repeat  0 0;content: " ";height: 14px;left: 0;position: absolute;top: 0;width: 14px;}
+
+#product-images #main-image,#product-images #main-image img,#product-images #product-thumbnails li a,#product-images #product-thumbnails li a img{-webkit-border-radius: 0px;-moz-border-radius: 0px;-ms-border-radius: 0px;-o-border-radius: 0px;border-radius: 0px;}
+body #reviews{ display:none;}

@@ -1,0 +1,61 @@
+<% content_for :subheader do %>
+  <%= render 'slider' %>
+<% end %>
+
+<div id="welcome-message">
+  <div class="container">
+    <h1>
+      Welcome to our amazing store!
+      <br>
+      Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
+    </h1>
+  </div>
+</div>
+
+<div class="benefits-main">
+<div class="benefits-inner">
+<h2>So many benefits in such a small package</h2>
+<div class="left-benefits">
+<p>A pro level power meter you can afford</p>
+<p>Delivers both left and right data</p>
+<p>Proven technology</p>
+<p>Consumes less power</p>
+<p>Built to withstand the elements</p>
+</div>
+<div class="right-benefits">
+<p>Works with YOUR crank, YOUR bike</p>
+<p>So light you’ll never know it’s there</p>
+<p>Universal software compatibility</p>
+<p>Easy to install, easy to use</p>
+<p>Full support – always there for you</p>
+</div>
+</div>
+</div>
+
+<!--
+<div class="container">
+  <% if @featured_products %>
+    <div id="featured-products" class="row">
+      <h3>Featured Products</h3>
+      <hr>
+      <ul class="carousel">
+        <% @featured_products.each do |product| %>
+          <%= render 'product', :product => product %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @latest_products %>
+    <div id="latest-products" class="row">
+      <h3>Latest Products</h3>
+      <hr>
+      <ul class="carousel">
+        <% @latest_products.sort_by{ |product| product.created_at }.reverse.each do |product| %>
+          <%= render 'product', :product => product %>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+-->
