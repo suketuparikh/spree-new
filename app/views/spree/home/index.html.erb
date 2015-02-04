@@ -1,6 +1,14 @@
+<div class="home">
 <% content_for :subheader do %>
   <%= render 'slider' %>
 <% end %>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#subheader .container').css('width','100%');
+$('.subheader-wrapper').css('padding','0px');
+});
+</script>
 
 <div id="welcome-message">
   <div class="container">

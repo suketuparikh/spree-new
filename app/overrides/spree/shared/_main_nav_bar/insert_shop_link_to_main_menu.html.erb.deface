@@ -1,0 +1,4 @@
+<!-- insert_after '#home-link' -->
+<li id="shop-link">
+	<a href="/products/pbprometer1">Shop</a>
+</li>

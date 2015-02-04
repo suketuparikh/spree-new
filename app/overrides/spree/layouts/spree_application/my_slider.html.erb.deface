@@ -1,2 +1,0 @@
-<!-- insert_before '#content'  -->
-<%= render :partial => 'spree/shared/new_slider' %>
