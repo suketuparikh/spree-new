@@ -84,3 +84,6 @@ table tbody tr td{color: #969495 !important;}
 body #reviews{ display:none;}
 
 #home-slider {width:100%}
+#main-image img{ width:99%; padding:0 !important; border: 2px solid #d9d9db; }                       
+#content #product-images #main-image{ border: none !important;}  
+#main-image { border: none !important;}   
