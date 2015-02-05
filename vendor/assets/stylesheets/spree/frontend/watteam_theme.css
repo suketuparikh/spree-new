@@ -83,7 +83,8 @@ table tbody tr td{color: #969495 !important;}
 #product-images #main-image,#product-images #main-image img,#product-images #product-thumbnails li a,#product-images #product-thumbnails li a img{-webkit-border-radius: 0px;-moz-border-radius: 0px;-ms-border-radius: 0px;-o-border-radius: 0px;border-radius: 0px;}
 body #reviews{ display:none;}
 
-#home-slider {width:100%}
+#home-slider {width:100%; min-height: 344px;}
+#home-slider li img{min-height:344px}
 #main-image img{ width:99%; padding:0 !important; border: 2px solid #d9d9db; }                       
 #content #product-images #main-image{ border: none !important;}  
 #main-image { border: none !important;}   
