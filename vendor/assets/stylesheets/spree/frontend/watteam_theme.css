@@ -88,3 +88,15 @@ body #reviews{ display:none;}
 #main-image img{ width:99%; padding:0 !important; border: 2px solid #d9d9db; }                       
 #content #product-images #main-image{ border: none !important;}  
 #main-image { border: none !important;}   
+.popup-main{ position:absolute; top:0; left:0; background:rgba(0,0,0,0.9); height:100%; width:100%; z-index:99999;text-align:center;}
+.popup-inner{position:fixed; left:0; top:50px; width:100%; height:100%;z-index:999999;}
+.wrapper-pop{ width:800px;margin:0 auto;}
+.wrapper-container{ padding:80px;background: url("model-bg.jpg") no-repeat  0 0;overflow:visible; color:#fff; height:340px; position:relative;}
+.model-close{ position:absolute; right:-10px; top:-10px; background:#F00; border-radius:50%; padding:2px; font-size:13px; color:#fff; height:22px; width:22px; line-height:22px; text-align:center; cursor:pointer;}
+.popup-main h1,.popup-main h4{  text-align:center; margin-bottom:14px;text-transform:uppercase; color:#fff; font-size:38px; line-height:50px; font-weight:bold;}
+.popup-main p{text-align:center; margin-bottom:14px;color:#fff; font-size:28px;font-weight:bold;}
+.newsletter-main{ margin-top:30px;}
+.newsletter-inner{ margin:0 auto; width:418px;}
+.newsletter-wrap{ padding:10px;background:rgba(0,0,0,0.3);-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;}
+.popup-main input[type="text"]{width: 340px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;background: url("email-bg.png") no-repeat  10px 10px #fff !important; padding-left:35px; font-size:17px; border:none;}
+.popup-main input[type="submit"]{ width:25px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px; text-indent:-99999px;background: url("button-bg.png") no-repeat  center center;border-color: #cc572f !important;background-color: #cc572f !important;}
