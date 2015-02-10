@@ -10,7 +10,7 @@ Spree::Wombat::Config.configure do |config|
 	#	"Spree::Product" => { serializer: "Spree::Wombat::ProductSerializer", root: "products" },
   #   "Spree::StockItem" => { serializer: "Spree::Wombat::StockItemSerializer", root: "inventories" }
   }
-  # config.push_url = "http://developer.dendroidal.com/spree/"
-  config.push_url = "http://54.149.177.150/SalesforceService.asmx?op=PushDataInSalesforceWithoutEmail"
+  config.push_url = "http://developer.dendroidal.com/spree/"
+  #config.push_url = "http://54.149.177.150/SalesforceService.asmx?op=PushDataInSalesforceWithoutEmail"
 
 end
