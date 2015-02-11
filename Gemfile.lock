@@ -54,6 +54,18 @@ GIT
       spree_core (~> 2.4.0)
 
 GIT
+  remote: git://github.com/spree-contrib/spree_tax_cloud.git
+  revision: 989cb96a95568ca5c03c717e6df83cb8a85879de
+  branch: 2-4-stable
+  specs:
+    spree_tax_cloud (2.4.2)
+      savon (~> 2.5.1)
+      spree_api
+      spree_backend
+      spree_core (~> 2.4.2)
+      tax_cloud (~> 0.3.0)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: 9d51f3d65a1ae6bd5aa1a48b649a1c57e52107a5
   branch: 2-4-stable
@@ -140,6 +152,9 @@ GEM
     acts_as_list (0.3.0)
       activerecord (>= 3.0)
     addressable (2.3.6)
+    akami (1.2.2)
+      gyoku (>= 0.4.0)
+      nokogiri
     arel (5.0.1.20140414130214)
     awesome_nested_set (3.0.2)
       activerecord (>= 4.0.0, < 5)
@@ -203,6 +218,8 @@ GEM
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
     fssm (0.2.10)
+    gyoku (1.1.1)
+      builder (>= 2.1.2)
     hashie (3.3.2)
     highline (1.6.21)
     hike (1.2.3)
@@ -210,6 +227,9 @@ GEM
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    httpi (2.1.1)
+      rack
+      rubyntlm (~> 0.3.2)
     i18n (0.7.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
@@ -224,6 +244,8 @@ GEM
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
@@ -240,6 +262,7 @@ GEM
       mini_portile (~> 0.6.0)
     nokogiri (1.6.5-x86-mingw32)
       mini_portile (~> 0.6.0)
+    nori (2.4.0)
     oa-core (0.3.2)
     oauth (0.4.7)
     oauth2 (1.0.0)
@@ -335,12 +358,22 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     recaptcha (0.3.6)
+    rubyntlm (0.3.4)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
+    savon (2.5.1)
+      akami (~> 1.2.0)
+      builder (>= 2.1.2)
+      gyoku (~> 1.1.0)
+      httpi (~> 2.1.0)
+      nokogiri (>= 1.4.0)
+      nori (~> 2.4.0)
+      uuid (~> 2.3.7)
+      wasabi (~> 3.3.0)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -407,6 +440,11 @@ GEM
       sprockets (>= 2.8, < 4.0)
     state_machine (1.2.0)
     stringex (1.5.1)
+    systemu (2.6.4)
+    tax_cloud (0.3.0)
+      activesupport (>= 3.0)
+      i18n
+      savon (>= 2.0)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -426,6 +464,8 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicode_utils (1.4.0)
+    uuid (2.3.7)
+      macaddr (~> 1.0)
     versioncake (2.3.1)
       actionpack (>= 3.2)
       activesupport (>= 3.2)
@@ -433,6 +473,9 @@ GEM
       tzinfo
     warden (1.2.3)
       rack (>= 1.0)
+    wasabi (3.3.1)
+      httpi (~> 2.0)
+      nokogiri (>= 1.4.0)
 
 PLATFORMS
   x64-mingw32
@@ -459,6 +502,7 @@ DEPENDENCIES
   spree_reviews!
   spree_slider!
   spree_social!
+  spree_tax_cloud!
   spree_wombat!
   turbolinks
   tzinfo-data

@@ -60,6 +60,9 @@ gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: '2-4-stable'
 #Wombat Integration
 gem 'spree_wombat', github: 'spree/spree_wombat', branch: '2-4-stable'
 
+#Tax Cloud Integration
+gem 'spree_tax_cloud', github: 'spree-contrib/spree_tax_cloud', branch: '2-4-stable'
+
 #slider integration
 gem 'spree_slider', github: 'priviterag/spree_slider'
 
