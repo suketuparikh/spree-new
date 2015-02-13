@@ -122,4 +122,4 @@ body label.ui-button:hover{background-color:#ff671d !important; border-color:#e3
 body #billing legend,body  #shipping legend,body  #shipping_method legend,body  #payment legend,body  #order_details legend, body #order_summary legend{ margin-left:0;}
 body #order_details .steps-data div.columns:first-child,body #order_summary .steps-data div.columns:first-child{ margin-left:0px;}
 body .cart-item-total,body .order-total{color: #ff671d !important; }
-body .flash.notice,body .notice.errorExplanation{ background-color:#ff671d;}
+body .flash.notice,body .notice.errorExplanation,body .flash.success{ background-color:#ff671d;}
