@@ -2,3 +2,9 @@
 <li id="shop-link">
 	<a href="/products/pbprometer1">Shop</a>
 </li>
+<% if current_spree_user %>
+<li><%= link_to t('my_account'), account_path, :class => "cart" %></a>
+<li><%= link_to t('logout'), spree.logout_path, :class => "cart" %></a>
+<% else %>
+<li><%= link_to t('log_in'), login_path, :class => "cart" %></li>
+<% end %>
