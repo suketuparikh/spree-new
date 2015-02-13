@@ -65,7 +65,7 @@ body .progress-steps li.current,body .progress-steps li.current-first,body .prog
 #billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend{color: #231f20 !important;}
 body fieldset{border-top: 2px solid #dadbd8 !important;}
 #checkout-summary h3{color: #231f20 !important;}
-#wrapper h3, #wrapper .search-results-title{border-bottom: 2px solid #dadbd8 !important;}
+#wrapper h3, #wrapper .search-results-title{border-bottom: 2px solid #dadbd8 !important;color: #404042 !important;}
 #checkout-summary tr[data-hook="order_total"] td{border-top: 2px solid #dadbd8 !important;color: #969495 !important;}
 table tbody tr td{color: #969495 !important;}
 /*#subheader div.container {width:100%; padding:0px;}
@@ -98,9 +98,28 @@ body #reviews{ display:none;}
 .newsletter-main{ margin-top:30px;}
 .newsletter-inner{ margin:0 auto; width:418px;}
 .newsletter-wrap{ padding:10px;background:rgba(0,0,0,0.3);-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;}
-.popup-main input[type="text"],.popup-main input[type="email"]{width: 330px !important;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;background: url("email-bg.png") no-repeat  10px 10px #fff !important; padding-left:35px !important; font-size:17px; border:none;  float:left !important; clear:none !important;}
+.popup-main input[type="text"],.popup-main input[type="email"]{width: 330px !important;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;background: url("email-bg.png") no-repeat  10px 10px #fff !important; padding-left:35px !important; font-size:17px; border:none;  float:left !important; clear:none !important;height: 34px;}
 .popup-main input[type="submit"]{ width:25px !important;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px; text-indent:-99999px !important;background: url("button-bg.png") no-repeat  center center;border-color: #cc572f !important;background-color: #cc572f !important; float:right !important;clear:none !important;height: 34px;}
 .indicates-required,.newsletter-wrap label{ display:none !important;}
-.newsletter-wrap #mc_embed_signup form,.newsletter-wrap #mc_embed_signup{ background:none !important;min-height: 52px;}
+.newsletter-wrap #mc_embed_signup form,.newsletter-wrap #mc_embed_signup{ background:none !important;min-height: 30px;}
 .newsletter-wrap  #mc_embed_signup div#mce-responses{overflow: visible !important;}
-.newsletter-wrap #mce-responses{ background:rgba(255,255,255,0.5);}
+.newsletter-wrap #mce-responses{ background:none;}
+.newsletter-wrap #mc_embed_signup .mc-field-group{ padding-bottom:0; min-height:0;}
+.newsletter-wrap #mc_embed_signup div.mce_inline_error{ margin:0;float: left;width: 100%; color:#F00; background:none;}
+.newsletter-wrap #mc_embed_signup div.response{ background:none;color: #529214; margin:0; padding:0;font-size: 13px;}
+body nav #main-nav-bar li:last-child a{ padding-right:30px;}
+
+body .progress-steps li.completed-first,body .progress-steps li.completed-last,body  .progress-steps li.completed{ background:none; color:#fff;}
+body .progress-steps li.completed-first a,body .progress-steps li.completed-last a,body  .progress-steps li.completed a{ color:#fff !important;}
+body .progress-steps li.completed-first:hover,body  .progress-steps li.completed:hover{background:none;}
+body #shipping_method .stock-location{ background-color:#ff671d; color:#fff !important;}
+body #shipping_method .shipping-methods .shipping-method label .rate-cost{ color:#ff671d !important;}
+label.ui-button.ui-state-active{border-color: #e34b13 !important;background-color: #ff671d !important;}
+
+body .ui-state-default, .ui-widget-content .ui-state-default,body .ui-widget-header .ui-state-default{ background-color:#231f20; color:#fff !important; border-color:#000;}
+body label.ui-button:hover{background-color:#ff671d !important; border-color:#e34b13;}
+
+body #billing legend,body  #shipping legend,body  #shipping_method legend,body  #payment legend,body  #order_details legend, body #order_summary legend{ margin-left:0;}
+body #order_details .steps-data div.columns:first-child,body #order_summary .steps-data div.columns:first-child{ margin-left:0px;}
+body .cart-item-total,body .order-total{color: #ff671d !important; }
+body .flash.notice,body .notice.errorExplanation{ background-color:#ff671d;}
