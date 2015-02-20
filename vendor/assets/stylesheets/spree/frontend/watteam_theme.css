@@ -90,9 +90,9 @@ body #reviews{ display:none;}
 #main-image { border: none !important;}   
 .popup-main{ position:absolute; top:0; left:0; background:rgba(0,0,0,0.4); height:100%; width:100%; z-index:99999;text-align:center;}
 .popup-inner{position:fixed; left:0; top:50px; width:100%; height:100%;z-index:999999;}
-.wrapper-pop{ width:725px;margin:0 auto;}
+.wrapper-pop{ width:725px;margin:0 auto; position:relative;}
 .wrapper-container{ padding:30px;background: url("model-bg.jpg") no-repeat  0 0;overflow:visible; color:#fff; height:330px; position:relative;}
-.model-close{ position:absolute; right:-10px; top:-10px; background:#F00; border-radius:50%; padding:2px; font-size:13px; color:#fff; height:22px; width:22px; line-height:22px; text-align:center; cursor:pointer;}
+.model-close{ position:absolute; right:-10px; top:-10px; background:#F00; border-radius:50%; padding:2px; font-size:13px; color:#fff; height:22px; width:22px; line-height:22px; text-align:center; cursor:pointer; z-index:99999;}
 .popup-main h1,.popup-main h4{  text-align:center; margin-bottom:14px;text-transform:uppercase; color:#fff; font-size:38px; line-height:50px; font-weight:bold;}
 .popup-main p{text-align:center; margin-bottom:14px;color:#fff; font-size:28px;font-weight:bold;}
 .newsletter-main{ margin-top:30px;}
@@ -128,4 +128,39 @@ body figure#logo{ margin-top:0;}
 body footer#footer{ border-color:#ff5000;}
 body footer#footer h5 {
 color: #000;
+}
+
+
+@media only screen and  (max-width:960px){
+#wrapper.container{ width:748px !important;}
+
+}
+
+@media only screen and  (max-width:768px){
+.wrapper-pop{width: 90%;}	
+.popup-main h1, .popup-main h4{font-size: 30px;line-height: 38px;}
+.wrapper-container{ overflow-y:auto;}
+.newsletter-inner{width: 100%;}
+.popup-main input[type="text"], .popup-main input[type="email"]{width: 82% !important;}
+.page-wrapper #subheader{ width:100%;}
+#wrapper.container{ width:420px !important;}
+
+body nav#top-nav-bar {
+    margin-top: -42px !important;
+}
+body figure#logo img {
+    max-width: 200px;
+}
+body .open-menu, .close-menu{ top:15px;}
+#subheader{ width:100%;}
+body #mobile-navigation{ background-color:#424242;}
+body #mobile-navigation #main-nav-bar li a{background-color:#424242;border-bottom: 1px solid #565656; color:#fff !important;}
+body #mobile-navigation #main-nav-bar li a:hover{ background-color:#ff5000 !important;}
+nav.columns.seven{ width:100%;}
+}
+
+@media only screen and  (max-width:480px){
+#wrapper.container{ width:300px !important;}
+.left-benefits, .right-benefits{ text-align: left; width: 85%;}
+.benefits-main p{ line-height:18px;}
 }
