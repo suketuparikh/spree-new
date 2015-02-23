@@ -168,7 +168,7 @@ body table#cart-detail{margin-left: 0 !important;}
 #wrapper.container{ width:300px !important;}
 .left-benefits, .right-benefits{ text-align: left; width: 85%;}
 .benefits-main p{ line-height:18px;}
-body ol.progress-steps li span,ol.progress-steps li{ font-size:9px !important;}
+body ol.progress-steps li span,ol.progress-steps li{ font-size:13px !important; display:inline !important;}
 body footer#footer h5{ border-color:#cecece !important;}
 body table#cart-detail th, body table#cart-detail td, body table#cart-detail tbody tr td[data-hook="cart_item_price"], body table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"]{ padding:5px;}
 body #wrapper #clear_cart_link a, body #wrapper #clear_cart_link button, body #wrapper #clear_cart_link input, body #wrapper #update-cart .links a, body #wrapper #update-cart .links button, body #wrapper #update-cart .links input{ padding: 3px 2px !important;}
