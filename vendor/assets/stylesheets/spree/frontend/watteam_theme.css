@@ -131,6 +131,7 @@ color: #000;
 }
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
 body #home-slider li img{ min-height:0; float:left; width:100%;}
+#home-slider ul li{width: 25% !important;}
 
 
 @media only screen and  (max-width:960px){
