@@ -129,6 +129,7 @@ body footer#footer{ border-color:#ff5000;}
 body footer#footer h5 {
 color: #000;
 }
+body #home-slider,body #home-slider li img,.bx-wrapper{ min-height:0; float:left;}
 
 
 @media only screen and  (max-width:960px){
