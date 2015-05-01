@@ -51,7 +51,7 @@ ul#products li .price{color: #0099A8 !important;}
 .pagination .page.current{background-color: #0099A8 !important;}
 #breadcrumbs a{ color:#fff !important;}
 #breadcrumbs {border-color: #fff !important;}
-input[type="submit"], input[type="button"], input[type="reset"], button, a.button{border-color: #e34b13 !important;background-color: #0099A8 !important; color:#fff !important;}
+input[type="submit"], input[type="button"], input[type="reset"], button, a.button{border-color: #0099A8 !important;background-color: #0099A8 !important; color:#fff !important;}
 input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover, a.button:hover{border-color: #000000 !important;background-color: #000 !important;}
 #content #product-images #main-image {border: 2px solid #d9d9db !important;}
 span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total{color: #0099A8 !important;}
