@@ -45,7 +45,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'spree', '2.4.2'
+gem 'spree', '2.4.5'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 gem 'spree_fancy', :github => 'spree/spree_fancy', :branch => '2-4-stable'
