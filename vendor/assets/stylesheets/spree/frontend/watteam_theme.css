@@ -114,10 +114,10 @@ body .progress-steps li.completed-first a,body .progress-steps li.completed-last
 body .progress-steps li.completed-first:hover,body  .progress-steps li.completed:hover{background:none;}
 body #shipping_method .stock-location{ background-color:#0099A8; color:#fff !important;}
 body #shipping_method .shipping-methods .shipping-method label .rate-cost{ color:#0099A8 !important;}
-label.ui-button.ui-state-active{border-color: #e34b13 !important;background-color: #0099A8 !important;}
+label.ui-button.ui-state-active{border-color: #0099A8 !important;background-color: #0099A8 !important;}
 
 body .ui-state-default, .ui-widget-content .ui-state-default,body .ui-widget-header .ui-state-default{ background-color:#000000; color:#fff !important; border-color:#000;}
-body label.ui-button:hover{background-color:#0099A8 !important; border-color:#e34b13;}
+body label.ui-button:hover{background-color:#0099A8 !important; border-color:#0099A8;}
 
 body #billing legend,body  #shipping legend,body  #shipping_method legend,body  #payment legend,body  #order_details legend, body #order_summary legend{ margin-left:0;}
 body #order_details .steps-data div.columns:first-child,body #order_summary .steps-data div.columns:first-child{ margin-left:0px;}
