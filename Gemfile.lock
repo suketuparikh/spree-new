@@ -66,14 +66,6 @@ GIT
       tax_cloud (~> 0.3.0)
 
 GIT
-  remote: git://github.com/spree-contrib/spree_wishlist.git
-  revision: c5312cc7015e3eee6a9e4cd73435aa5a60a14e88
-  branch: 2-4-stable
-  specs:
-    spree_wishlist (2.2)
-      spree_core (~> 2.4.0)
-
-GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: c53ccc17323e2c22e4b4fdf0292972ff44790233
   branch: 2-4-stable
@@ -512,7 +504,6 @@ DEPENDENCIES
   spree_slider!
   spree_social!
   spree_tax_cloud!
-  spree_wishlist!
   spree_wombat!
   therubyracer
   turbolinks
