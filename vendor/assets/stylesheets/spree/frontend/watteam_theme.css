@@ -95,14 +95,22 @@ body #reviews{ display:none;}
 background-color:#fff;
 color:#000;
 }
-.model-close{ position:absolute; right:-10px; top:-10px; background:#F00; border-radius:50%; padding:2px; font-size:13px; color:#fff; height:22px; width:22px; line-height:22px; text-align:center; cursor:pointer; z-index:99999;}
-.popup-main h1,.popup-main h4{  text-align:center; margin-bottom:14px;text-transform:uppercase; color:#fff; font-size:38px; line-height:50px; font-weight:bold;}
+.model-close{ position:absolute; right:0px; top:10px; border-radius:50%; padding:2px; font-size:13px; color:#fff; height:22px; width:22px; line-height:22px; text-align:center; cursor:pointer; z-index:99999;   font-weight: bold;
+  font-size: 15px}
+.popup-main h1,.popup-main h4{  text-align:center; margin-bottom:14px;text-transform:uppercase;  font-weight:bold;}
 
 .popup-main h1
 {  text-align: left !important;
 font-size: 18px !important;
   background-color: #1d6e8f;
-    padding: 0 10px !important;  
+    padding: 0 10px !important; 
+	color:#fff !important; 
+}
+.popup-main h4
+{
+	color:#404042;
+	line-height:35px;
+	font-size:14px;
 }
 .popup-main p{text-align:center; margin-bottom:14px;color:#fff; font-size:28px;font-weight:bold;}
 .newsletter-main{ margin-top:30px;}
