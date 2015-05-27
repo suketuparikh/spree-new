@@ -2,8 +2,7 @@
 body{ border-color:#0099A8 !important; border-top:none !important;}
 nav #main-nav-bar li a,nav#top-nav-bar ul li a{ text-transform:capitalize !important;; color:#000000 !important;}
 nav #main-nav-bar{ border:none !important;}
-#header{ border-bottom:1px solid #d9d9db !important;height: 72px;
-}
+#header{ border-bottom:1px solid #d9d9db !important;height: 72px;}
 nav#top-nav-bar ul li{display: none !important;}
 nav#top-nav-bar ul li#link-to-cart{display: block !important;}
 #subheader{border-top:1px solid #0099A8 !important;border-bottom:1px solid #0099A8 !important; background:#000000 !important; box-shadow:none !important;-webkit-box-shadow:none !important;}
@@ -125,7 +124,7 @@ body #order_details .steps-data div.columns:first-child,body #order_summary .ste
 body .cart-item-total,body .order-total{color: #0099A8 !important; }
 body .flash.notice,body .notice.errorExplanation,body .flash.success{ background-color:#0099A8;}
 body figure#logo img{ padding-top:0; max-width:270px;}
-body figure#logo{ margin-top:0;}
+body figure#logo{ margin-top:0; width:100% !important; float:left !important;}
 body footer#footer{ border-color:#0099A8;}
 body footer#footer h5 {
 color: #000;
