@@ -1,5 +1,5 @@
 /* my overriding css */
-body{ border-color:#0099A8 !important; border-top:none !important;}
+body{ border-color:#0099A8 !important; border-top:none !important; padding-top:0px !important;}
 nav #main-nav-bar li a,nav#top-nav-bar ul li a{ text-transform:capitalize !important;; color:#000000 !important;}
 nav #main-nav-bar{ border:none !important;}
 #header{ border-bottom:1px solid #d9d9db !important;height: 72px;}
