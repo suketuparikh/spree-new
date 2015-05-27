@@ -1,5 +1,5 @@
 /* my overriding css */
-body{ border-color:#0099A8 !important; border-top:none !important; padding-top:0px !important;}
+body{ border-color:#0099A8 !important; border-top:none !important; padding-top:2px !important;}
 nav #main-nav-bar li a,nav#top-nav-bar ul li a{ text-transform:capitalize !important;; color:#000000 !important;}
 nav #main-nav-bar{ border:none !important;}
 #header{ border-bottom:1px solid #d9d9db !important;height: 72px;}
@@ -125,7 +125,7 @@ body .cart-item-total,body .order-total{color: #0099A8 !important; }
 body .flash.notice,body .notice.errorExplanation,body .flash.success{ background-color:#0099A8;}
 body figure#logo img{ padding-top:0; max-width:270px; height:26px !important;}
 body figure#logo{ margin-top:0; float:left !important;
- width:100% !important; }
+ /*width:100% !important;*/ }
 body footer#footer{ border-color:#0099A8;}
 body footer#footer h5 {
 color: #000;
