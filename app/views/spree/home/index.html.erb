@@ -3,23 +3,6 @@
   <%= render 'slider' %>
 <% end %>
 </div>
-<script type="text/javascript">
-$(document).ready(function(){
-$('#subheader .container').css('width','100%');
-$('.subheader-wrapper').css('padding','0px');
-
-$('#wrapper').css('position','static');	
-$('html').css('position','relative');
-$('html').css('overflow-x','hidden');	
-});
-
-function close_popup()
-{
-	$('.popup-main').hide();
-	$('#wrapper').css('position','relative');	
-	$('#wrapper').css('width','960px');
-}
-</script>
 <div class="popup-main"><div class="popup-inner"><div class="wrapper-pop">
 <div class="model-close" onclick="close_popup();">X</div>
 <div class="wrapper-container">
@@ -142,3 +125,24 @@ function close_popup()
   <% end %>
 </div>
 -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('#subheader .container').css('width','100%');
+$('.subheader-wrapper').css('padding','0px');
+
+$('#wrapper').css('position','static');	
+$('html').css('position','relative');
+$('html').css('overflow-x','hidden');	
+
+$('.popup-main').fadeIn('slow');
+
+});
+
+function close_popup()
+{
+	$('.popup-main').hide();
+	$('#wrapper').css('position','relative');	
+	$('#wrapper').css('width','960px');
+}
+</script>

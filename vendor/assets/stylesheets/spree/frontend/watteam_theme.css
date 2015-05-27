@@ -88,7 +88,7 @@ body #reviews{ display:none;}
 #main-image img{ width:99%; padding:0 !important; border: 2px solid #d9d9db; }                       
 #content #product-images #main-image{ border: none !important;}  
 #main-image { border: none !important;}   
-.popup-main{ position:absolute; top:0; left:0; background:rgba(0,0,0,0.4); height:100%; width:100%; z-index:99999;text-align:center;}
+.popup-main{ position:absolute; top:0; left:0; background:rgba(0,0,0,0.4); height:100%; width:100%; z-index:99999;text-align:center;display:none;}
 .popup-inner{position:fixed; left:0; top:50px; width:100%; height:100%;z-index:999999;}
 .wrapper-pop{ width:725px;margin:0 auto; position:relative;}
 .wrapper-container{ padding:30px;background: url("model-bg.jpg") no-repeat  0 0;overflow:visible; color:#fff; height:330px; position:relative;}
