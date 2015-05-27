@@ -160,6 +160,7 @@ body figure#logo a
 	text-align:right;
 	font-weight:bold;
 	font-size:15px;
+	float:right;
 }
 .header-logo-main 
 {
