@@ -158,9 +158,10 @@ body figure#logo
 }
 .nav#top-nav-bar
 {
-	padding:5px;
-	margin:0px;
+	padding:5px !important;
+	margin:0px !important;
 }
+
 
 @media only screen and  (max-width:960px){
 #wrapper.container{ width:748px !important;}
