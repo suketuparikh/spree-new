@@ -10,6 +10,9 @@ Spree.config do |config|
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
   
+  config.attachment_url = ":s3_eu_url"
+  config.s3_host_alias = "s3-us-west-2.amazonaws.com"
+  
   attachment_config = {
 
 	  s3_credentials: {
@@ -35,6 +38,8 @@ Spree.config do |config|
 	  default_url:    "/spree/:class/:id/:style/:basename.:extension",
 	  default_style:  "product"
 	}
+	
+
 
 	attachment_config.each do |key, value|
 	  Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
