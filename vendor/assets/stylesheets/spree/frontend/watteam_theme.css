@@ -158,6 +158,7 @@ body figure#logo a
 .header-logo-main 
 {
 	 background-color:#fff ;
+	 height:35px;
 }
 .main-menu-top
 {
@@ -169,7 +170,7 @@ nav #main-nav-bar, nav#top-nav-bar
 	padding:5px !important;
 	margin:0px !important;
 }
-nav #main-nav-bar li a,nav#top-nav-bar ul li a
+nav #main-nav-bar li a,nav#top-nav-bar ul li a,nav #main-nav-bar li a:hover,nav#top-nav-bar ul li a:hover
 {
 	color:#fff !important;
 }
