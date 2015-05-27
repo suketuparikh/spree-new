@@ -117,7 +117,7 @@ font-size: 18px !important;
 .newsletter-inner{ margin:0 auto; width:418px;}
 .newsletter-wrap{ padding:10px;background:rgba(0,0,0,0.3);-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;}
 .popup-main input[type="text"],.popup-main input[type="email"]{width: 330px !important;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;background: url("email-bg.png") no-repeat  10px 10px #fff !important; padding-left:35px !important; font-size:17px; border:none;  float:left !important; clear:none !important;height: 34px;}
-.popup-main input[type="submit"]{ width:25px !important;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px; text-indent:-99999px !important;background: url("button-bg.png") no-repeat  center center;border-color: #0099A8 !important;background-color: #0099A8 !important; float:right !important;clear:none !important;height: 34px;}
+.popup-main input[type="submit"]{ width:25px !important;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px; /*text-indent:-99999px !important;*/background: url("button-bg.png") no-repeat  center center;border-color: #0099A8 !important;background-color: #0099A8 !important; float:right !important;clear:none !important;height: 34px;}
 .indicates-required,.newsletter-wrap label{ display:none !important;}
 .newsletter-wrap #mc_embed_signup form,.newsletter-wrap #mc_embed_signup{ background:none !important;min-height: 30px;}
 .newsletter-wrap  #mc_embed_signup div#mce-responses{overflow: visible !important;}
