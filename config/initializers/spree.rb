@@ -9,7 +9,7 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
-  
+ =begin 
   attachment_config = {
 
 	  s3_credentials: {
@@ -41,6 +41,8 @@ Spree.config do |config|
 	attachment_config.each do |key, value|
 	  Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
 	end
+=end
+
 end
 
 Spree.user_class = "Spree::User"
