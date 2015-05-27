@@ -156,6 +156,11 @@ body figure#logo
 	width: 960px !important;
   margin: 0 auto !important;
 }
+.nav#top-nav-bar
+{
+	padding:5px;
+	margin:0px;
+}
 
 @media only screen and  (max-width:960px){
 #wrapper.container{ width:748px !important;}
