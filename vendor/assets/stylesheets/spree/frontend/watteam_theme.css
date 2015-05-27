@@ -1,5 +1,5 @@
 /* my overriding css */
-body{ border-color:#0099A8 !important; border-top:none !important; padding-top:2px !important;}
+body{ border-color:#0099A8 !important; border-top:none !important; padding-top:0px !important;}
 nav #main-nav-bar li a,nav#top-nav-bar ul li a{ text-transform:capitalize !important;; color:#000000 !important;}
 nav #main-nav-bar{ border:none !important;}
 #header{ border-bottom:1px solid #d9d9db !important;height: 72px;}
@@ -133,7 +133,16 @@ color: #000;
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
 body #home-slider li img{ min-height:0; float:left; width:100%;}
 #home-slider ul li{width: 25% !important;}
-
+.head-content .container
+{
+	width: 100% !important;
+}
+body figure#logo
+{
+	  width: 960px !important;
+  margin: 0 auto !important;
+  float:none !important;
+}
 
 @media only screen and  (max-width:960px){
 #wrapper.container{ width:748px !important;}
