@@ -95,7 +95,7 @@ body #reviews{ display:none;}
 background-color:#fff;
 color:#000;
 }
-.model-close{ position:absolute; right:0px; top:10px; border-radius:50%; padding:2px; font-size:13px; color:#fff; height:22px; width:22px; line-height:22px; text-align:center; cursor:pointer; z-index:99999;   font-weight: bold;
+.model-close{ position:absolute; right:4px; top:4px; border-radius:50%; padding:2px; font-size:13px; color:#fff; height:22px; width:22px; line-height:22px; text-align:center; cursor:pointer; z-index:99999;   font-weight: bold;
   font-size: 15px}
 .popup-main h1,.popup-main h4{  text-align:center; margin-bottom:14px;text-transform:uppercase;  font-weight:bold;}
 
