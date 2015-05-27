@@ -137,6 +137,7 @@ body #home-slider li img{ min-height:0; float:left; width:100%;}
 {
 	width: 100% !important;
 	background:#0097a6;
+	height:75px;
 }
 body figure#logo
 {
@@ -163,7 +164,7 @@ nav #main-nav-bar, nav#top-nav-bar
 }
 nav #main-nav-bar li a,nav #top-nav-bar li a
 {
-	color:#fff;
+	color:#fff !important;
 }
 
 
