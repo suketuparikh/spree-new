@@ -123,7 +123,7 @@ body #billing legend,body  #shipping legend,body  #shipping_method legend,body  
 body #order_details .steps-data div.columns:first-child,body #order_summary .steps-data div.columns:first-child{ margin-left:0px;}
 body .cart-item-total,body .order-total{color: #0099A8 !important; }
 body .flash.notice,body .notice.errorExplanation,body .flash.success{ background-color:#0099A8;}
-body figure#logo img{ padding-top:0; max-width:270px;}
+body figure#logo img{ padding-top:0; max-width:270px; height:26px !important;}
 body figure#logo{ margin-top:0; float:left !important;
  width:100% !important; }
 body footer#footer{ border-color:#0099A8;}
