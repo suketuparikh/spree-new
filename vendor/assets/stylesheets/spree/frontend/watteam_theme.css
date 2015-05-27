@@ -13,7 +13,7 @@ width: auto !important;margin-left: 0 !important;
 nav.columns.seven {
 float: right !important;margin-right: 0 !important;
 }
-figure#logo{float:left !important;}
+figure#logo{float:left !important; width:100% !important; float:left !important;}
 .bx-wrapper .bx-pager.bx-default-pager a{ color:#dadbd8 !important;}
 body#default .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:hover{background-color:#0099A8 !important;}
 body#default #featured-products .bx-wrapper .bx-pager.bx-default-pager a{background-color:#0099A8 !important;}
@@ -124,7 +124,7 @@ body #order_details .steps-data div.columns:first-child,body #order_summary .ste
 body .cart-item-total,body .order-total{color: #0099A8 !important; }
 body .flash.notice,body .notice.errorExplanation,body .flash.success{ background-color:#0099A8;}
 body figure#logo img{ padding-top:0; max-width:270px;}
-body figure#logo{ margin-top:0; width:100% !important; float:left !important;}
+body figure#logo{ margin-top:0; }
 body footer#footer{ border-color:#0099A8;}
 body footer#footer h5 {
 color: #000;
