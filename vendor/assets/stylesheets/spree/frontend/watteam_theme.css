@@ -156,12 +156,12 @@ body figure#logo
 	width: 960px !important;
   margin: 0 auto !important;
 }
-nav#top-nav-bar
+nav #main-nav-bar, nav#top-nav-bar
 {
 	padding:5px !important;
 	margin:0px !important;
 }
-nav #main-nav-bar li a
+nav #main-nav-bar li a,nav #top-nav-bar li a
 {
 	color:#fff;
 }
