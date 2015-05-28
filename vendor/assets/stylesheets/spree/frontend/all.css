@@ -11,5 +11,4 @@
  *= require spree/frontend/spree_social
  *= require spree/frontend/spree_reviews
  *= require ./watteam_theme.css
- *= depend_on_asset "spree/frontend/bullets.png"
 */
