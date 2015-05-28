@@ -156,6 +156,13 @@ color: #000;
 .bottom-menu ul li
 {
 	display:inline-block;
+	padding:0 23px;
+	border-right:1px solid #03737e;
+}
+.bottom-menu ul li a
+{
+	color:#fff;
+	font-size:12px;
 }
 
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
