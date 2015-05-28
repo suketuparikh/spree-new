@@ -224,13 +224,20 @@ margin:0px !important;
 }
 .bottom-social 
 {
-	width:100%
+	width:100%;
+	padding-top:18px;
 }
 
 .bottom-social  li
 {
 	display:inline-block;
 	padding:2px;
+}
+
+.bottom-social  li a img
+{
+	width:485px;
+	height:45px;
 }
 #footer #mc_embed_signup .mc-field-group input[type="text"],#footer #mc_embed_signup .mc-field-group input[type="email"]
 {
