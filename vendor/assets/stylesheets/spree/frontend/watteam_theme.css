@@ -184,6 +184,18 @@ color: #000;
 {
 	background:none !important;
 }
+#footer #mc_embed_signup .mc-field-group .asterisk
+{
+	position:static !important;
+	color:#c0392b !important;
+	font-size:10px;
+	
+}
+#footer #mc_embed_signup .mc-field-group label
+{
+	margin:6px 0;
+}
+
 
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
 body #home-slider li img{ min-height:0; float:left; width:100%;}
