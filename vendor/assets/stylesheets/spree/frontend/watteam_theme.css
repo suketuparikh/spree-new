@@ -176,9 +176,13 @@ color: #000;
 	color:#fff !important;
 	font-size:12px;
 }
-.footer.container .three.columns
+#footer .container .three.columns
 {
 	width:31% !important;
+}
+#footer #mc_embed_signup
+{
+	background:none !important;
 }
 
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
