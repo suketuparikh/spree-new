@@ -216,7 +216,7 @@ margin:0px !important;
 	display:block !important;
 	
 }
-#footer #mc_embed_signup .mc-field-group input
+#footer #mc_embed_signup .mc-field-group input[type="text"],#footer #mc_embed_signup .mc-field-group input[type="email"]
 {
 	background: rgba(255, 255, 255, 0.88) !important;
   border: 1px solid #bbbbbb !important;
