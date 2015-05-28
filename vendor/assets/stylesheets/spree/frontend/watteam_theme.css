@@ -173,7 +173,7 @@ color: #000;
 }
 .bottom-menu ul li a
 {
-	color:#fff;
+	color:#fff !important;
 	font-size:12px;
 }
 
