@@ -149,7 +149,7 @@ body .flash.notice,body .notice.errorExplanation,body .flash.success{ background
 body figure#logo img{ padding-top:0; max-width:270px; height:26px !important;}
 body figure#logo{ margin-top:0; float:left !important;
  /*width:100% !important;*/ }
-body footer#footer{ /*border-color:#0099A8;*/ border:none !important; padding-top:0px !important;}
+body footer#footer{ /*border-color:#0099A8;*/ color:#fff; border:none !important; padding-top:0px !important; background-color:#03737e !important;}
 body footer#footer h5 {
 color: #000;
 }
