@@ -152,6 +152,12 @@ body figure#logo{ margin-top:0; float:left !important;
 body footer#footer{ /*border-color:#0099A8;*/ color:#fff; border:none !important; padding-top:0px !important; background-color:#03737e !important;}
 body footer#footer h5 {
 color: #fff;
+font-size:20px !important;
+border-bottom:1px solid #fff;
+margin:0px !important;
+  border-bottom: 1px solid;
+  display: inline-block;
+ 
 }
 .bottom-menu ul li
 {
@@ -192,7 +198,7 @@ color: #fff;
 {
 	position:static !important;
 	color:#c0392b !important;
-	font-size:10px;
+	font-size:15px;
 	
 }
 #footer #mc_embed_signup .mc-field-group label
@@ -202,6 +208,10 @@ color: #fff;
 .bottom-second 
 {
 	margin-top:48px;
+}
+#footer #mc-embedded-subscribe
+{
+	margin-top:10px;
 }
 
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
