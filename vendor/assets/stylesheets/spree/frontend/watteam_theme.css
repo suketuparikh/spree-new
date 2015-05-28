@@ -235,7 +235,17 @@ margin:0px !important;
 }
 #footer #mc-embedded-subscribe
 {
-	margin-top:10px;
+		
+	  background: #0099a7;
+  border-radius: 4px !important;
+  display: block;
+  font-size: 16px !important;
+  letter-spacing: 1px;
+  margin: 15px 0 10px;
+  padding: 6px 18px !important;
+  text-transform: capitalize;
+  transform: scaleY(1.2);
+  width: auto;
 }
 
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
