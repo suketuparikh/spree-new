@@ -9,6 +9,8 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+  
+  config.s3_host_alias = "s3-us-west-2.amazonaws.com",
  
   attachment_config = {
 
@@ -24,7 +26,6 @@ Spree.config do |config|
 	  bucket:         ENV['S3_BUCKET_NAME'],
 	  url:            ":s3_domain_url",
 	  attachment_url: ":s3_ap_url",
-	  s3_host_alias: "s3-us-west-2.amazonaws.com",
 
 	  styles: {
 		  mini:     "48x48>",
