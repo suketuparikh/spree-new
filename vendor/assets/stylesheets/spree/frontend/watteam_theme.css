@@ -151,7 +151,7 @@ body figure#logo{ margin-top:0; float:left !important;
  /*width:100% !important;*/ }
 body footer#footer{ /*border-color:#0099A8;*/ color:#fff; border:none !important; padding-top:0px !important; background-color:#03737e !important;}
 body footer#footer h5 {
-color: #000;
+color: #fff;
 }
 .bottom-menu ul li
 {
@@ -180,6 +180,10 @@ color: #000;
 {
 	width:31% !important;
 }
+#footer .container .three.columns a
+{
+	color:#fff !important;
+}
 #footer #mc_embed_signup
 {
 	background:none !important;
@@ -195,7 +199,10 @@ color: #000;
 {
 	margin:6px 0;
 }
-
+.bottom-second 
+{
+	margin-top:48px;
+}
 
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
 body #home-slider li img{ min-height:0; float:left; width:100%;}
