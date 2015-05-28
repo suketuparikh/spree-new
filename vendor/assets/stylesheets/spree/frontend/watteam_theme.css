@@ -159,11 +159,11 @@ margin:0px !important;
   display: inline-block;
  
 }
-.bottom-copyright .container
+#bottom-copyright .container
 {
 	text-align:center;
 }
-.bottom-copyright .container ul li
+#bottom-copyright .container ul li
 {
 	font-size:12px;
 	line-height:17px;
