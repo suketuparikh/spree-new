@@ -222,6 +222,16 @@ margin:0px !important;
 	display:block !important;
 	
 }
+.bottom-social ul
+{
+	width:100%
+}
+
+.bottom-social ul li
+{
+	display:inline-block;
+	padding:2px;
+}
 #footer #mc_embed_signup .mc-field-group input[type="text"],#footer #mc_embed_signup .mc-field-group input[type="email"]
 {
 	background: rgba(255, 255, 255, 0.88) !important;
