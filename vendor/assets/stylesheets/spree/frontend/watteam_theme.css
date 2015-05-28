@@ -236,16 +236,16 @@ margin:0px !important;
 #footer #mc-embedded-subscribe
 {
 		
-	  background: #0099a7;
+	  background: #0099a7 !important;
   border-radius: 4px !important;
-  display: block;
+  display: block !important;
   font-size: 16px !important;
-  letter-spacing: 1px;
-  margin: 15px 0 10px;
+  letter-spacing: 1px !important;
+  margin: 15px 0 10px !important;
   padding: 6px 18px !important;
-  text-transform: capitalize;
-  transform: scaleY(1.2);
-  width: auto;
+  text-transform: capitalize !important;
+  transform: scaleY(1.2) !important;
+  width: auto !important;
 }
 
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
