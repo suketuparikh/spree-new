@@ -149,10 +149,15 @@ body .flash.notice,body .notice.errorExplanation,body .flash.success{ background
 body figure#logo img{ padding-top:0; max-width:270px; height:26px !important;}
 body figure#logo{ margin-top:0; float:left !important;
  /*width:100% !important;*/ }
-body footer#footer{ border-color:#0099A8;}
+body footer#footer{ /*border-color:#0099A8;*/ border:none !important;}
 body footer#footer h5 {
 color: #000;
 }
+.bottom-menu ul li
+{
+	display:inline-block;
+}
+
 body #home-slider,.bx-wrapper{ min-height:0; float:left; width:100%;}
 body #home-slider li img{ min-height:0; float:left; width:100%;}
 #home-slider ul li{width: 25% !important;}
