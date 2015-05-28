@@ -9,8 +9,8 @@ gem 'rails', '4.1.8'
 gem 'pg'
 
 # Paperclip and aws
-#gem 'paperclip'
-gem 'aws-sdk'
+gem "paperclip", "~> 4.2"
+gem 'aws-sdk', '~> 1.6'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

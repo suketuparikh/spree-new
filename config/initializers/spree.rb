@@ -23,6 +23,8 @@ Spree.config do |config|
 	  s3_protocol:    "https",
 	  bucket:         ENV['S3_BUCKET_NAME'],
 	  url:            ":s3_domain_url",
+	  attachment_url: ":s3_ap_url",
+	  s3_host_alias: "s3-us-west-2.amazonaws.com",
 
 	  styles: {
 		  mini:     "48x48>",
@@ -44,6 +46,6 @@ end
 
 Spree.user_class = "Spree::User"
 
-#Paperclip.interpolates(:s3_eu_url) do |attachment, style|
-#"#{attachment.s3_protocol}://#{Spree::Config[:s3_host_alias]}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
-#end
+Paperclip.interpolates(:s3_domain_url) do |attachment, style|
+"#{attachment.s3_protocol}://#{Spree::Config[:s3_host_alias]}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
+end
