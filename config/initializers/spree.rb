@@ -23,7 +23,6 @@ Spree.config do |config|
 	  s3_protocol:    "https",
 	  bucket:         ENV['S3_BUCKET_NAME'],
 	  url:            ":s3_domain_url",
-	  attachment_url: ":s3_ap_url",
 
 	  styles: {
 		  mini:     "48x48>",
@@ -46,5 +45,5 @@ end
 Spree.user_class = "Spree::User"
 
 Paperclip.interpolates(:s3_domain_url) do |attachment, style|
-"#{attachment.s3_protocol}://#{attchment.s3_host_name}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
+"#{attachment.s3_protocol}://#{attachment.s3_host_name}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
 end
