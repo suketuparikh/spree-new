@@ -213,6 +213,21 @@ margin:0px !important;
 #footer #mc_embed_signup .mc-field-group label
 {
 	margin:6px 0;
+	display:block !important;
+	
+}
+#footer #mc_embed_signup .mc-field-group input
+{
+	background: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid #bbbbbb !important;
+  border-radius: 4px !important;
+  color: #03737e !important;
+  display: table-cell;
+  font-size: 18px !important;
+  height: 30px;
+  vertical-align: bottom;
+  width: 100%;
+	
 }
 .bottom-second 
 {
