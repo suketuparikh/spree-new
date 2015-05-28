@@ -222,6 +222,23 @@ margin:0px !important;
 	display:block !important;
 	
 }
+.bottom-social 
+{
+	width:100%;
+	padding-top:18px;
+}
+
+.bottom-social  li
+{
+	display:inline-block;
+	padding:2px;
+}
+
+.bottom-social  li a img
+{
+	width:45px;
+	height:45px;
+}
 #footer #mc_embed_signup .mc-field-group input[type="text"],#footer #mc_embed_signup .mc-field-group input[type="email"]
 {
 	background: rgba(255, 255, 255, 0.88) !important;
