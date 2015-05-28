@@ -9,8 +9,6 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
-  
-  config.s3_host_alias = "s3-us-west-2.amazonaws.com"
  
   attachment_config = {
 
@@ -48,5 +46,5 @@ end
 Spree.user_class = "Spree::User"
 
 Paperclip.interpolates(:s3_domain_url) do |attachment, style|
-"#{attachment.s3_protocol}://#{Spree::Config[:s3_host_alias]}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
+"#{attachment.s3_protocol}://#{attchment.s3_host_name}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
 end
