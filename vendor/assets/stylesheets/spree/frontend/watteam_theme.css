@@ -149,7 +149,7 @@ body .flash.notice,body .notice.errorExplanation,body .flash.success{ background
 body figure#logo img{ padding-top:0; max-width:270px; height:26px !important;}
 body figure#logo{ margin-top:0; float:left !important;
  /*width:100% !important;*/ }
-body footer#footer{ /*border-color:#0099A8;*/ border:none !important;}
+body footer#footer{ /*border-color:#0099A8;*/ border:none !important; padding-top:0px !important;}
 body footer#footer h5 {
 color: #000;
 }
@@ -158,6 +158,18 @@ color: #000;
 	display:inline-block;
 	padding:0 23px;
 	border-right:1px solid #03737e;
+}
+.bottom-menu
+{background: #0099a7;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding: 40px 0 30px;
+
+}
+.bottom-menu ul li:last-child 
+{
+	border:none !important;
 }
 .bottom-menu ul li a
 {
