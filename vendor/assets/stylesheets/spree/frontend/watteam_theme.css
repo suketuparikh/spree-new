@@ -39,8 +39,8 @@ body#default #latest-products .product-name{ color:#434343 !important;}
 body#default #latest-products .product-name:hover{color: #0099A8 !important;}
 #featured-products .bx-pager.bx-default-pager a.active, #featured-products .bx-pager.bx-default-pager a:hover {background-color: #0099A8 !important;}
 
-body nav #main-nav-bar li a:hover,body nav #main-nav-bar li a.active,body nav#top-nav-bar li a:hover,body nav#top-nav-bar li a.active{color:#0099A8 !important;}
-body nav #main-nav-bar li a:hover,body nav #main-nav-bar li a.active,body nav#top-nav-bar li a:hover, body nav#top-nav-bar li a.active{color:#0099A8 !important;}
+/*body nav #main-nav-bar li a:hover,body nav #main-nav-bar li a.active,body nav#top-nav-bar li a:hover,body nav#top-nav-bar li a.active{color:#0099A8 !important;}
+body nav #main-nav-bar li a:hover,body nav #main-nav-bar li a.active,body nav#top-nav-bar li a:hover, body nav#top-nav-bar li a.active{color:#0099A8 !important;}*/
 body #latest-products .product-image a{height:140px !important; width:140px !important;}
 
 /* New css */
