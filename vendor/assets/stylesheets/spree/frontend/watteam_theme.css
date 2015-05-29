@@ -304,6 +304,10 @@ body figure#logo a
 	float:right;
 	width:134px;
 }
+.top-phone-no img
+{
+	float:left !important;
+}
 .top-phone-no p
 {
 	margin:0px !important;
