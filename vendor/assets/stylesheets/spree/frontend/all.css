@@ -10,5 +10,5 @@
  *= require spree/fancy
  *= require spree/frontend/spree_social
  *= require spree/frontend/spree_reviews
- *= require ./watteam_theme.scss
+ *= require ./watteam_theme.css
 */
