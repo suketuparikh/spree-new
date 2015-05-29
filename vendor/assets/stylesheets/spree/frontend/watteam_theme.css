@@ -302,6 +302,12 @@ body figure#logo a
 	font-weight:bold;
 	font-size:15px;
 	float:right;
+	width:134px;
+}
+.top-phone-no p
+{
+	margin:0px !important;
+	padding:0px !important;
 }
 .header-logo-main 
 {
@@ -326,6 +332,9 @@ nav #main-nav-bar li a,nav#top-nav-bar ul li a,nav #main-nav-bar li a:hover,nav#
 .logo-sub-t
 {
 	color:#7b909c !important;
+}
+.top-phone-no img
+{
 }
 
 @media only screen and  (max-width:960px){
