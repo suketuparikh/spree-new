@@ -322,6 +322,7 @@ body figure#logo a
 {
 	width: 960px !important;
   margin: 0 auto !important;
+  line-height:24px !important;
 }
 nav #main-nav-bar, nav#top-nav-bar
 {
