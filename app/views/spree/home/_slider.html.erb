@@ -3,9 +3,16 @@
 	<ul>
 	<% Spree::Slide.published.order('position ASC').each do |s| %>
         <li>
-          <%= link_to image_tag(s.slide_image.url), url_for(s.slide_link) %>
+          <%= link_to image_tag(s.slide_image.url, size: "1600x500"), url_for(s.slide_link) %>
         </li>
 	<% end %>
 	</ul>
+	<div id="homepage-logo-spree">
+                               <div id="homepage-caption">
+                <p class="powerbeat-sub-subtitle">» Actual left &amp; right power measurement</p>
+                <p class="powerbeat-sub-subtitle">» Pro level technology at entry-level price</p>
+                <p class="powerbeat-sub-subtitle">» Works with all crank types &amp; head units</p>
+              </div>
+            </div>
 </div>
 <% end %>

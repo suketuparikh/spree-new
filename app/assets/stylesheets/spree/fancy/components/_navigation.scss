@@ -135,19 +135,21 @@ nav #main-nav-bar, nav#top-nav-bar {
 
   li {
     a {
-      font-weight: 600 !important;
+      /*font-weight: 600 !important;*/
 
       &:hover, &.active {
-        color: $c_green !important;
+        /*color: $c_green !important;*/
       }   
     }
 
     &.current {
       a {
-        color: $c_green;
+        /*color: $c_green;*/
 
         &:hover {
-          color: darken($c_green, 5);
+          /*color: darken($c_green, 5);*/
+		  
+		  
         }
       }
     }

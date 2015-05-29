@@ -1,10 +1,13 @@
+/*
+*= depend_on_asset "./bullets.png"
+*/
 /* my overriding css */
 body{ border-color:#0099A8 !important; border-top:none !important; padding-top:0px !important;}
 nav #main-nav-bar li a,nav#top-nav-bar ul li a{  }
 nav #main-nav-bar{ border:none !important;}
 #header{ /*border-bottom:1px solid #d9d9db !important;height: 72px;*/ margin:0px !important;}
 nav#top-nav-bar ul li{display: none !important;}
-nav#top-nav-bar ul li#link-to-cart{display: block !important;}
+nav#top-nav-bar ul li#link-to-cart{display: block !important; padding-right:0px;}
 #subheader{border-top:1px solid #0099A8 !important;border-bottom:1px solid #0099A8 !important; background:#000000 !important; box-shadow:none !important;-webkit-box-shadow:none !important;}
 nav#top-nav-bar {
 float: right !important;
@@ -78,7 +81,7 @@ table tbody tr td{color: #969495 !important;}
 .benefits-main h2{ text-align:center; margin-bottom:20px;color: #0099A8;}
 .left-benefits,.right-benefits{ float:left;width: 33%;margin: 0 8%;}
 .benefits-main p{ padding:0; margin:0; margin-bottom: 18px;padding-left: 22px;position: relative; color: #333333;font-size: 14px;line-height: 15px;}
-.benefits-main p:before {background: url("bullets.png") no-repeat  0 0;content: " ";height: 14px;left: 0;position: absolute;top: 0;width: 14px;}
+.benefits-main p:before {background: url('bullets.png') no-repeat  0 0;content: " ";height: 14px;left: 0;position: absolute;top: 0;width: 14px;}
 
 #product-images #main-image,#product-images #main-image img,#product-images #product-thumbnails li a,#product-images #product-thumbnails li a img{-webkit-border-radius: 0px;-moz-border-radius: 0px;-ms-border-radius: 0px;-o-border-radius: 0px;border-radius: 0px;}
 body #reviews{ display:none;}
@@ -326,14 +329,8 @@ body figure#logo a
 }
 nav #main-nav-bar, nav#top-nav-bar
 {
-	padding:5px !important;
+	/*padding:5px !important;*/
 	margin:0px !important;
-}
-nav #main-nav-bar li a,nav#top-nav-bar ul li a,nav #main-nav-bar li a:hover,nav#top-nav-bar ul li a:hover
-{
-	color:#fff !important;
-	text-transform:uppercase !important;
-	font-weight:normal !important;
 }
 
 .logo-sub-t
@@ -344,7 +341,39 @@ nav #main-nav-bar li a,nav#top-nav-bar ul li a,nav #main-nav-bar li a:hover,nav#
 {
 	line-height:16px !important;
 }
+.main-menu-top nav
+{
+line-height:40px;
+height:40px;
+}
+#homepage-logo-spree
+{
+position: absolute;
+  right: 0;
+  top: 7%;
+  z-index: 1;
+  background: url('/images/powerbeat_logo.png') no-repeat;
+  width: 596px;
+  height: 412px;
+  text-align: center;
+  padding-top: 230px;
+  box-sizing: border-box;
+  z-index:99999;
+}
+#homepage-caption {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  padding: 20px 10px;
+  width: 430px;
+}
+.powerbeat-sub-subtitle
+{
+font-size:20px;
+padding:0px;
+  color: #fff;
+  line-height: 40px;
 
+}
 @media only screen and  (max-width:960px){
 #wrapper.container{ width:748px !important;}
 body #header nav.columns.seven{width: auto !important;}
