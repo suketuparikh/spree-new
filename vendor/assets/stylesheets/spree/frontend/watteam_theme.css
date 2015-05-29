@@ -2,7 +2,7 @@
 body{ border-color:#0099A8 !important; border-top:none !important; padding-top:0px !important;}
 nav #main-nav-bar li a,nav#top-nav-bar ul li a{ text-transform:capitalize !important;; color:#000000 !important;}
 nav #main-nav-bar{ border:none !important;}
-#header{ /*border-bottom:1px solid #d9d9db !important;height: 72px;*/}
+#header{ /*border-bottom:1px solid #d9d9db !important;height: 72px;*/ margin:0px !important;}
 nav#top-nav-bar ul li{display: none !important;}
 nav#top-nav-bar ul li#link-to-cart{display: block !important;}
 #subheader{border-top:1px solid #0099A8 !important;border-bottom:1px solid #0099A8 !important; background:#000000 !important; box-shadow:none !important;-webkit-box-shadow:none !important;}
@@ -39,8 +39,8 @@ body#default #latest-products .product-name{ color:#434343 !important;}
 body#default #latest-products .product-name:hover{color: #0099A8 !important;}
 #featured-products .bx-pager.bx-default-pager a.active, #featured-products .bx-pager.bx-default-pager a:hover {background-color: #0099A8 !important;}
 
-body nav #main-nav-bar li a:hover,body nav #main-nav-bar li a.active,body nav#top-nav-bar li a:hover,body nav#top-nav-bar li a.active{color:#0099A8 !important;}
-body nav #main-nav-bar li a:hover,body nav #main-nav-bar li a.active,body nav#top-nav-bar li a:hover, body nav#top-nav-bar li a.active{color:#0099A8 !important;}
+/*body nav #main-nav-bar li a:hover,body nav #main-nav-bar li a.active,body nav#top-nav-bar li a:hover,body nav#top-nav-bar li a.active{color:#0099A8 !important;}
+body nav #main-nav-bar li a:hover,body nav #main-nav-bar li a.active,body nav#top-nav-bar li a:hover, body nav#top-nav-bar li a.active{color:#0099A8 !important;}*/
 body #latest-products .product-image a{height:140px !important; width:140px !important;}
 
 /* New css */
