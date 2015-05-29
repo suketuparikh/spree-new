@@ -7,7 +7,7 @@ nav #main-nav-bar li a,nav#top-nav-bar ul li a{  }
 nav #main-nav-bar{ border:none !important;}
 #header{ /*border-bottom:1px solid #d9d9db !important;height: 72px;*/ margin:0px !important;}
 nav#top-nav-bar ul li{display: none !important;}
-nav#top-nav-bar ul li#link-to-cart{display: block !important; padding-right:0px;}
+nav#top-nav-bar ul li#link-to-cart{display: block !important; padding-left:0px;}
 #subheader{border-top:1px solid #0099A8 !important;border-bottom:1px solid #0099A8 !important; background:#000000 !important; box-shadow:none !important;-webkit-box-shadow:none !important;}
 nav#top-nav-bar {
 float: right !important;
@@ -352,7 +352,7 @@ position: absolute;
   right: 0;
   top: 7%;
   z-index: 1;
-  background: url('/images/powerbeat_logo.png') no-repeat;
+  background: url('<%= image-url('images/powerbeat_logo.png')%>') no-repeat;
   width: 596px;
   height: 412px;
   text-align: center;
@@ -366,6 +366,7 @@ position: absolute;
   padding: 20px 10px;
   width: 430px;
 }
+.slider-pager{top:-85px !important;}
 .powerbeat-sub-subtitle
 {
 font-size:18px;
