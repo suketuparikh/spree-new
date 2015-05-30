@@ -1,7 +1,3 @@
-/*
-*= depend_on_asset "bullets.png"
-*= depend_on_asset "powerbeat_logo.png"
-*/
 /* my overriding css */
 body{ border-color:#0099A8 !important; border-top:none !important; padding-top:0px !important;}
 nav #main-nav-bar li a,nav#top-nav-bar ul li a{  }
@@ -82,7 +78,7 @@ table tbody tr td{color: #969495 !important;}
 .benefits-main h2{ text-align:center; margin-bottom:20px;color: #0099A8;}
 .left-benefits,.right-benefits{ float:left;width: 33%;margin: 0 8%;}
 .benefits-main p{ padding:0; margin:0; margin-bottom: 18px;padding-left: 22px;position: relative; color: #333333;font-size: 14px;line-height: 15px;}
-.benefits-main p:before {background: url('./bullets.png') no-repeat  0 0;content: " ";height: 14px;left: 0;position: absolute;top: 0;width: 14px;}
+.benefits-main p:before {background: <%= image-url('bullets.png')%> no-repeat  0 0;content: " ";height: 14px;left: 0;position: absolute;top: 0;width: 14px;}
 
 #product-images #main-image,#product-images #main-image img,#product-images #product-thumbnails li a,#product-images #product-thumbnails li a img{-webkit-border-radius: 0px;-moz-border-radius: 0px;-ms-border-radius: 0px;-o-border-radius: 0px;border-radius: 0px;}
 body #reviews{ display:none;}
@@ -353,7 +349,7 @@ position: absolute;
   right: 0;
   top: 7%;
   z-index: 1;
-   background-image: url('<%= asset_path 'powerbeat_logo.png' %>')no-repeat;
+   background-image: <%=image-url('powerbeat_logo.png')%> no-repeat;
   width: 596px;
   height: 412px;
   text-align: center;
