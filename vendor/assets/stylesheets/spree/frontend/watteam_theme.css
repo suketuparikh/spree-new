@@ -352,7 +352,7 @@ position: absolute;
   right: 0;
   top: 7%;
   z-index: 1;
-  background: image-url("images/powerbeat_logo.png") no-repeat;
+   background-image: url(<%= asset_path 'powerbeat_logo.png' %>)no-repeat;
   width: 596px;
   height: 412px;
   text-align: center;
