@@ -3,12 +3,11 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *
- *= require ./priority.css
+ *= require spree/frontend/priority.css
  *= require spree/frontend
  *= require_self
  *= require_tree .
  *= require spree/fancy
  *= require spree/frontend/spree_social
  *= require spree/frontend/spree_reviews
- *= require ./watteam_theme.css
 */
