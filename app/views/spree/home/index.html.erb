@@ -136,7 +136,17 @@ $(document).ready(function(){
 //$('html').css('position','relative');
 //$('html').css('overflow-x','hidden');	
 $('.flexslider').flexslider({
-    animation: "slide"
+    slideshowSpeed:3000,
+	animation:"fade",
+	controlNav:true,
+	directionNav:true,
+	pauseOnHover:true,
+	direction:"horizontal",
+	reverse:false,
+	animationSpeed:1000,
+	prevText:"&lt;",
+	nextText:"&gt;",
+	slideshow:true
   });
 $('.popup-main').fadeIn('slow');
 
