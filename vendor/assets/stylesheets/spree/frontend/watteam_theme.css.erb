@@ -371,6 +371,38 @@ padding:0px;
   line-height: 18px;
 
 }
+/*7-1-15 krunal*/
+.main-menu-top > ul {
+      color: #fff !important;
+    float: right;
+    list-style: outside none none;
+    margin: 0;
+    text-transform: uppercase;
+}
+#menu-mainmenu a {
+    color: #fff !important;
+}
+#menu-mainmenu a:hover {
+    color: #fff !important;
+}
+
+.sub-menu {
+    list-style: outside none none;
+	display:none;
+}
+#menu-mainmenu li {
+    display: inline-block;
+    padding: 8px;
+}
+#menu-mainmenu li:hover .sub-menu {
+    display: block;
+	position:absolute;
+	z-index:9999;
+}
+
+
+
+
 @media only screen and  (max-width:960px){
 #wrapper.container{ width:748px !important;}
 body #header nav.columns.seven{width: auto !important;}
