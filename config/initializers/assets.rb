@@ -24,4 +24,10 @@ Rails.application.config.assets.precompile += %w( powerbeat_logo.png )
 Rails.application.config.assets.precompile += %w( down_menu_white.png )
 Rails.application.config.assets.precompile += %w( down_menu_black.png )
 Rails.application.config.assets.precompile += %w( bullets.png )
+
+Rails.application.config.assets.precompile += %w( f_facebook.png )
+Rails.application.config.assets.precompile += %w( f_linkedin.png )
+Rails.application.config.assets.precompile += %w( f_twitter.png )
+Rails.application.config.assets.precompile += %w( f_youtube.png )
+
 Rails.application.config.assets.precompile += %w( spree/frontend/fonts/flexslider-icon.eot spree/frontend/fonts/flexslider-icon.svg spree/frontend/fonts/flexslider-icon.ttf spree/frontend/fonts/flexslider-icon.woff )
