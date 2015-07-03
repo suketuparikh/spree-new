@@ -1,4 +1,11 @@
 <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<script>
+$( document ).ready(function() {
+$('#mobile-menu-open').click(function() {
+  $( ".togle_menu_mobile" ).toggle('slide');
+});
+});
+</script>
 <header id="header" class="row" data-hook>
 <div class="header-logo-main">
   <figure id="logo" class="columns six" data-hook><a href="http://watteam.com"><%= image_tag 'spree_50.png' %></a><span class="logo-sub-t">&nbsp;&nbsp; Innovation with a spin  </span><!--<span class="top-phone-no"><%= image_tag 'phone-contact.png' %><p>1-877-213-8399</p> </span>--></figure>
@@ -6,7 +13,7 @@
   <div class="main-menu-top">
   <!--<%= render :partial => 'spree/shared/nav_bar' %>
   <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>-->
-  <ul id="menu-mainmenu" class=""><li class="pro_arro"><a href="#">PRODUCT</a>
+  <ul id="menu-mainmenu" class=""><li class="pro_arro"><a  href="#">PRODUCT</a>
 <ul class="sub-menu">
 	<li><a href="http://watteam.com/benefits/">Benefits</a></li>
 	<li><a href="http://watteam.com/technology/">Technology</a></li>
@@ -28,6 +35,43 @@
 </li>
 <li><a href="#">Powerbeat</a></li>
 <li><a href="http://watteam.com/contact/">Contact</a></li>
+<div class="claer"></div>
 </ul>
+<div class="claer"></div>
+<a href="#" id="mobile-menu-open">Menu</a>
+	<ul class="togle_menu_mobile" style="display:none;">
+		<li class="menu_mo">
+			<a href="#" class="mobile-product">PRODUCT</a>
+			<ul class="submenu">
+				<li><a href="http://watteam.com/benefits/">Benefits</a></li>
+				<li><a href="http://watteam.com/technology/">Technology</a></li>
+				<li><a href="http://watteam.com/news/gallery/">Gallery</a></li>
+			</ul>
+		</li>
+		<li class="menu_mo">
+			<a href="#">COMPANY</a>
+			<ul class="submenu">
+					<li><a href="http://watteam.com/about/">About</a></li>
+					<li><a href="http://watteam.com/partners/">Partners</a></li>
+					<li><a href="http://watteam.com/news/press/">PRESS</a></li>
+					<div class="claer"></div>
+			</ul>
+			<div class="claer"></div>
+		</li>
+		<li class="menu_mo">
+			<a href="#">SUPPORT</a>
+				<ul class="sub-menu">
+					<li><a href="http://watteam.com/faq/">FAQ</a></li>
+					<li><a href="http://watteam.com/video-gallery/">Video Gallery</a></li>
+				</ul>
+				<div class="claer"></div>
+		</li>
+		<li class="menu_mo"><a href="#">Powerbeat</a></li>
+		<li class="menu_mo"><a href="http://watteam.com/contact/">Contact</a></li>
+
+		<div class="claer"></div>
+	</ul>
+	<div class="claer"></div>
   </div>
+  	<div class="claer"></div>
 </header>
