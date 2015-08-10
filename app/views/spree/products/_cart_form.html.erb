@@ -49,7 +49,7 @@
         </div>
 
         <div class="add-to-cart">
-          <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1%>
+          <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
           <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>
