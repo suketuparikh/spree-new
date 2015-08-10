@@ -122,9 +122,15 @@ Irvine CA, 92604 USA.<br>
 			
 <script>
 $( document ).ready(function() {
-$("#add-to-cart-button").click(function(){
-    alert("test");
+$("#add-to-cart-button").click(function(event){
+event.preventDefault();
+    $.fancybox({
+        type: 'inline',
+        content: '#dialogContent'
+    });
 });
 });
 </script>
+<div id="dialogContent">
+</div>
 </footer>
