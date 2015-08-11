@@ -47,7 +47,11 @@
             <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
           <% end %>
         </div>
-
+<%= current_order.line_items.to_yaml %>
+<% current_order.line_items.to_yaml do item %>
+  <%= item..to_yaml %>
+  
+  <% end %>
 			
         <div class="add-to-cart">
           <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
