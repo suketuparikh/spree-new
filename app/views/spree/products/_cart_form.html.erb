@@ -48,7 +48,7 @@
           <% end %>
         </div>
 <%= current_order.line_items.to_yaml %>
-<% current_order.line_items.to_yaml do item %>
+<% current_order.line_items do item %>
   <%= item.variant_id %>
   
   <% end %>
