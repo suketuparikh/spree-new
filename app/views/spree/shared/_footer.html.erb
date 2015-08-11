@@ -120,7 +120,7 @@ Irvine CA, 92604 USA.<br>
             </div>
 			</div>
 			
-			<a href="#divForm" id="btnForm">Load Form</a>
+			
 
 <div id="divForm" style="display:none">
     <form action="tbd">
@@ -136,7 +136,10 @@ Irvine CA, 92604 USA.<br>
 $( document ).ready(function() {
 $("#add-to-cart-button").click(function(event){
     event.preventDefault();
-	$("#btnForm").fancybox();
+	$.fancybox({
+        'type': 'inline',
+        'content': '#divForm'
+    });
 });
 });
 </script>
