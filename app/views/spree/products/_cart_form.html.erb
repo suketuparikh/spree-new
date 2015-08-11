@@ -48,9 +48,9 @@
           <% end %>
         </div>
 <%= current_order.line_items.to_yaml %>
-<% current_order.line_items do item %>
-  <%puts item.inspect %>
-  <%puts item.to_yaml %>
+<% current_order.line_items.to_yaml do item %>
+  <%= item.variant_id %>
+  
   <% end %>
 			
         <div class="add-to-cart">
