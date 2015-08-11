@@ -47,8 +47,7 @@
             <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
           <% end %>
         </div>
-<%= current_order.line_items.inspect %>
-
+<%= current_order.line_items.to_yaml %>
 <% current_order.line_items do item %>
   <%puts item.inspect %>
   <%puts item.to_yaml %>
