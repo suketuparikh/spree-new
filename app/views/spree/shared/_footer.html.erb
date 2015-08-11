@@ -122,11 +122,11 @@ Irvine CA, 92604 USA.<br>
 			
 			
 
-<div id="divForm" style="display:none">
-    <form action="tbd">
-        File: <input type="file" /><br /><br />
-        <input type="submit" />
-    </form>
+<div style="display:none;">
+    <div id="dialogContent">
+	
+	aaaaaaaaaa
+    </div>
 </div>
 
 
@@ -137,8 +137,8 @@ $( document ).ready(function() {
 $("#add-to-cart-button").click(function(event){
     event.preventDefault();
 	$.fancybox({
-        'type': 'inline',
-        'content': '#divForm'
+         'type': 'inline',
+        'href': '#dialogContent'
     });
 });
 });
