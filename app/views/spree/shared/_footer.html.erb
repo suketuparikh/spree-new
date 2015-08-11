@@ -150,5 +150,14 @@ $("#add-to-cart-button").click(function(event){
         'href': '#addtocart-popup'
     });
 });
+
+$("#add-to-cart-btn").click(function(event){
+$( "#cartform" ).submit();
+});
+
+$("#no-thanks-btn").click(function(event){
+$.fancybox.close();
+});
+
 });
 </script>
