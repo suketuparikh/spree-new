@@ -32,5 +32,10 @@ Rails.application.config.assets.precompile += %w( f_twitter.png )
 Rails.application.config.assets.precompile += %w( f_youtube.png )
 Rails.application.config.assets.precompile += %w( foot-nav-devider.jpg )
 
+Rails.application.config.assets.precompile += %w( fancybox_overlay.png )
+Rails.application.config.assets.precompile += %w( fancybox_sprite.png )
+Rails.application.config.assets.precompile += %w( fancybox_sprite@2x.png )
+Rails.application.config.assets.precompile += %w( fancybox_loading@2x.gif )
+
 
 Rails.application.config.assets.precompile += %w( spree/frontend/fonts/flexslider-icon.eot spree/frontend/fonts/flexslider-icon.svg spree/frontend/fonts/flexslider-icon.ttf spree/frontend/fonts/flexslider-icon.woff )
