@@ -50,7 +50,7 @@
 		
 		<% disable_cart_btn = true %>
 		<% if current_order %>
-			product_id: <%= product.id %>
+			product_id: <%= @product.id %>
 			<% current_order.line_items.each do |line_item| %>
 				qty: <%= @line_item.quantity %><br />
 				variant_id: <%= line_item.variant_id %><br />
