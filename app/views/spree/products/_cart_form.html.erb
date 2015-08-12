@@ -52,7 +52,7 @@
 		<%= current_order.line_items.variant_id %>
 		
 		<% current_order.line_items.each do |line_item| %>
-			<% if line_item.variant_id == @product.id && line_item.quantity >= 0 %>
+			<% if line_item.variant_id == @product.id && line_item.quantity >=1  %>
 			<% @disable_cart_btn = false %>
 			<% end %>
 		<% end %>
