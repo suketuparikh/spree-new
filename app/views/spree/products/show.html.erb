@@ -13,6 +13,8 @@
           </div>
         </div>
 
+        <% if false %>
+        <!-- commented out -->
         <div data-hook="product_properties">
           <%= render :partial => 'properties' %>
         </div>
@@ -20,6 +22,7 @@
         <div data-hook="promotions">
           <%= render :partial => 'promotions' %>
         </div>
+        <% end %>
 
       </div>
     </div>
@@ -35,10 +38,10 @@
             <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
           </div>
 
-          <div id="cart-form" data-hook="cart_form">
-            <%= render :partial => 'cart_form' %>
-          </div>
+        </div>
 
+        <div id="cart-form" data-hook="cart_form">
+            <%= render :partial => 'cart_form' %>
         </div>
 
         <% if false %>
