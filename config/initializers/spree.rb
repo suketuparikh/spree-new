@@ -47,3 +47,5 @@ Spree.user_class = "Spree::User"
 Paperclip.interpolates(:s3_domain_url) do |attachment, style|
 "#{attachment.s3_protocol}://#{attachment.s3_host_name}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
 end
+Spree::Config[:always_include_confirm_step] = true
+Spree::Auth::Config[:registration_step] = true
