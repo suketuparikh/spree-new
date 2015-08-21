@@ -1,0 +1,19 @@
+<fieldset id="order_summary" class="order_contauner" data-hook>
+<legend><%= Spree.t(:order_number, :number => @order.number) %></legend>
+<h1><%= accurate_title %></h1>
+<% if order_just_completed?(@order) %>
+<strong><%= Spree.t(:thank_you_for_your_order) %></strong>
+<% end %>
+<div id="order" data-hook>
+<%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
+<br class="clear" />
+<p data-hook="links" class="pbtn">
+<%= link_to Spree.t(:back_to_store), 'http://watteam.com/', :class => "button pbtn" %>
+<% unless order_just_completed?(@order) %>
+<% if try_spree_current_user && respond_to?(:spree_account_path) %>
+<%= link_to Spree.t(:my_account), spree_account_path, :class => "button pbtn" %>
+<% end %>
+<% end %>
+</p>
+</div>
+</fieldset>
