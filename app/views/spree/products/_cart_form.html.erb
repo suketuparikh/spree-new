@@ -88,9 +88,11 @@ $( document ).ready(function() {
       <span class="dnone">
 			  <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
       </span>
+      <div class="cartbutton">
 			  <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do  %>
-				<%= Spree.t(:add_to_cart) %>
+				Buy Now
 			  <% end %>
+      </div>
 			<% else %>
 				<h4>Already added in <a href="/cart">cart</a>.</h4>
 			<% end %>
