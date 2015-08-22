@@ -45,8 +45,11 @@
           <% if @product.master.can_supply? %>
             <link itemprop="availability" href="http://schema.org/InStock" />
           <% elsif @product.variants.empty? %>
+            <% if false %>
             <br />
             <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
+            <% end %>
+             <%= render :partial => 'out_of_stock' %>
           <% end %>
         </div>
 		
