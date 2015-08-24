@@ -27,6 +27,7 @@ Rails.application.config.assets.precompile += %w( down_menu_black.png )
 Rails.application.config.assets.precompile += %w( bullets.png )
 Rails.application.config.assets.precompile += %w( powerbeat-logo-blue.png )
 Rails.application.config.assets.precompile += %w( toted.png )
+Rails.application.config.assets.precompile += %w( cart.png )
 
 Rails.application.config.assets.precompile += %w( f_facebook.png )
 Rails.application.config.assets.precompile += %w( f_linkedin.png )
