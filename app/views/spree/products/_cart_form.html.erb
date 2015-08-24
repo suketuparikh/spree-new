@@ -112,7 +112,6 @@ $( document ).ready(function() {
     <% end %>
   </div>
 <% end %>
-SiteLogin: <%= session[:valid_sitelogin] %>
 <% if !session[:valid_sitelogin] || session[:valid_sitelogin]==false %>
 <!-- load popup for password -->
 <%= render :partial => 'sitelogin/new' %>

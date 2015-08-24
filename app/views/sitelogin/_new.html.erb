@@ -1,5 +1,5 @@
 
-<div align="center" style="float:left;display:none;height:400px;" id="sitelogin_popup">
+<div align="center" style="float:left;display:none;" id="sitelogin_popup">
   
   <div align="left">
     <h1>Exclusive<br />
@@ -8,7 +8,7 @@
   </div>
   <div>Not on the earlybird list? <a href="#">Click here</a> to signup for the updates.</div>
   <div>
-  <%= form_tag @sitelogin do %>
+  <%= form_tag '/sitelogin', method: "post" do %>
     <%= password_field_tag :site_password, "", :required => true, :placeholder => 'Enter passcode here' %>
     <div>
       <%= submit_tag 'Site Login', :class=> "btn primary" %>
