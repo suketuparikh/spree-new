@@ -1,0 +1,31 @@
+
+<div align="center" style="float:left;" id="sitelogin_popup">
+  
+  <div align="left">
+    <h1>Exclusive<br />
+      Pre-Order</h1>
+      <p>Enter your passcode below for early access</p>
+  </div>
+  <div>Not on the earlybird list? <a href="#">Click here</a> to signup for the updates.</div>
+
+  <%= form_tag @sitelogin do |f| %>
+    <%= password_field_tag :site_password, :required => true, :placeholder => 'Enter passcode here', :value => "" %>
+    <div>
+      <%= submit_tag 'Site Login', :class=> "" %>
+    </div>
+  <% end %>
+</div>
+<script>
+jQuery( document ).ready(function($) {
+
+  $.fancybox({
+         'type': 'inline',
+        'href': '#sitelogin_popup',
+        'width': '720px',
+        'centerOnScroll': false,
+        'autoDimensions':true,
+        'modal': true
+    });
+});
+
+</script>

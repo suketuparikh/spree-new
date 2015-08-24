@@ -60,4 +60,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  match '/sitelogin',     to: 'sitelogin#new',             via: 'get'
+  match '/sitelogin',     to: 'sitelogin#login',           via: 'post'
+  resources "sitelogin", only: [:new, :login]
 end
