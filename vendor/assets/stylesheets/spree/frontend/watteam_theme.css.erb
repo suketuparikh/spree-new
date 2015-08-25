@@ -481,6 +481,7 @@ width:100%;
 #sitelogin_popup{
 	background:url(<%= asset_path 'popup_main_bg.jpg' %>);
 	width:600px;
+	height:410px;
 }
 .sitelogin_header{
 	background: url(<%= asset_path 'popup_bg.png' %>) repeat ;
@@ -490,9 +491,15 @@ width:100%;
 	color:#fff;
 	padding-top:20px;
 }
-.sitelogin_header h1{font-size:33pt;}
-.sitelogin_header p{font-size: 15pt;}
+.sitelogin_header h1{font-size:33pt;
+	color: #fff;
+    text-align: left;
+    line-height: 34pt;
+    padding: 5px;
+}
+.sitelogin_header p{font-size: 15pt; color:#fff; text-align: left;}
 #sitelogin_popup .not_invited{float:right; text-align: left;}
+#sitelogin_popup .login_box {clear:both; width:100%;}
 
 
 /*.................media...........*/
