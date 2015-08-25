@@ -66,11 +66,14 @@
 <script>
 $( document ).ready(function() {
   $.fancybox({
+        'padding': 0,
+        'margin': 4,
         'type': 'inline',
         'href': '#out-of-stock-popup',
         'width': '720px',
-        'centerOnScroll': false,
-        'autoDimensions':true
+        'centerOnScroll': true,
+        'autoDimensions': true,
+        'modal': true
     });
 
 });
@@ -142,11 +145,14 @@ $( document ).ready(function() {
 $("#add-to-cart-button").click(function(event){
     event.preventDefault();
   $.fancybox({
-         'type': 'inline',
+        'padding': 0,
+        'margin': 4,
+        'type': 'inline',
         'href': '#addtocart-popup',
         'width': '720px',
         'centerOnScroll': false,
-        'autoDimensions':true
+        'autoDimensions':true,
+        'modal': true
     });
 });
 
