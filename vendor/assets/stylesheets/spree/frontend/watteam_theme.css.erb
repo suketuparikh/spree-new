@@ -315,7 +315,8 @@ body figure#logo a
 }
 .header-cart{max-width: 200px;float:right;line-height: 25px;vertical-align: middle;}
 .header-cart img{vertical-align: middle;}
-.header-cart a{font-size:14px; font-weight: bold;vertical-align: middle; color: #0099a8;}
+.header-cart a{font-size:14px; font-weight: bold;vertical-align: middle; color: #0099a8 !important;}
+.header-cart a:hover{color:#424242 !important;}
 .top-phone-no 
 {
 	text-align:right;
@@ -475,6 +476,11 @@ float:right;
 {
 text-align:center;
 width:100%;
+}
+
+#sitelogin_popup{
+	background:url(<%= asset_path 'popup_main_bg.jpg' %>);
+
 }
 
 
