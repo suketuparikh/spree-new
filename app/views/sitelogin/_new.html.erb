@@ -1,13 +1,13 @@
 
 <div align="center" style="float:left;display:none;" id="sitelogin_popup">
   
-  <div align="left" class="">
+  <div align="right" class="sitelogin_header">
     <h1>Exclusive<br />
       Pre-Order</h1>
       <p>Enter your passcode below for early access</p>
   </div>
-  <div>Not on the earlybird list? <a href="#">Click here</a> to signup for the updates.</div>
-  <div>
+  <div class="not_invited">Not on the earlybird list? <a href="#">Click here</a> to signup for the updates.</div>
+  <div class="login_box">
   <%= form_tag '/sitelogin', method: "post" do %>
     <%= password_field_tag :site_password, "", :required => true, :placeholder => 'Enter passcode here' %>
     <div>
@@ -23,6 +23,7 @@ jQuery( document ).ready(function($) {
         'type': 'inline',
         'href': '#sitelogin_popup',
         'width': '600px',
+        'height': '410px',
         'centerOnScroll': true,
         'autoDimensions': true,
         'modal': true
