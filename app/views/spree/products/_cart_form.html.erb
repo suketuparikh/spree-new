@@ -145,9 +145,8 @@ $( document ).ready(function() {
 $("#add-to-cart-button").click(function(event){
     event.preventDefault();
   $.fancybox({
-        'href': '#addtocart-popup',
-        'width': '720px',
-        'modal': true
+        'type': 'inline',
+        'href': '#addtocart-popup'
     });
 });
 
