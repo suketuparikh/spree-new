@@ -85,7 +85,7 @@ table tbody tr td{color: #969495 !important;}
 .benefits-main p:before {background: url(<%= asset_path 'bullets.png' %>) no-repeat  0 0;content: " ";height: 14px;left: 0;position: absolute;top: 0;width: 14px;}
 
 #product-images #main-image,#product-images #main-image img,#product-images #product-thumbnails li a,#product-images #product-thumbnails li a img{-webkit-border-radius: 0px;-moz-border-radius: 0px;-ms-border-radius: 0px;-o-border-radius: 0px;border-radius: 0px;}
-.container .ten.columns{width:500px;margin-left:30px;}
+.container .ten.columns{ width: 500px !Important; margin-left: 50px !important;}
 body #reviews{ display:none;}
 #product-description{color:#a8a8a8;}
 #product-description ul {margin-left:10px;}
@@ -98,7 +98,8 @@ clear:both;
 }
 
 ul.tabs{list-style: none;float:left;clear:both;margin:10px 0px;}
-ul.tabs li.tab-link{float:left;margin:5px 50px 5px 0px; color:#0099A8;cursor: pointer;font-size: 13px;list-style-image: url(<%= asset_path 'pipe.png'%>);}
+ul.tabs li.tab-link{float:left; margin: 5px 30px 5px 0px; color:#0099A8;cursor: pointer;font-size: 13px;list-style-image: url(<%= asset_path 'foot-nav-devider.jpg'%>); padding-right: 20px; }
+ul.tabs li.tab-link:last-child{background-image:none;}
 ul.tabs li.tab-link.current{font-weight:700;}
 .tab_data{float:left;clear:both;}
 .tab-content{display:none;}
