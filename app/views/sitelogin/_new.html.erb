@@ -89,7 +89,7 @@
 <script>
 jQuery( document ).ready(function($) {
 
-  window.originalFancybox = $.fancybox({
+  $.fancybox({
         'padding': 0,
         'margin': 4,
         'type': 'inline',
@@ -103,8 +103,8 @@ jQuery( document ).ready(function($) {
 
   $("#invite_phase2").click(function(event){
     event.preventDefault();
-    window.originalFancybox.close();
-    newfancybox = $.fancybox({
+    $.fancybox.close();
+    $.fancybox({
         'type': 'inline',
         'href': '#phase2_subscription',
         'width': '720px',
