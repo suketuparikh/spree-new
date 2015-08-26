@@ -6,7 +6,7 @@
       Pre-Order</h1>
       <p>Please enter your passcode to proceed with your purchase</p>
   </div>
-  <div class="not_invited">Not on the earlybird list? <a href="#">Click here</a> to signup for the updates.</div>
+  <div class="not_invited">Not on the earlybird list? <a href="#" class="invite">Click here</a> to signup for the updates.</div>
   <div class="login_box">
   <%= form_tag '/sitelogin', method: "post" do %>
     <%= password_field_tag :site_password, "", :required => true, :placeholder => 'Enter passcode here' %>
