@@ -103,6 +103,7 @@ jQuery( document ).ready(function($) {
 
   $("#invite_phase2").click(function(event){
     event.preventDefault();
+    $.fancybox.close();
     $.fancybox({
         'type': 'inline',
         'href': '#phase2_subscription',
