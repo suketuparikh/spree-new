@@ -145,12 +145,10 @@ $( document ).ready(function() {
 $("#add-to-cart-button").click(function(event){
     event.preventDefault();
   $.fancybox({
-        'padding': 0,
-        'margin': 4,
         'type': 'inline',
         'href': '#addtocart-popup',
         'width': '720px',
-        'centerOnScroll': false,
+        'centerOnScroll': true,
         'autoDimensions':true,
         'modal': true
     });
