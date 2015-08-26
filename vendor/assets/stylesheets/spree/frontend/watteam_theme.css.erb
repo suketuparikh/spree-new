@@ -513,15 +513,23 @@ width:100%;
 #sitelogin_popup .login_box {clear:both; width:100%;background: #0099A8;    height: 50px;
     padding: 13px 0px;}
 #sitelogin_popup .login_box input[type="password"]{
-	border:1px solid #fff;
-	background: #33adb9;
-	color:#fff;
+	border:1px solid #fff !important;
+	background: #33adb9 !important;
+	color:#fff !important;
 	font-size: 14px;
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
 	float: left;
 	width:200px;
 	margin: 5px 0px 5px 10px;
+}
+#sitelogin_popup .login_box input[type="password"]::-webkit-input-placeholder,#sitelogin_popup .login_box input[type="password"]:-moz-placeholder,#sitelogin_popup .login_box input[type="password"]::-moz-placeholder,#sitelogin_popup .login_box input[type="password"]:-ms-input-placeholder{
+    color: #fff;
+}
+
+#sitelogin_popup .login_box input[type="password"]:hover{
+	background-color: #33adb9 !important;
+	border:1px solid #fff !important;
 }
 #sitelogin_popup .login_box input[type="submit"]{
 	border:1px solid #fff;
