@@ -11,7 +11,7 @@ class SiteloginController < ApplicationController
       redirect_to spree.products_path
     else
       session[:valid_sitelogin] = false;
-      redirect_to sitelogin
+      redirect_to spree.products_path
     end
   end
 
