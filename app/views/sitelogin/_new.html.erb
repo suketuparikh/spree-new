@@ -32,7 +32,7 @@ jQuery( document ).ready(function($) {
         'modal': true
     });
   $('.fancybox-type-inline').css('z-index','10000');
-  $("#invite_phase2").click(function(event){
+  $('body').on('click',"#invite_phase2",function(event){
     event.preventDefault();
     $.fancybox.close();
     $.fancybox({
