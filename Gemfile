@@ -72,3 +72,8 @@ gem 'rails_12factor', group: :production
 #  # asset_sync is required as needed by application.rb
 #  gem 'asset_sync', :require => nil
 #end
+
+group :development do
+  gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git'
+  gem 'wdm', '>= 0.0.3'
+end
