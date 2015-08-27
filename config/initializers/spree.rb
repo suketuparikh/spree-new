@@ -9,8 +9,6 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
-
-  config.checkout_zone = "USA"
  
   attachment_config = {
 
@@ -51,3 +49,4 @@ end
 
 Spree::Config[:always_include_confirm_step] = true
 Spree::Auth::Config[:registration_step] = true
+Spree::Config[:checkout_zone] = "North America"
