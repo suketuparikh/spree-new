@@ -1,6 +1,6 @@
 class NewsletterController < ApplicationController
   def new
-    @NewsLetter = Newsletter.new
+    @Newsletter = Newsletter.new
   end
 
 end
