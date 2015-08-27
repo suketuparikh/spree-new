@@ -21,6 +21,6 @@
 
 en:
   hello: "Hello world"
-spree:
+  activerecord:
 	add_to_cart: "Buy Now"
-	save_and_continue: "Continue"
+  	save_and_continue: "Continue"
