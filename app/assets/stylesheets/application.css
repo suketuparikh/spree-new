@@ -12,5 +12,6 @@
  *
  *= require_self
  *= require ./spree/fancy
- ***********require_tree .
+ **********
+ require_tree .
  */
