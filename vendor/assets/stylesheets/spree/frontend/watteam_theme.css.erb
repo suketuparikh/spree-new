@@ -500,7 +500,7 @@ width:100%;
 	background: url(<%= asset_path 'popup_bg.png' %>) repeat ;
 	float:right;
 	max-width:295px;
-	height:155px;
+	min-height:155px;
 	color:#fff;
 	padding:20px;
 }
@@ -679,9 +679,8 @@ padding:5px;
 }
 
 @media only screen and  (max-width:500px){
-#sitelogin_popup{    width: 100%;}
-.sitelogin_header{float: none; margin-top: 0PX;}
-.sitelogin_header{ float: none; text-align: center;}
+#sitelogin_popup{ width: 100%;}
+.sitelogin_header { float: none; text-align: center; clear: both; margin-top:0px;}
 #sitelogin_popup .login_box{min-width: 54%;float:left;clear:both;}
 #sitelogin_popup .login_box input[type="password"]{ width: 260px;float:none; margin:5px auto;}
 #sitelogin_popup .login_box input[type="submit"]{ float:none; margin:5px auto;}
