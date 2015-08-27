@@ -80,13 +80,13 @@
         border-color: $c_green;
       }
 
-      &, img {
-        /*@include border-radius(165px);*/
-      }
+      /*&, img {
+        @include border-radius(165px);
+      }*/
 
-      img {
+      /*img {
         padding: 11px;
-      }
+      }*/
     }
 
     &.selected a {
