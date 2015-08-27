@@ -25,10 +25,9 @@ Spree.config do |config|
 	  url:            ":s3_domain_url",
 
 	  styles: {
-		  mini:     "72x72>",
-		  small:    "144x144>",
-		  product:  "342x342>",	
-
+		  mini:     "86x86>",
+		  small:    "114x114>",
+		  product:  "340x340>"
 	  },
 
 	  path:           ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
