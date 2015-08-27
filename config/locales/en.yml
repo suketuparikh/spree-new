@@ -22,5 +22,5 @@
 en:
   hello: "Hello world"
   spree:
-	add_to_cart: "Buy Now"
-  	save_and_continue: "Continue"
+	add_to_cart: Buy Now
+  	save_and_continue: Continue
