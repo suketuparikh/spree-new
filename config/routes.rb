@@ -64,4 +64,7 @@ Rails.application.routes.draw do
   match '/sitelogin',     to: 'sitelogin#new',             via: 'get'
   match '/sitelogin',     to: 'sitelogin#login',           via: 'post'
   resources "sitelogin", only: [:new, :login]
+
+  match '/newsletter',  to: 'newsletter#new', via: 'get'
+  resources 'newsletter', only: [:new]
 end
