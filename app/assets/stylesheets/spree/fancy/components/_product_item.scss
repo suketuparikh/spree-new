@@ -52,7 +52,7 @@
   overflow: hidden;
 
   &, img {
-    @include border-radius(165px);
+    /*@include border-radius(165px);*/
   }
 
   img {
@@ -81,7 +81,7 @@
       }
 
       &, img {
-        @include border-radius(165px);
+        /*@include border-radius(165px);*/
       }
 
       img {
