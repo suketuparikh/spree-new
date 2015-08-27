@@ -85,7 +85,8 @@ table tbody tr td{color: #969495 !important;}
 .benefits-main p:before {background: url(<%= asset_path 'bullets.png' %>) no-repeat  0 0;content: " ";height: 14px;left: 0;position: absolute;top: 0;width: 14px;}
 
 #product-images #main-image,#product-images #main-image img,#product-images #product-thumbnails li a,#product-images #product-thumbnails li a img{-webkit-border-radius: 0px;-moz-border-radius: 0px;-ms-border-radius: 0px;-o-border-radius: 0px;border-radius: 0px;}
-.container .ten.columns{ width:80%; max-width: 500px !important; margin-left: 50px !important;}
+div[data-hook="product_left_part"]{margin-right:30px;}
+.container .ten.columns{ width:80%; max-width: 500px !important; }
 body #reviews{ display:none;}
 #product-description ul {margin-left:10px;}
 #product-description ul li{list-style: none; background: url(<%= asset_path 'doted.png' %>) no-repeat 0 7px; padding-left:15px;}
@@ -102,12 +103,14 @@ ul.tabs li.tab-link:last-child{background-image:none;}
 ul.tabs li.tab-link.current{font-weight:700;}
 .tab_data{float:left;clear:both;}
 .tab-content{display:none;}
+.tab-content{font-size:15px; color:#f0f0f0;}
+.tab-content p > strong:first-child {color:#0099A8;}
 .current-tab{display:block;}
 
 #home-slider {width:100%; min-height: 344px;}
 #home-slider li img{min-height:344px}
 #main-image img{ width:99%; padding:0 !important; border: 2px solid #d9d9db; }                       
-#content #product-images #main-image{ border: none !important;}  
+#content #product-images #main-image{ border: none !important; margin-top: 20px;}  
 #main-image { border: none !important;}   
 .popup-main{ position:absolute; top:0; left:0; background:rgba(0,0,0,0.4); height:100%; width:100%; z-index:99999;text-align:center;display:none;}
 .popup-inner{position:fixed; left:0; top:50px; width:100%; height:100%;z-index:999999;}
@@ -470,6 +473,7 @@ display:block;
 .cart-popup-btn button
 {
 margin:5px;
+float:left;
 }
 .popup-video-cart
 {
@@ -713,5 +717,19 @@ body table#cart-detail th, body table#cart-detail td, body table#cart-detail tbo
 
 .dnone {display:none;}
 .dollar {float: left; width: 100%}
-.dollar .only {float: left; font-size: 14px;}
+.dollar .only {float: left;
+    font-size: 18px;
+    line-height: 20px;
+    vertical-align: bottom;
+    display: block;
+    padding: 15px 5px 0px 0px;
+    color: #0099A8;
+    font-weight: bold;}
 .dollar span {display: inline-block !important;}
+
+.shipping_info_2015 {
+    padding: 10px 0px;
+    font-size: 16px;
+    color: red;
+    text-transform: uppercase;
+}
