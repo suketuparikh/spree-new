@@ -97,6 +97,22 @@ $( document ).ready(function() {
 			  <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
       </span>
 
+      <% if false %>
+      <select name="manufacturer">
+        <option value="">Please select</option>
+        <option value="Shimano">Shimano</option>
+        <option value="FSA">FSA</option>
+        <option value="Rotor">Rotor</option>
+      </select> 
+
+      <select name="model">
+        <option value="">Please select</option>
+        <option value="Shimano">Shimano</option>
+        <option value="FSA">FSA</option>
+        <option value="Rotor">Rotor</option>
+      </select>
+      <% end %>
+
         <% if session[:valid_sitelogin] == true %>
   			  <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do  %>
   				Buy Now
