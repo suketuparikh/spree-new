@@ -25,7 +25,7 @@ Spree.config do |config|
 	  url:            ":s3_domain_url",
 
 	  styles: {
-		  mini:     "40x40>",
+		  mini:     "48x48>",
 		  small:    "100x100>",
 		  product:  "240x240>"
 	  },
