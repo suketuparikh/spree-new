@@ -28,6 +28,38 @@
       <%= hidden_field_tag "variant_id", @product.master.id %>
     <% end %>
 
+    <div class="crank_selector">
+  <label>Crank Manufacturer:</label>
+      <select name="manufacturer">
+        <option value="">Please select</option>
+        <option value="Shimano">Shimano</option>
+        <option value="FSA">FSA</option>
+        <option value="Rotor">Rotor</option>
+      </select> 
+<br clear="both" />
+<label>Crank Model:</label>
+      <select name="model">
+  <option value="">Please select</option>
+ <option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>
+ <option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>
+ <option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>
+ <option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>
+ <option value="Ultegra FC 6700" class="Shimano">Ultegra FC 6700</option>
+ <option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>
+ <option value="105 FC 5600" class="Shimano">105 FC 5600</option>
+ <option value="105 FC 5800" class="Shimano">105 FC 5800</option>
+ <option value="FC 6650" class="Shimano">FC 6650</option>
+ <option value="FC R700" class="Shimano">FC R700</option>
+ <option value="Energy" class="FSA">Energy</option>
+ <option value="3D" class="Rotor">Rotor</option>
+     </select>
+     <br clear="both" />
+     <div>
+      My crank manufacturer and model aren't listed here, <a href="#">contact us</a>
+     </div>
+
+</div>
+
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
 		
@@ -97,38 +129,6 @@ $( document ).ready(function() {
 			  <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
       </span>
 
-<div class="crank_selector">
-
-  <label>Crank Manufacturer:</label>
-      <select name="manufacturer">
-        <option value="">Please select</option>
-        <option value="Shimano">Shimano</option>
-        <option value="FSA">FSA</option>
-        <option value="Rotor">Rotor</option>
-      </select> 
-<br clear="both" />
-<label>Crank Model:</label>
-      <select name="model">
-  <option value="">Please select</option>
- <option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>
- <option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>
- <option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>
- <option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>
- <option value="Ultegra FC 6700" class="Shimano">Ultegra FC 6700</option>
- <option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>
- <option value="105 FC 5600" class="Shimano">105 FC 5600</option>
- <option value="105 FC 5800" class="Shimano">105 FC 5800</option>
- <option value="FC 6650" class="Shimano">FC 6650</option>
- <option value="FC R700" class="Shimano">FC R700</option>
- <option value="Energy" class="FSA">Energy</option>
- <option value="3D" class="Rotor">Rotor</option>
-     </select>
-     <br clear="both" />
-     <div>
-      My crank manufacturer and model aren't listed here, <a href="#">contact us</a>
-     </div>
-
-</div>
 
         <% if session[:valid_sitelogin] == true %>
   			  <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do  %>
