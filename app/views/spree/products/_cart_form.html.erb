@@ -172,6 +172,8 @@ $( document ).ready(function() {
 </div>
 <script>
 jQuery( document ).ready(function($) {
+$('#add-to-cart-button').attr('disabled','disabled');
+
 $("#add-to-cart-button").click(function(event){
   event.preventDefault();
   $.fancybox({
@@ -236,7 +238,7 @@ switch(sel_mfg){
 });
 $('#crank_model').click(function(e){
   if($(this).val()!="" && $(this).val()!="CRANK_NOT_LISTED"){
-    $('.add-to-cart').show();
+    $('.add-to-cart').removeAttr('disabled');
   }
   if($(this).val()=="CRANK_NOT_LISTED"){
     $('#crank_not_listed').show();
@@ -246,7 +248,7 @@ $('#crank_model').click(function(e){
         'width': '300px'
     });
     $('.fancybox-type-inline').css('z-index','10000');
-    $('.add-to-cart').hide();
+    $('.add-to-cart').attr('disabled','disabled');
   }
 
 });
