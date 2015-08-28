@@ -56,33 +56,28 @@ console.log(sel_mfg);
 // $('#crank_model').find('.'+sel_mfg).css('display','block');
 switch(sel_mfg){
   default:
-  $('#crank_model').html('
- <option value="">Please select</option>
- ');
+  $('#crank_model').html('<option value="">Please select</option>');
   break;
   case 'Shimano':
-  $('#crank_model').html('
- <option value="">Please select</option>
- <option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>
- <option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>
- <option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>
- <option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>
- <option value="Ultegra FC 6700" class="Shimano">Ultegra FC 6700</option>
- <option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>
- <option value="105 FC 5600" class="Shimano">105 FC 5600</option>
- <option value="105 FC 5800" class="Shimano">105 FC 5800</option>
- <option value="FC 6650" class="Shimano">FC 6650</option>
- <option value="FC R700" class="Shimano">FC R700</option>');
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>' +
+ '<option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>' +
+ '<option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>' +
+ '<option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>' +
+ '<option value="Ultegra FC 6700" class="Shimano">Ultegra FC 6700</option>' +
+ '<option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>' +
+ '<option value="105 FC 5600" class="Shimano">105 FC 5600</option>' +
+ '<option value="105 FC 5800" class="Shimano">105 FC 5800</option>' +
+ '<option value="FC 6650" class="Shimano">FC 6650</option>' +
+ '<option value="FC R700" class="Shimano">FC R700</option>');
   break;
   case 'FSA':
-  $('#crank_model').html('
- <option value="">Please select</option>
- <option value="Energy" class="FSA">Energy</option>');
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="Energy" class="FSA">Energy</option>');
   break;
   case 'Rotor':
-  $('#crank_model').html('
- <option value="">Please select</option>
- <option value="3D" class="Rotor">Rotor</option>');
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="3D" class="Rotor">Rotor</option>');
   break;
 }
 });
