@@ -27,7 +27,7 @@ Spree.config do |config|
 	  styles: {
 		  mini:     "48x48>",
 		  small:    "100x100>",
-		  product:  "240x240>"
+		  product:  "340x340>"
 	  },
 
 	  path:           ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
