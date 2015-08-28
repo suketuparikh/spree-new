@@ -120,7 +120,7 @@ $( document ).ready(function() {
 
 
         <% if session[:valid_sitelogin] == true %>
-  			  <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do  %>
+  			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit do  %>
   				Buy Now
   			  <% end %>
         <% end %>  
@@ -238,7 +238,8 @@ switch(sel_mfg){
 });
 $('#crank_model').click(function(e){
   if($(this).val()!="" && $(this).val()!="CRANK_NOT_LISTED"){
-    $('.add-to-cart').removeAttr('disabled');
+    $('#add-to-cart-button').removeAttr('disabled');
+    $('#add-to-cart-button').removeClass('gray');
   }
   if($(this).val()=="CRANK_NOT_LISTED"){
     $('#crank_not_listed').show();
@@ -248,7 +249,8 @@ $('#crank_model').click(function(e){
         'width': '300px'
     });
     $('.fancybox-type-inline').css('z-index','10000');
-    $('.add-to-cart').attr('disabled','disabled');
+    $('#add-to-cart-button').attr('disabled','disabled');
+    $('#add-to-cart-button').addClass('gray');
   }
 
 });
