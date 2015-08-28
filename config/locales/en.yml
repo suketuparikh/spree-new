@@ -22,5 +22,6 @@
 en:
   hello: "Hello world"
   spree:
-    delivery: Shipping
-    confirmation: Review
+    order_state:
+      delivery: Shipping
+      confirm: Review
