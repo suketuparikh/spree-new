@@ -197,10 +197,6 @@ $.fancybox.close();
 $('body').on('change','#crank_manufacturer',function(e){
 var sel_mfg = $(this).val();
 console.log(sel_mfg);
-// $('#crank_model').find('.Shimano').css('display','none');
-// $('#crank_model').find('.FSA').css('display','none');
-// $('#crank_model').find('.Rotor').css('display','none');
-// $('#crank_model').find('.'+sel_mfg).css('display','block');
 switch(sel_mfg){
   default:
   $('#crank_model').html('<option value="">Please select</option>');
@@ -228,5 +224,13 @@ switch(sel_mfg){
   break;
 }
 });
+
+$('#crank_not_listed').click(function(e){
+
+
+});
+
+
+
 });
 </script>
