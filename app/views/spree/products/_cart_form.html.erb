@@ -164,6 +164,11 @@ $( document ).ready(function() {
   </div>
     </div>
 </div>
+<div class="dnone">
+  <div id="crank_not_listed_content">
+<p>We're sorry but your crank type is not compatible with POWERBEAT, which currently supports only hollow aluminum cranks.</p>
+  </div>
+</div>
 <script>
 jQuery( document ).ready(function($) {
 $("#add-to-cart-button").click(function(event){
@@ -199,7 +204,7 @@ $.fancybox.close();
 
 $('#crank_manufacturer').change(function(e){
 var sel_mfg = $(this).find('option:selected').val();
-console.log(sel_mfg);
+//console.log(sel_mfg);
 switch(sel_mfg){
   default:
   $('#crank_model').html('<option value="">Please select</option>');
@@ -234,7 +239,12 @@ $('#crank_model').click(function(e){
 });
 
 $('#crank_not_listed').click(function(e){
-
+  $.fancybox({
+        'type': 'inline',
+        'href': '#crank_not_listed_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
 });
 
 
