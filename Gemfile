@@ -56,6 +56,7 @@ gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: 
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: '2-4-stable'
 gem 'spree_social', github: 'spree-contrib/spree_social', branch: '2-4-stable'
 gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: '2-4-stable'
+gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
 
 #Wombat Integration
 gem 'spree_wombat', github: 'spree/spree_wombat', branch: '2-4-stable'
