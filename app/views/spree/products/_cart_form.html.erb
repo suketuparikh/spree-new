@@ -30,7 +30,7 @@
 
     <div class="crank_selector">
       <p class="crank_description">POWERBEAT is currently compatible with hollow aluminum cranks only. The below list includes all the crank manufacturers and models that are tested and supported at this stage:</p>
-      <p class="crank_description">Please choose your crank and model below to proceed</p>
+      <p class="crank_description">Please choose your crank manufacturer and model below to proceed</p>
   <label>Crank Manufacturer:</label>
       <select name="crank_manufacturer" id="crank_manufacturer">
         <option value="">Please select</option>
@@ -213,8 +213,7 @@ switch(sel_mfg){
   default:
   $('#crank_not_listed').show();
   $('#crank_model').html('<option value="">Please select</option>');
-  if($(this).val()=="CRANK_NOT_LISTED"){
-    $('#crank_not_listed').show();
+  if($(this).val()=="Crank_Mfg_Not_Available"){
     $.fancybox({
         'type': 'inline',
         'href': '#crank_not_listed_content',
