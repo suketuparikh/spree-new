@@ -45,44 +45,6 @@
      <div>
       <a href="#">My crank manufacturer and model aren't listed here</a>
      </div>
-<script type="javascript">
-jQuery(document).ready(function($){
-$('body').on('change','#crank_manufacturer',function(e){
-var sel_mfg = $(this).val();
-console.log(sel_mfg);
-// $('#crank_model').find('.Shimano').css('display','none');
-// $('#crank_model').find('.FSA').css('display','none');
-// $('#crank_model').find('.Rotor').css('display','none');
-// $('#crank_model').find('.'+sel_mfg).css('display','block');
-switch(sel_mfg){
-  default:
-  $('#crank_model').html('<option value="">Please select</option>');
-  break;
-  case 'Shimano':
-  $('#crank_model').html('<option value="">Please select</option>' +
- '<option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>' +
- '<option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>' +
- '<option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>' +
- '<option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>' +
- '<option value="Ultegra FC 6700" class="Shimano">Ultegra FC 6700</option>' +
- '<option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>' +
- '<option value="105 FC 5600" class="Shimano">105 FC 5600</option>' +
- '<option value="105 FC 5800" class="Shimano">105 FC 5800</option>' +
- '<option value="FC 6650" class="Shimano">FC 6650</option>' +
- '<option value="FC R700" class="Shimano">FC R700</option>');
-  break;
-  case 'FSA':
-  $('#crank_model').html('<option value="">Please select</option>' +
- '<option value="Energy" class="FSA">Energy</option>');
-  break;
-  case 'Rotor':
-  $('#crank_model').html('<option value="">Please select</option>' +
- '<option value="3D" class="Rotor">Rotor</option>');
-  break;
-}
-});
-});
-</script>
 </div>
 <p>&nbsp;</p>
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
@@ -201,7 +163,7 @@ $( document ).ready(function() {
     </div>
 </div>
 <script>
-$( document ).ready(function() {
+jQuery( document ).ready(function($) {
 $("#add-to-cart-button").click(function(event){
   event.preventDefault();
   $.fancybox({
@@ -218,11 +180,6 @@ $("#no-thanks-btn").click(function(event){
 $.fancybox.close();
 });
 
-});
-</script>
-<script>
-jQuery( document ).ready(function($) {
-
   $("#invite_phase2").click(function(event){
     event.preventDefault();
     $.fancybox.close();
@@ -236,6 +193,40 @@ jQuery( document ).ready(function($) {
     $('.fancybox-type-iframe').css('z-index','10000');
   });
 
-});
 
+$('body').on('change','#crank_manufacturer',function(e){
+var sel_mfg = $(this).val();
+console.log(sel_mfg);
+// $('#crank_model').find('.Shimano').css('display','none');
+// $('#crank_model').find('.FSA').css('display','none');
+// $('#crank_model').find('.Rotor').css('display','none');
+// $('#crank_model').find('.'+sel_mfg).css('display','block');
+switch(sel_mfg){
+  default:
+  $('#crank_model').html('<option value="">Please select</option>');
+  break;
+  case 'Shimano':
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>' +
+ '<option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>' +
+ '<option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>' +
+ '<option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>' +
+ '<option value="Ultegra FC 6700" class="Shimano">Ultegra FC 6700</option>' +
+ '<option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>' +
+ '<option value="105 FC 5600" class="Shimano">105 FC 5600</option>' +
+ '<option value="105 FC 5800" class="Shimano">105 FC 5800</option>' +
+ '<option value="FC 6650" class="Shimano">FC 6650</option>' +
+ '<option value="FC R700" class="Shimano">FC R700</option>');
+  break;
+  case 'FSA':
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="Energy" class="FSA">Energy</option>');
+  break;
+  case 'Rotor':
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="3D" class="Rotor">Rotor</option>');
+  break;
+}
+});
+});
 </script>
