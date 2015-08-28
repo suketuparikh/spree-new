@@ -47,7 +47,7 @@
      </div>
 <script type="javascript">
 jQuery(document).ready(function($){
-$('#crank_manufacturer').on('change',function(e){
+$('body').on('change','#crank_manufacturer',function(e){
 var sel_mfg = $(this).val();
 console.log(sel_mfg);
 // $('#crank_model').find('.Shimano').css('display','none');
