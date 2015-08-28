@@ -73,6 +73,10 @@ gem 'rails_12factor', group: :production
 #  gem 'asset_sync', :require => nil
 #end
 
+gem "memcachier"
+gem 'rack-cache'
+gem 'dalli'
+
 group :development do
   gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git'
   gem 'wdm', '>= 0.0.3'
