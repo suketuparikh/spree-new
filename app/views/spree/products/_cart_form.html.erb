@@ -30,7 +30,7 @@
 
     <div class="crank_selector">
   <label>Crank Manufacturer:</label>
-      <select name="manufacturer">
+      <select name="crank_manufacturer" id="crank_manufacturer">
         <option value="">Please select</option>
         <option value="Shimano">Shimano</option>
         <option value="FSA">FSA</option>
@@ -38,7 +38,7 @@
       </select> 
 <br clear="both" />
 <label>Crank Model:</label>
-      <select name="model">
+      <select name="crank_model" id="crank_model">
   <option value="">Please select</option>
  <option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>
  <option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>
@@ -55,11 +55,22 @@
      </select>
      <br clear="both" />
      <div>
-      My crank manufacturer and model aren't listed here, <a href="#">contact us</a>
+      <a href="#">My crank manufacturer and model aren't listed here, contact us</a>
      </div>
-
+<script type="javascript">
+jQuery(document).ready(function($){
+$('#crank_manufacturer').on('change',function(e){
+var sel_mfg = $(this).find('option:selected').attr('class');
+console.log(sel_mfg);
+$('#crank_model').find('.Shimano').css('display','none');
+$('#crank_model').find('.FSA').css('display','none');
+$('#crank_model').find('.Rotor').css('display','none');
+$('#crank_model').find('.'+sel_mfg).css('display','block');
+});
+});
+</script>
 </div>
-
+<p>&nbsp;</p>
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
 		
