@@ -29,6 +29,7 @@
     <% end %>
 
     <div class="crank_selector">
+      <p class="">POWERBEAT is currently compatible with hollow aluminum cranks only. The below list includes all the crank manufacturers and models that are tested and supported at this stage:</p>
   <label>Crank Manufacturer:</label>
       <select name="crank_manufacturer" id="crank_manufacturer">
         <option value="">Please select</option>
@@ -169,8 +170,9 @@ $("#add-to-cart-button").click(function(event){
   event.preventDefault();
   $.fancybox({
         'type': 'inline',
-        'href': '#addtocart-popup'
+        'href': '#addtocart-popup',
     });
+  $('.fancybox-type-inline').css('z-index','10000');
 });
 
 $("#add-to-cart-btn").click(function(event){
@@ -225,6 +227,11 @@ switch(sel_mfg){
   break;
 }
 });
+$('#crank_model').click(function(e)){
+  if($(this).val()!=""){
+    $('.add-to-cart').show();
+  }
+}
 
 $('#crank_not_listed').click(function(e){
 
