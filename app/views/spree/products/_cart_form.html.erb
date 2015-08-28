@@ -39,7 +39,29 @@
 <br clear="both" />
 <label>Crank Model:</label>
       <select name="crank_model" id="crank_model">
-  <option value="">Please select</option>
+     </select>
+     <br clear="both" />
+     <div>
+      <a href="#">My crank manufacturer and model aren't listed here, contact us</a>
+     </div>
+<script type="javascript">
+jQuery(document).ready(function($){
+$('#crank_manufacturer').on('change',function(e){
+var sel_mfg = $(this).val();
+console.log(sel_mfg);
+// $('#crank_model').find('.Shimano').css('display','none');
+// $('#crank_model').find('.FSA').css('display','none');
+// $('#crank_model').find('.Rotor').css('display','none');
+// $('#crank_model').find('.'+sel_mfg).css('display','block');
+switch(sel_mfg){
+  default:
+  $('#crank_model').html('
+ <option value="">Please select</option>
+ ');
+  break;
+  case 'Shimano':
+  $('#crank_model').html('
+ <option value="">Please select</option>
  <option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>
  <option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>
  <option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>
@@ -49,23 +71,19 @@
  <option value="105 FC 5600" class="Shimano">105 FC 5600</option>
  <option value="105 FC 5800" class="Shimano">105 FC 5800</option>
  <option value="FC 6650" class="Shimano">FC 6650</option>
- <option value="FC R700" class="Shimano">FC R700</option>
- <option value="Energy" class="FSA">Energy</option>
- <option value="3D" class="Rotor">Rotor</option>
-     </select>
-     <br clear="both" />
-     <div>
-      <a href="#">My crank manufacturer and model aren't listed here, contact us</a>
-     </div>
-<script type="javascript">
-jQuery(document).ready(function($){
-$('#crank_manufacturer').on('change',function(e){
-var sel_mfg = $(this).find('option:selected').attr('class');
-console.log(sel_mfg);
-$('#crank_model').find('.Shimano').css('display','none');
-$('#crank_model').find('.FSA').css('display','none');
-$('#crank_model').find('.Rotor').css('display','none');
-$('#crank_model').find('.'+sel_mfg).css('display','block');
+ <option value="FC R700" class="Shimano">FC R700</option>');
+  break;
+  case 'FSA':
+  $('#crank_model').html('
+ <option value="">Please select</option>
+ <option value="Energy" class="FSA">Energy</option>');
+  break;
+  case 'Rotor':
+  $('#crank_model').html('
+ <option value="">Please select</option>
+ <option value="3D" class="Rotor">Rotor</option>');
+  break;
+}
 });
 });
 </script>
