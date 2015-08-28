@@ -36,6 +36,7 @@
         <option value="Shimano">Shimano</option>
         <option value="FSA">FSA</option>
         <option value="Rotor">Rotor</option>
+        <option value="Crank_Mfg_Not_Available">Crank Manufacturer Not Listed</option>
       </select> 
 <br clear="both" />
 <label>Crank Model:</label>
@@ -43,8 +44,8 @@
         <option value="">Please select</option>
      </select>
      <br clear="both" />
-     <div>
-      <a href="#" id="crank_not_listed">My crank manufacturer and model aren't listed here</a>
+     <div >
+      <a href="#" id="crank_not_listed" class="dnone">My crank manufacturer and model aren't listed here</a>
      </div>
 </div>
 <p>&nbsp;</p>
@@ -231,11 +232,23 @@ switch(sel_mfg){
  '<option value="3D" class="Rotor">Rotor</option>');
   break;
 }
+  $('#crank_model').append('<option value="CRANK_NOT_LISTED">Crank_Not_Listed</option>');
 });
 $('#crank_model').click(function(e){
-  if($(this).val()!=""){
+  if($(this).val()!="" && $(this).val()!="CRANK_NOT_LISTED"){
     $('.add-to-cart').show();
   }
+  if($(this).val()=="CRANK_NOT_LISTED"){
+    $('#crank_not_listed').show();
+    $.fancybox({
+        'type': 'inline',
+        'href': '#crank_not_listed_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+    $('.add-to-cart').hide();
+  }
+
 });
 
 $('#crank_not_listed').click(function(e){
