@@ -206,7 +206,7 @@ $.fancybox.close();
   });
 
 
-$('#crank_manufacturer').change(function(e){
+$('body').on('change','#crank_manufacturer',function(e){
 var sel_mfg = $(this).find('option:selected').val();
 //console.log(sel_mfg);
 switch(sel_mfg){
@@ -248,7 +248,7 @@ switch(sel_mfg){
 }
   $('#crank_model').append('<option value="CRANK_NOT_LISTED">Crank model not listed</option>');
 });
-$('#crank_model').click(function(e){
+$('body').on('click','#crank_model',function(e){
   if($(this).val()!="" && $(this).val()!="CRANK_NOT_LISTED"){
     $('#add-to-cart-button').removeAttr('disabled');
     $('#add-to-cart-button').removeClass('gray');
@@ -267,7 +267,7 @@ $('#crank_model').click(function(e){
 
 });
 
-$('#crank_not_listed').click(function(e){
+$('body').on('click','#crank_not_listed',function(e){
   $.fancybox({
         'type': 'inline',
         'href': '#crank_not_listed_content',
