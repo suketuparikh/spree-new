@@ -31,12 +31,12 @@ else %>
       <table>
         <% @order.line_items.each do |item| %>
           <tr>
-            <td><%= item.variant.sku %></td>
-            <td>
+            <td width="20%"><%= item.variant.sku %></td>
+            <td width="25%">
               <%= raw(item.variant.product.name) %>
               <%= raw(item.variant.options_text) -%>
             </td>
-            <td>(<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %></td>
+            <td width="50%">(<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %></td>
           </tr>
         <% end %>
         <tr>
