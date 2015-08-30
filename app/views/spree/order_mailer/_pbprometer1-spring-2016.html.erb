@@ -1,27 +1,12 @@
-@template_name = "pbprometer1"
-<% @order.line_items.each do |item| 
-
-if item.variant.sku == "WPB1-Spring-2016"
-@template_name = "pbprometer1-spring-2016"
-render :partial => 'pbprometer1-spring-2016'
-else %>
 <table>
   <tr>
     <td>
       <p class="lede">
         Dear Cyclist,
-        <% 
-       if false
-         Spree.t('order_mailer.confirm_email.dear_customer') 
-       end
-         %>
       </p>
+      <p>Thanks for purchasing POWERBEAT.</p>
+      <p>The first batch went like hot cakes so you made a wise choice by securing a unit to be shipped to you from our next batch. Please review and retain the following order information for your records.</p>
       <p>
-      <%
-      if false
-         Spree.t('order_mailer.confirm_email.instructions') 
-       end
-      %>
       Please review and retain the following order information for your records.
       </p>
       <p>
@@ -93,19 +78,13 @@ else %>
         </tr>
       </table>
       <p>
-        <%
-        if false
-         Spree.t('order_mailer.confirm_email.thanks') 
-        end
-         %>
-         POWERBEAT will be shipped to your home by the <strong>end of 2015</strong>.<br />
-         We're excited to have you on board and thank you for your business. 
+         Time flies when you're having fun and Spring 2016 is just around the corner. We appreciate your patience and support and in the meanwhile, feel free to contact us if you have any questions.<br />
+Welcome aboard, <br />
       </p>
       <h2>
-        Watteam
+        The Watteam
       </h2>
     </td>
     <td class="expander"></td>
   </tr>
 </table>
-<% end %>
