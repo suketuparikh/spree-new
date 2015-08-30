@@ -61,9 +61,18 @@ $(document).ready(function(){
 
     $(this).addClass('current');
     $("#"+tab_id).addClass('current-tab');
-  })
+  });
 
-})
+  $('#crank_list').click(function(e){
+    $.fancybox({
+        'type': 'inline',
+        'href': '#crank_support_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+  });
+
+});
 </script>
 <ul class="tabs">
     <li class="tab-link current" data-tab="tab-1">Overview</li>
@@ -120,7 +129,7 @@ POWERBEAT sports the industry's first ecological battery. It comes equipped with
     <td>Waterproof:</td><td>IP64 certified</td>
   </tr>
   <tr>
-    <td>Compatible cranks:</td><td>Hollow aluminum <a href="#" >(Click here for full list)</a></td>
+    <td>Compatible cranks:</td><td>Hollow aluminum <a href="#" id="crank_list" >(Click here for full list)</a></td>
   </tr>
   <tr>
     <td>Mobile apps:</td><td>iOS and Android</td>
@@ -153,4 +162,28 @@ Box weight: 700 grams (24.7 ounces)<br />
 </p>
 </div>
 </div>
-  </div>
+</div>
+<div class="dnone">
+<div id="crank_support_content">
+<p>
+<strong>Shimano:</strong><br />
+Dura Ace FC 7700<br />
+Dura Ace FC 7900<br />
+Dura Ace FC 9000<br />
+Ultegra FC 6600<br />
+Ultegra FC 6700<br />
+Ultegra FC 6800<br />
+105 FC 5600<br />
+105 FC 5700<br />
+105 FC 5800<br />
+FC 6650<br />
+FC R700<br />
+<br />
+<strong>FSA:</strong><br />
+Energy<br />
+<br />
+<strong>Rotor:</strong><br />
+3D<br />
+</p>
+</div>
+</div>
