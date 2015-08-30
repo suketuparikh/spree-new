@@ -1,5 +1,6 @@
+<% 
 @template_name = "pbprometer1"
-<% @order.line_items.each do |item| 
+@order.line_items.each do |item| 
 
 if item.variant.sku == "WPB1-Spring-2016"
 @template_name = "pbprometer1-spring-2016"
