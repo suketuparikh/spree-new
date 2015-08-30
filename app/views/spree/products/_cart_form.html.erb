@@ -121,7 +121,7 @@ $( document ).ready(function() {
 
 
         <% if session[:valid_sitelogin] == true %>
-  			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit do  %>
+  			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
   			  <% end %>
         <% end %>  
@@ -173,7 +173,6 @@ $( document ).ready(function() {
 </div>
 <script>
 jQuery( document ).ready(function($) {
-$('#add-to-cart-button').attr('disabled','disabled');
 
 $("#add-to-cart-button").click(function(event){
   event.preventDefault();
@@ -185,7 +184,7 @@ $("#add-to-cart-button").click(function(event){
 });
 
 $("#add-to-cart-btn").click(function(event){
-$( "#cartform" ).submit();
+  $( "#cartform" ).submit();
 });
 
 $("#no-thanks-btn").click(function(event){
@@ -250,7 +249,7 @@ switch(sel_mfg){
 });
 $('body').on('click','#crank_model',function(e){
   if($(this).val()!="" && $(this).val()!="CRANK_NOT_LISTED"){
-    $('#add-to-cart-button').removeAttr('disabled');
+    $('#add-to-cart-button').attr('disabled','');
     $('#add-to-cart-button').removeClass('gray');
   }
   if($(this).val()=="CRANK_NOT_LISTED"){
