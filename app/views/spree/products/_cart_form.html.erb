@@ -247,9 +247,9 @@ switch(sel_mfg){
 }
   $('#crank_model').append('<option value="CRANK_NOT_LISTED">Crank model not listed</option>');
 });
-$('body').on('click','#crank_model',function(e){
+$('body').on('change','#crank_model',function(e){
   if($(this).val()!="" && $(this).val()!="CRANK_NOT_LISTED"){
-    $('#add-to-cart-button').attr('disabled','');
+    $('#add-to-cart-button').removeAttr('disabled');
     $('#add-to-cart-button').removeClass('gray');
   }
   if($(this).val()=="CRANK_NOT_LISTED"){
