@@ -367,6 +367,7 @@
 
         span {
           padding: 10px 10px 20px;
+          display:block;
         }
         &.current, &.current-first, &.current-last {
           @include box-shadow(none);
