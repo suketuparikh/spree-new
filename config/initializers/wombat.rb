@@ -10,7 +10,7 @@ Spree::Wombat::Config.configure do |config|
 	#	"Spree::Product" => { serializer: "Spree::Wombat::ProductSerializer", root: "products" },
   #   "Spree::StockItem" => { serializer: "Spree::Wombat::StockItemSerializer", root: "inventories" }
   }
-  config.push_url = "http://www.commerceacceleration.com/watteam_spree/index.php"
+  config.push_url = "http://watteam.com/watteam_spree/index.php"
   #config.push_url = "http://54.149.177.150/SalesforceService.asmx?op=PushDataInSalesforceWithoutEmail"
 
 end
