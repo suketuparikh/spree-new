@@ -33,8 +33,8 @@ else %>
           <tr>
             <td width="20%"><%= item.variant.sku %></td>
             <td width="25%">
-              <%= raw(item.variant.product.name) %>
-              <%= raw(item.variant.options_text) -%>
+              <%= raw(item.variant.product.name) %><br />
+              <%= raw(item.variant.options_text) %>
             </td>
             <td width="50%">(<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %></td>
           </tr>
