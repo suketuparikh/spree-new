@@ -1,11 +1,9 @@
-<% 
-@template_name = "pbprometer1"
-@order.line_items.each do |item| 
-
-  if item.variant.sku == "WPB1-Spring-2016"
-  @template_name = "pbprometer1-spring-2016"
-  render :partial => 'pbprometer1-spring-2016'
-  else %>
+<% @template_name = "pbprometer1" %>
+<% @order.line_items.each do |item| %>
+<% if item.variant.sku == "WPB1-Spring-2016" %>
+<% @template_name = "pbprometer1-spring-2016" %>
+<%=  render :partial => 'pbprometer1-spring-2016' %>
+<% else %>
   <table>
     <tr>
       <td>
