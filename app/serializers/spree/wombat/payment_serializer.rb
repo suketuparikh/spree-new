@@ -12,10 +12,10 @@ module Spree
       end
 
       def payment_method
-        if object.payment_method.name
-          object.payment_method.name
-        else
+        if !object.payment_method.name
           object.payment_method.name = "Not Available"
+        else
+          object.payment_method.name
         end
       end
 
