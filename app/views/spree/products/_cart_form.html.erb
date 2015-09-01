@@ -226,6 +226,7 @@ switch(sel_mfg){
   case 'Shimano':
   $('#crank_model').html('<option value="">Please select</option>' +
  '<option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>' +
+ '<option value="Dura Ace FC 7800" class="Shimano">Dura Ace FC 7800</option>' +
  '<option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>' +
  '<option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>' +
  '<option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>' +
@@ -233,6 +234,7 @@ switch(sel_mfg){
  '<option value="Ultegra FC 6750" class="Shimano">Ultegra FC 6750</option>' +
  '<option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>' +
  '<option value="105 FC 5600" class="Shimano">105 FC 5600</option>' +
+ '<option value="105 FC 5750" class="Shimano">105 FC 5750</option>' +
  '<option value="105 FC 5800" class="Shimano">105 FC 5800</option>' +
  '<option value="FC 6650" class="Shimano">FC 6650</option>' +
  '<option value="FC R700" class="Shimano">FC R700</option>');
@@ -243,7 +245,8 @@ switch(sel_mfg){
   break;
   case 'Rotor':
   $('#crank_model').html('<option value="">Please select</option>' +
- '<option value="3D" class="Rotor">3D</option>');
+ '<option value="3D" class="Rotor">3D</option>'+
+ '<option value="3DPlus" class="Rotor">3D+</option>');
   break;
 }
   $('#crank_model').append('<option value="CRANK_NOT_LISTED">Crank model not listed</option>');
