@@ -119,12 +119,9 @@ $( document ).ready(function() {
 			  <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
       </span>
 
-
-        <% if session[:valid_sitelogin] == true %>
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
   			  <% end %>
-        <% end %>  
 			<% else %>
 				<h4>Already added in <a href="/cart">cart</a>.</h4>
 			<% end %>
@@ -138,10 +135,6 @@ $( document ).ready(function() {
         </div>
     <% end %>
   </div>
-<% end %>
-<% if !session[:valid_sitelogin] || session[:valid_sitelogin]==false %>
-<!-- load popup for password -->
-<%= render :partial => 'sitelogin/new' %>
 <% end %>
 
 <div style="display:none;" class="main-cart-popup">
