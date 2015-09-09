@@ -73,6 +73,11 @@ gem 'rails_12factor', group: :production
 #  # asset_sync is required as needed by application.rb
 #  gem 'asset_sync', :require => nil
 #end
+#https://github.com/stephskardal/spree-advanced-reporting.git
+gem 'ruport'
+gem 'ruport-util'
+#gem "advanced_reporting", github: 'stephskardal/spree-advanced-reporting', branch: 'master'
+#gem 'spree-advanced-reporting', :git => 'git://github.com/stephskardal/spree-advanced-reporting.git'
 
 gem "memcachier"
 gem 'rack-cache'
