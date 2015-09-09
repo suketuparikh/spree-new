@@ -113,6 +113,13 @@ GIT
     rails-dev-boost (0.3.0)
       railties (>= 3.0)
 
+PATH
+  remote: vendor/extensions/spree_orders_csv_export
+  specs:
+    spree_orders_csv_export (2.4.3)
+      spree_backend (~> 2.4.5)
+      spree_core (~> 2.4.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -514,6 +521,7 @@ DEPENDENCIES
   spree_fancy!
   spree_gateway!
   spree_mail_settings!
+  spree_orders_csv_export!
   spree_paypal_express!
   spree_related_products!
   spree_reviews!

@@ -13,3 +13,4 @@
 //= require spree/frontend/spree_reviews
 //= require simple.carousel
 //= require simple.carousel.slider
+//= require spree/frontend/spree_orders_csv_export
