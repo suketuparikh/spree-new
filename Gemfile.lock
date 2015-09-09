@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/3months/spree-order-export.git
+  revision: ce35eef9ebbce1910c88d6d3d9dc1892c0d84c4e
+  specs:
+    order_export (1.0.0)
+      spree_core (>= 0.30.1)
+
+GIT
   remote: git://github.com/priviterag/spree_slider.git
   revision: 49532e5d401d2d510e93a27599831bdb4d84704d
   specs:
@@ -501,6 +508,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   memcachier
+  order_export!
   paperclip
   pg
   rack-cache

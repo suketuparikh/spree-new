@@ -74,9 +74,13 @@ gem 'rails_12factor', group: :production
 #  gem 'asset_sync', :require => nil
 #end
 #https://github.com/stephskardal/spree-advanced-reporting.git
-gem 'ruport'
-gem 'ruport-util'
-gem "advanced_reporting", :path => "vendor/extensions/advanced_reporting"
+
+gem 'order_export', github: '3months/spree-order-export'
+
+#gem 'ruport'
+#gem 'ruport-util'
+#gem "advanced_reporting", :path => "vendor/extensions/advanced_reporting"
+
 #gem "advanced_reporting", github: 'stephskardal/spree-advanced-reporting', branch: 'master'
 #gem 'spree-advanced-reporting', :git => 'git://github.com/stephskardal/spree-advanced-reporting.git'
 
