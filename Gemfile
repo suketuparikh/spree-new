@@ -83,6 +83,7 @@ gem 'rails_12factor', group: :production
 
 #gem "advanced_reporting", github: 'stephskardal/spree-advanced-reporting', branch: 'master'
 #gem 'spree-advanced-reporting', :git => 'git://github.com/stephskardal/spree-advanced-reporting.git'
+gem 'spree_orders_csv_export'
 
 gem "memcachier"
 gem 'rack-cache'
