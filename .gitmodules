@@ -1,0 +1,3 @@
+[submodule "vendor/extensions/advanced_reporting"]
+	path = vendor/extensions/advanced_reporting
+	url = git@github.com:stephskardal/spree-advanced-reporting.git
