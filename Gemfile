@@ -75,7 +75,7 @@ gem 'rails_12factor', group: :production
 #end
 #https://github.com/stephskardal/spree-advanced-reporting.git
 
-gem 'order_export', github: '3months/spree-order-export'
+#gem 'order_export', github: '3months/spree-order-export'
 
 #gem 'ruport'
 #gem 'ruport-util'
