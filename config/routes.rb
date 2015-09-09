@@ -67,4 +67,10 @@ Rails.application.routes.draw do
 
   match '/newsletter',  to: 'newsletter#new', via: 'get'
   resources 'newsletter', only: [:new]
+
+  namespace :admin do
+    resources :reports do
+      get 'order_export', :on => :collection
+    end
+  end
 end
