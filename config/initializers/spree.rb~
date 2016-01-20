@@ -30,7 +30,7 @@ Spree.config do |config|
 		  product:  "340x340>"
 	  },
 
-	  path:           "/app/public/:class/:attachment/:id/:style/:basename.:extension",
+	  path:           ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
 	  default_url:    "/:class/:attachment/:id/:style/:basename.:extension",
 	  default_style:  "product"
 	}
