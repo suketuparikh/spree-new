@@ -97,7 +97,7 @@ html {
 	height: 100%;
 }
 body {
-
+	display: block;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	line-height: 1.50;
@@ -117,7 +117,7 @@ h6 {
 	color: #343434;
 	line-height: 1.2;
 }
-h1 a,
+h1 a,d
 h2 a,
 h3 a,
 h4 a,
@@ -148,7 +148,52 @@ h5 {
 h6 {
 	font-weight: 700;
 }
+.container{width: 1024px;}
 
+
+/*.....21_jan.....*/
+.footer-title {color: #000000;font-family: 'Raleway-Regular';font-size: 14px!important;font-weight: normal;letter-spacing: 1px;margin: 0;}
+.footer-title-2{font-size: 14px!important}
+footer#footer{margin-top: 0px!important;}
+.carousel-indicators {display: none;}
+a {text-decoration: none !important;}
+.header_bg_top {background: none repeat scroll 0 0 #FFFFFF;}
+
+.mobile_menu{display: none;}
+.desc_menu{background-color:rgba(232, 232, 232, 0.5);}
+.desc_menu .menu_ul > li {display: inline-block;padding: 10px; position: relative;}
+.desc_menu .menu_nev{text-align: right;}
+.desc_menu .menu_ul > li a{ font-family: 'Raleway-SemiBold';font-size: 16px;color: #0099A8!important;}
+
+.mega_abt {position: absolute;left: -590%;width:1160%; }
+.store_left{display:inline-block;width: 30%;float: left; border-right: 1px solid #fff; }
+.abt_right{display:inline-block;width: 69%;float: right;}
+.sub_abt{width: 30%;display: inline-block;vertical-align: top; padding: 10px;text-align: center;}
+.mega_abt span{font-family: raleway-light;font-size: 18px;color: #0099A8 !important;padding: 20px 0; display: block;text-transform: uppercase;}
+.go_to_store {padding: 20px;text-align: center;}
+.bet_sub_menu{display: none;}
+.power_beat:hover .bet_sub_menu{display: block;}
+
+.company_sub:hover .company_sub_menu{display: block;}
+.company_sub_menu{display: none;}
+.mega_company {   left: -1080%;   position: absolute;    text-align: left;    width: 1800%;}
+.company_sub_menu .container li {display: inline-block;list-style: none outside none;padding: 10px;text-transform: uppercase;}
+
+.support_sub:hover .support_sub_menu{display: block;}
+.support_sub_menu{display: none;}
+.mega_support {left: -1230px;position: absolute;text-align: left;width: 2030%;text-transform: uppercase;}
+.support_sub_menu .container li {display: inline-block;list-style: none outside none;padding: 10px;}
+
+
+
+.slider_padd_right{padding-left:0px; padding-right: 15PX; }
+.slider_padd_right_l {padding: 0 8px;}
+.slider_padd_left {padding-right: 0;}
+
+.slider_container .img img {width: 100%;}
+.effects .img{border: 1px solid #ccc;}
+.bx-wrapper .bx-controls-direction a{top:-179px!important;}
+/*.....21_jan.....*/
 /* Medium devices (desktops, tablets, 992px and up) */
 @media (min-width:992px) {
 	.title {
@@ -427,7 +472,7 @@ tbody {
 	padding: 10px 0;
 }
 .logo {  width: 400px;}
-.site-nub{ font-family:'Raleway-SemiBold'; font-size:14px; color:#838586; padding: 16px 0 0 0;}
+.site-nub{ font-family:'Raleway-SemiBold'; font-size:12px; color:#838586; padding: 16px 0 0 0;}
 .top-manu{ width:100%; padding:0px; float:right;}
 .top-manu ul{ text-align:right; list-style:none; padding: 15px 0 0 0; margin:0px;}
 .top-manu li{  display:inline-block; font-family:'Raleway-SemiBold'; font-size:16px; color:#0099a8; text-transform:uppercase; }

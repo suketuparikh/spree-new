@@ -3,16 +3,17 @@
   <div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
     <% @body_id = 'product-details' %>
 
-    <div class="columns six alpha" data-hook="product_left_part">
+    <div class="columns eleven alpha" data-hook="product_left_part">
       <div class="row" data-hook="product_left_part_wrap">
 
-        <div id="product-images" data-hook="product_images">
-          <div id="main-image" data-hook>
+        <div id="product-images" data-hook="product_images" class="columns eleven">
+	 <div id="thumbnails" class="product-thumb-image two columns" data-hook>
+            <%= render :partial => 'thumbnails' %>
+          </div>          
+	<div id="main-image" class="product-main-image eight columns" data-hook>
             <%= render :partial => 'image' %>
           </div>
-          <div id="thumbnails" data-hook>
-            <%= render :partial => 'thumbnails' %>
-          </div>
+         
         </div>
 
         <% if false %>
@@ -29,18 +30,10 @@
       </div>
     </div>
 
-    <div class="columns ten omega" data-hook="product_right_part">
+    <div class="columns five omega" data-hook="product_right_part">
       <div class="row" data-hook="product_right_part_wrap">
-
-        <div id="product-description" data-hook="product_description">
-
-          <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
-
-          <div itemprop="description" data-hook="description">
-            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
-          </div>
-
-        </div>
+ <h3 class="product-title1" itemprop="name"><%= @product.name %></h3>
+      
 
         <div id="cart-form" data-hook="cart_form">
             <%= render :partial => 'cart_form' %>
@@ -76,6 +69,9 @@ $(document).ready(function(){
 
 });
 </script>
+<div class="shipping_info_2015">
+<strong>Shipping will be available in March 2016 (Currently available in the US only)</strong>
+</div>
 <ul class="tabs">
     <li class="tab-link current" data-tab="tab-1">Overview</li>
     <li class="tab-link" data-tab="tab-2">Benefits</li>

@@ -28,8 +28,30 @@
       <%= hidden_field_tag "variant_id", @product.master.id %>
     <% end %>
 
+     <div class="dollar">
+            
+            <span class="only">only</span>
+            <span class="price selling" itemprop="price">
+              <%= display_price(@product) %>
+            </span>
+            <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
+          </div>
+<div class="clearfix"></div>
+
     <div class="crank_selector">
-      <p class="crank_description">POWERBEAT is currently compatible with hollow aluminum cranks only. The below list includes all the crank manufacturers and models that are tested and supported at this stage:</p>
+      <div class="crank_description">
+        <div id="product-description" data-hook="product_description">
+
+         
+
+          <div itemprop="description" data-hook="description">
+            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+          </div>
+
+        </div>  
+
+
+      </div>
       <p class="crank_description"><strong>Please choose your crank manufacturer and model below to proceed</strong></p>
   <label>Crank Manufacturer:</label>
       <select name="crank_manufacturer" id="crank_manufacturer">
@@ -56,15 +78,7 @@
 		
         <div id="product-price">
           <h6 class="product-section-title"><%= Spree.t(:price) %></h6>
-          <div class="dollar">
-            
-            <span class="only">only</span>
-            <span class="price selling" itemprop="price">
-              <%= display_price(@product) %>
-            </span>
-            <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
-          </div>
-
+         
           <% if @product.master.can_supply? %>
             <link itemprop="availability" href="http://schema.org/InStock" />
           <% elsif @product.variants.empty? %>
@@ -88,7 +102,7 @@
 </div>
 </div>
 <script>
-$( document ).ready(function() {
+/*$( document ).ready(function() {
   $.fancybox({
         'padding': 10,
         'margin': 10,
@@ -100,6 +114,19 @@ $( document ).ready(function() {
         'modal': true
     });
   $('.fancybox-type-inline').css('z-index','10000');
+});*/
+jQuery(document).ready(function(){
+	  jQuery('.product-thumb-image ul').bxSlider({
+	    slideWidth: 200,
+	    auto: true,
+	    minSlides: 5,
+	    maxSlides: 10,
+	    mode: 'vertical',
+	    moveSlides: 1,
+	    pager: false,
+	   
+    	    slideMargin: 10
+  });
 });
 </script>
           <% end %>
@@ -169,6 +196,8 @@ $( document ).ready(function() {
 jQuery( document ).ready(function($) {
 
 $("#add-to-cart-button").click(function(event){
+
+
   event.preventDefault();
   $.fancybox({
         'type': 'inline',

@@ -231,3 +231,11 @@ header {
     font-size: 16px;
   }
 }
+/* 21-01-2016*/
+.product-thumb-image .bx-wrapper{ text-align: center;}
+.product-thumb-image .bx-wrapper .bx-viewport{left:5px !important;}
+.product-thumb-image{margin-top:20px;}
+#product-details .page-wrapper{padding-top: 130px;}
+#product-details div[data-hook="product_left_part"]{margin-right:0px !important;}
+#cart-form .dollar .only{ padding: 0 10px 0 0;}
+.page-wrapper{padding-top: 180px !important;}
