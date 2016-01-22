@@ -18,26 +18,6 @@ $('#mobile-menu-open').click(function() {
 });
 });
 
-
-
-$(document).ready(function() {
-          $(function(){
-            $("#navside").navside({
-                      position         : 'left',   // options for Position: 'left' or 'right'. Default is 'right'
-                      scroll           : 'fixed'  // options for Scroll: 'hidden' or 'fixed'. Default is 'hidden'
-                  });
-          });
-        });
-
-        $(document).ready(function(){
-
-   $(".sub_menu").hide();
-   $(".menu-mobile").click(function(){
-  var d = $(this).attr('id'); 
-        $('#'+ d).find('.sub_menu').toggle(1000);
-    });
-    });
-        
 </script>
 <div id="header1" class="row" data-hook>
 <div class="header-top header_bg_top">
@@ -273,3 +253,23 @@ $(document).ready(function() {
   
 </div>
 </div>
+<script>
+  
+  $(document).ready(function() {
+          $(function(){
+            $("#navside").navside({
+                      position         : 'left',   // options for Position: 'left' or 'right'. Default is 'right'
+                      scroll           : 'fixed'  // options for Scroll: 'hidden' or 'fixed'. Default is 'hidden'
+                  });
+          });
+        });
+
+  //       $(document).ready(function(){
+
+  //  $(".sub_menu").hide();
+  //  $(".menu-mobile").click(function(){
+  // var d = $(this).attr('id'); 
+  //       $('#'+ d).find('.sub_menu').toggle(1000);
+  //   });
+  //   });
+</script>
