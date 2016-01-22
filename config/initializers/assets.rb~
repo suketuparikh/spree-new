@@ -39,6 +39,10 @@ Rails.application.config.assets.precompile += %w( item-1.png.png )
 Rails.application.config.assets.precompile += %w( item-2.png.png )
 Rails.application.config.assets.precompile += %w( item-3.png.png )
 Rails.application.config.assets.precompile += %w( item-4.png.png )
+Rails.application.config.assets.precompile += %w( menu1.jpg )
+Rails.application.config.assets.precompile += %w( menu2.jpg )
+Rails.application.config.assets.precompile += %w( menu3.jpg )
+
 
 
 
@@ -56,6 +60,7 @@ Rails.application.config.assets.precompile += %w( fancybox_sprite@2x.png )
 Rails.application.config.assets.precompile += %w( fancybox_loading@2x.gif )
 
 Rails.application.config.assets.precompile += %w( .svg .eot .woff .ttf .woff2)
+
 
 
 Rails.application.config.assets.precompile += %w( spree/frontend/fonts/flexslider-icon.eot spree/frontend/fonts/flexslider-icon.svg spree/frontend/fonts/flexslider-icon.ttf spree/frontend/fonts/flexslider-icon.woff )

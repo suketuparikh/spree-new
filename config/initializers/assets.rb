@@ -62,4 +62,5 @@ Rails.application.config.assets.precompile += %w( fancybox_loading@2x.gif )
 Rails.application.config.assets.precompile += %w( .svg .eot .woff .ttf .woff2)
 
 
+
 Rails.application.config.assets.precompile += %w( spree/frontend/fonts/flexslider-icon.eot spree/frontend/fonts/flexslider-icon.svg spree/frontend/fonts/flexslider-icon.ttf spree/frontend/fonts/flexslider-icon.woff )

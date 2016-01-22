@@ -11,6 +11,7 @@ module Newstore
     config.cache_store = :dalli_store
     config.serve_static_assets = true
 	config.assets.initialize_on_precompile = true
+config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
 
     config.to_prepare do
       # Load application's model / class decorators
