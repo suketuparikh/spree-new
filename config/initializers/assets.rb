@@ -42,6 +42,8 @@ Rails.application.config.assets.precompile += %w( item-4.png.png )
 Rails.application.config.assets.precompile += %w( menu1.jpg )
 Rails.application.config.assets.precompile += %w( menu2.jpg )
 Rails.application.config.assets.precompile += %w( menu3.jpg )
+Rails.application.config.assets.precompile += %w( benifits_banner.jpg )
+
 
 
 
