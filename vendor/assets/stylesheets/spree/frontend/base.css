@@ -239,3 +239,10 @@ header {
 #product-details div[data-hook="product_left_part"]{margin-right:0px !important;}
 #cart-form .dollar .only{ padding: 0 10px 0 0;}
 .page-wrapper{padding-top: 130px !important;}
+
+
+@media all and (max-width: 768px){
+body{display: none;}
+.desc_menu{display: none;}
+.mobile_menu{display: block;}
+}
