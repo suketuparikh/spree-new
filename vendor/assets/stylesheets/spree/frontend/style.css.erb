@@ -29,11 +29,11 @@ about etc )
 
 @font-face {
 	font-family:'Raleway-Regular';
-	src: font-url('Raleway-Regular_gdi.eot');
-	src: font-url('Raleway-Regular_gdi.eot?#iefix') format('embedded-opentype'),
-		font-url('Raleway-Regular_gdi.woff') format('woff'),
-		font-url('Raleway-Regular_gdi.ttf') format('truetype'),
-		font-url('Raleway-Regular_gdi.svg#Raleway-Regular') format('svg');
+	src: url('fonts/Raleway-Regular_gdi.eot');
+	src: url('fonts/Raleway-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Raleway-Regular_gdi.woff') format('woff'),
+		url('fonts/Raleway-Regular_gdi.ttf') format('truetype'),
+		url('fonts/Raleway-Regular_gdi.svg#Raleway-Regular') format('svg');
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
@@ -42,11 +42,11 @@ about etc )
 
 @font-face {
 	font-family:'Raleway-Bold';
-	src: font-url('Raleway-Bold_gdi.eot');
-	src: font-url('Raleway-Bold_gdi.eot?#iefix') format('embedded-opentype'),
-		font-url('Raleway-Bold_gdi.woff') format('woff'),
-		font-url('Raleway-Bold_gdi.ttf') format('truetype'),
-		font-url('Raleway-Bold_gdi.svg#Raleway-Bold') format('svg');
+	src: url('fonts/Raleway-Bold_gdi.eot');
+	src: url('fonts/Raleway-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Raleway-Bold_gdi.woff') format('woff'),
+		url('fonts/Raleway-Bold_gdi.ttf') format('truetype'),
+		url('fonts/Raleway-Bold_gdi.svg#Raleway-Bold') format('svg');
 	font-weight: 700;
 	font-style: normal;
 	font-stretch: normal;
@@ -55,11 +55,11 @@ about etc )
 
 @font-face {
 	font-family:'Raleway-SemiBold';
-	src: font-url('Raleway-SemiBold_gdi.eot');
-	src: font-url('Raleway-SemiBold_gdi.eot?#iefix') format('embedded-opentype'),
-		font-url('Raleway-SemiBold_gdi.woff') format('woff'),
-		font-url('Raleway-SemiBold_gdi.ttf') format('truetype'),
-		font-url('Raleway-SemiBold_gdi.svg#Raleway-SemiBold') format('svg');
+	src: url('fonts/Raleway-SemiBold_gdi.eot');
+	src: url('fonts/Raleway-SemiBold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Raleway-SemiBold_gdi.woff') format('woff'),
+		url('fonts/Raleway-SemiBold_gdi.ttf') format('truetype'),
+		url('fonts/Raleway-SemiBold_gdi.svg#Raleway-SemiBold') format('svg');
 	font-weight: 600;
 	font-style: normal;
 	font-stretch: normal;
@@ -68,11 +68,11 @@ about etc )
 
 @font-face {
 	font-family:'Raleway-Light';
-	src: font-url('Raleway-Light_gdi.eot');
-	src: font-url('Raleway-Light_gdi.eot?#iefix') format('embedded-opentype'),
-		font-url('Raleway-Light_gdi.woff') format('woff'),
-		font-url('Raleway-Light_gdi.ttf') format('truetype'),
-		font-url('Raleway-Light_gdi.svg#Raleway-Light') format('svg');
+	src: url('fonts/Raleway-Light_gdi.eot');
+	src: url('fonts/Raleway-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Raleway-Light_gdi.woff') format('woff'),
+		url('fonts/Raleway-Light_gdi.ttf') format('truetype'),
+		url('fonts/Raleway-Light_gdi.svg#Raleway-Light') format('svg');
 	font-weight: 300;
 	font-style: normal;
 	font-stretch: normal;
@@ -194,6 +194,23 @@ a {text-decoration: none !important;}
 .effects .img{border: 1px solid #ccc;}
 .bx-wrapper .bx-controls-direction a{top:-179px!important;}
 /*.....21_jan.....*/
+/*.....22_jan.....*/
+#footer{display: block;clear: both;}
+ul#products li .product-image a{margin: 0 auto;}
+ul#products li a.info{min-height: 50px;}
+#effect-1 .img {width: 100%;}
+
+
+.header_right {display: inline-block;width: 38%;}
+.header_left {display: inline-block;width: 30%;}
+.header_middle {display: inline-block;padding-left: 9%;position: relative;top: -12px;width: 30%;}
+
+
+#products1 .product-image a{height: 300px; width: 300px; background-color: none!important;border: none!important;  border-radius: 0; display: block;    float: left;    overflow: hidden;    padding: 0!important;    position: relative;   transition-duration: 0.3s;}
+#products1 .product-image img{border-radius: 0px!important;}
+#products1 a {    display: inline-block;    margin: 0px 0px 25px 0px;font-size: 12px;}
+#products1 span{font-size: 14px;} 
+/*.....22_jan.....*/
 /* Medium devices (desktops, tablets, 992px and up) */
 @media (min-width:992px) {
 	.title {
@@ -425,15 +442,7 @@ tbody {
 .dark .table-hover > tbody > tr:hover {
 	background-color: #27272a;
 }
-/* Small devices (tablets, 768px and up) */
-@media (min-width:768px) {
-	.dl-horizontal dd {
-		margin-left: 150px;
-	}
-	.dl-horizontal dt {
-		max-width: 120px;
-	}
-}
+
 
 /* 2 Layout
 ----------------------------------------------------------------------------- */
@@ -471,7 +480,7 @@ tbody {
 .header.header-small {
 	padding: 10px 0;
 }
-.logo {  width: 400px;}
+.logo {  width: 100%;}
 .site-nub{ font-family:'Raleway-SemiBold'; font-size:12px; color:#838586; padding: 16px 0 0 0;}
 .top-manu{ width:100%; padding:0px; float:right;}
 .top-manu ul{ text-align:right; list-style:none; padding: 15px 0 0 0; margin:0px;}
@@ -540,13 +549,13 @@ font-style:italic; padding:0px 0 0px 0px;}
 .logo-slide li img {display:inline-block;}
 .logo-slider .bx-wrapper {margin:0px 0 0px 0; max-width:100% !important; padding-top:24px;}
 .logo-slider .bx-pager {display:none;}
-.logo-slider .bx-prev {background:url(/assets/slide-arrow-right2.png) no-repeat 0 0 !important; left:-60px !important; width:44px !important; height:129px !important; margin-top:-20px !important;}
-.logo-slider .bx-next {background:url(/assets/slide-arrow-left1.png) no-repeat 0 0 !important; right:-60px !important; width:44px !important; height:129px !important; margin-top:-20px !important;}
+.logo-slider .bx-next {background:url(/assets/slide-arrow-right2.png) no-repeat 0 0 !important; left:-60px !important; width:44px !important; height:129px !important; margin-top:-20px !important;}
+.logo-slider .bx-prev {background:url(/assets/slide-arrow-left1.png) no-repeat 0 0 !important; right:-60px !important; width:44px !important; height:129px !important; margin-top:-20px !important;}
 
 .top-to-bottom { background:rgba(0, 0, 0, 0) url("../images/border-img.png") no-repeat scroll center bottom / 100% 1px; min-height:1px;}
 .footer-wrper{ width:100%; padding:0px; margin:80px 0 0 0 ; float: left; }
 .footer-title{ font-family:'Raleway-Regular'; letter-spacing:1px; font-size:18px; margin:0px; font-weight:normal}
-.caption-wrper{ position:absolute; bottom:30px; left:52%;}
+.caption-wrper{ position:absolute; bottom:30px; left:50%;}
 .banner-title{ font-family:'Raleway-Regular'; letter-spacing:1px; padding-bottom:20px; color:#52514f; text-shadow:none; font-size:24px;  width:450px;}
 .footer-title-2{ float: left; padding-top:10px; font-family:'Raleway-Regular'; letter-spacing:1px; font-size:18px; margin:0px; font-weight:normal}
 .btn-shop {
@@ -709,4 +718,60 @@ font-style:italic; padding:0px 0 0px 0px;}
 .ie8 .overlay-container:hover .overlay { 
 	display: block;
 
+}
+.logo-slider .bx-wrapper .bx-prev{left:auto !important;}
+
+/*mediaquerys*/
+/*.......................................................................................................*/
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 1170px) {
+	
+		.logo-slider {float: none;margin: 0 auto;width: 80%;}
+
+}
+@media (max-width: 1024px) {	
+	
+}
+@media (max-width: 1023px) {
+	.mega_abt {left: -308%;position: absolute; width: 650%;}
+	.container {margin: 0 auto;width: 90%;}
+	.mega_company {left: -960%;}
+	.mega_support {left: -1100px;}
+}
+
+@media (max-width: 800px) {
+	
+}
+
+@media (max-width: 800px) {
+.mega_abt {left: -268%;}
+.caption-wrper {bottom: 30px;left: 44%; position: absolute;}
+.banner-title{font-size: 18px;}
+.top-manu li a{font-size: 12px;}
+}
+
+
+@media (max-width: 768px) {
+
+	.img img {width: 100%;}
+}
+@media (max-width: 640px) {
+
+	.header_left {display: inline-block;width: 100%;}
+	.header_middle{display: inline-block;width: 49%;}
+	.header_right{display: inline-block;width: 49%;}
+}	
+
+
+
+
+1
+@media (min-width:768px) {
+
+	.dl-horizontal dd {
+		margin-left: 150px;
+	}
+	.dl-horizontal dt {
+		max-width: 120px;
+	}
 }
