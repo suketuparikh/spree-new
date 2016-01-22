@@ -17,7 +17,6 @@ $('#mobile-menu-open').click(function() {
 
 });
 });
-
 </script>
 <div id="header1" class="row" data-hook>
 <div class="header-top header_bg_top">
@@ -208,112 +207,7 @@ $('#mobile-menu-open').click(function() {
                   </div>
                 </div>
               </div> -->
-
-
-
-
-              <h1>demo menu</h1>
-
-              <nav id="navside">
-  <ul id="sidebar-menu">
-    <li class="active "><a href="#">Home</a></li>
-    <li class="button menu-mobile" id="second"><a href="#">Portfolio</a>
-    <ul class="sub_menu" id="hideMe">
-       <li class="child"><a href="#">sub menu 1</a></li>
-       <li class="child"><a href="#">sub menu 2</a></li>
-       <li class="child"><a href="#">sub menu 3</a></li>
-       <li class="child"><a href="#">sub menu 4</a></li>
-    </ul>
-  </li>
-  
-  <li class="button menu-mobile" id="second1"><a href="#">Service</a>
-    <ul class="sub_menu" id="hideMe1">
-       <li class="child"><a href="#">sub menu 1</a></li>
-       <li class="child"><a href="#">sub menu 2</a></li>
-       <li class="child"><a href="#">sub menu 3</a></li>
-       <li class="child"><a href="#">sub menu 4</a></li>
-    </ul>
-  </li> 
-  
-  <li class="button menu-mobile" id="second2"><a href="#">Contact</a>
-    <ul class="sub_menu" id="hideMe2">
-       <li class="child"><a href="#">sub menu 1</a></li>
-       <li class="child"><a href="#">sub menu 2</a></li>
-       <li class="child"><a href="#">sub menu 3</a></li>
-       <li class="child"><a href="#">sub menu 4</a></li>
-    </ul>
-  </li> 
-  
-    
-    
-  </ul>
-</nav>
-              <h1>demo menuend</h1>
  
   
 </div>
 </div>
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #0099AA;
-  font-family: 'Open Sans', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #7b7b7a;
-  font-size: 12px;
-  line-height: 18px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  width: 100%;
-}
-
-/* Menu styles
-===========================*/
-
-
-
-#sidebar-menu {
-  top: 0px;
-  width: 100%;
-}
-
-#sidebar-menu li { border-bottom: 1px solid rgba(238, 238, 238, 0.05); }
-
-#sidebar-menu a {
-  text-decoration: none;
-  color: #595959;
-}
-
-#sidebar-menu a:hover {
-  text-decoration: none;
-  color: #595959;
-}
-/* Custom css */
-#navside{width:218px !important;}
-#navside.right{text-align:left !important}
-
-
-/* End custon css */
-
-h1 { text-align:center; color:#fff;}
-</style>
-<script>
-
-
-  $(document).ready(function(){
-    $("#navside").navside({
-                      position         : 'left',   // options for Position: 'left' or 'right'. Default is 'right'
-                      scroll           : 'fixed'  // options for Scroll: 'hidden' or 'fixed'. Default is 'hidden'
-                  });
-    });
-
-   $(".sub_menu").hide();
-   $(".menu-mobile").click(function(){
-  var d = $(this).attr('id'); 
-        $('#'+ d).find('.sub_menu').toggle(1000);
-    });
-     
-        
-</script>
