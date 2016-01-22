@@ -98,6 +98,6 @@ config.action_dispatch.rack_cache = {
   :entitystore  => client
 }
 config.static_cache_control = "public, max-age=2592000"
-config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
 end
