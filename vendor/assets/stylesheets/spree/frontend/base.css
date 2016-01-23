@@ -249,4 +249,4 @@ span#navside_icon {
 #full_width .page-wrapper{padding-top: 0px !important;}
 .product-thumb-image .bx-wrapper .bx-prev {background: url("../../down.png") ;background-position: center;background-repeat: no-repeat;background-size: auto;height: 50px !important;left: 27px !important;width: 50px !important;}
 .product-thumb-image .bx-wrapper .bx-prev:hover {background: url("../../down.png") ;background-position: center;background-repeat: no-repeat;background-size: auto;height: 50px !important;left: 27px !important;width: 50px !important;}
-.product-thumb-image .bx-wrapper .bx-next {    height: 50px !important;width: 50px !important;  right: 10px!important;background: url(assets_path('top.png')); 
+.product-thumb-image .bx-wrapper .bx-next {    height: 50px !important;width: 50px !important;  right: 10px!important;background: url(assets_path('top.png')); }
