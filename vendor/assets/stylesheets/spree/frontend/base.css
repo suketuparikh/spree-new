@@ -250,9 +250,3 @@ span#navside_icon {
 .product-thumb-image .bx-wrapper .bx-prev {background: url("../../down.png") ;background-position: center;background-repeat: no-repeat;background-size: auto;height: 50px !important;left: 27px !important;width: 50px !important;}
 .product-thumb-image .bx-wrapper .bx-prev:hover {background: url("../../down.png") ;background-position: center;background-repeat: no-repeat;background-size: auto;height: 50px !important;left: 27px !important;width: 50px !important;}
 .product-thumb-image .bx-wrapper .bx-next {    height: 50px !important;width: 50px !important;  right: 10px!important;background: url(assets_path('top.png')); 
-
-/*@media all and (max-width: 768px){
-body{display: none;}
-.desc_menu{display: none;}
-.mobile_menu{display: block;}
-}*/
