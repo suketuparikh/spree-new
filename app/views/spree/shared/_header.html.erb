@@ -20,6 +20,7 @@ $('#mobile-menu-open').click(function() {
 </script>
 <div id="header1" class="row" data-hook>
 <div class="header-top header_bg_top">
+ <div class="top_header">
   <div class="container">
     <div class="row">
       <div class="header_left"> 
@@ -32,21 +33,21 @@ $('#mobile-menu-open').click(function() {
       <div class="header_right">
         <div class="top-manu">
           <ul>
-            <li><a href="#">cart</a></li>
+            <li><a href="/cart">cart</a></li>
             <li><a href="#">wishlist</a></li>
-            <li><a href="#">account</a></li>
+            <li><a href="/account">account</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-
+</div>
 
   <div class="desc_menu">
     <div class="container">
       <div class="menu_nev">
         <ul class="menu_ul">
-          <li><a href="#">Shop Now</a></li>
+          <li><a href="/products">store</a></li>
           <li class="power_beat"><a href="#">About Powerbeat<i class="fa fa-angle-down"></i></a>
             <div class="bet_sub_menu">
             <div class="mega_abt" style="background:#ccc"> 
@@ -154,6 +155,8 @@ $('#mobile-menu-open').click(function() {
   
 
   </div>
+  
+  
 
   <!-- <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid container">
@@ -210,4 +213,8 @@ $('#mobile-menu-open').click(function() {
  
   
 </div>
+</div>
+
+<div class="top_banner_1">
+ <%= image_tag("benifits_banner.jpg", :alt => "slider1_img", :class =>"topbanner") %>
 </div>
