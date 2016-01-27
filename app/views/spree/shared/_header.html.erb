@@ -18,6 +18,23 @@ $('#mobile-menu-open').click(function() {
 });
 });
 </script>
+<script>
+  
+
+  
+$(document).ready(function(){
+
+   $(".sub_menu").hide();
+   $(".menu-mobile").click(function(){
+  var d = $(this).attr('id'); 
+        $('#'+ d).find('.sub_menu').toggle(1000);
+    });
+    });
+  
+</script>
+
+
+
 <div id="header1" class="row" data-hook>
 <div class="header-top header_bg_top">
  <div class="top_header">

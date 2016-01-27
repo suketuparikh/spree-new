@@ -1,0 +1,160 @@
+html {
+    overflow-y: scroll;
+}
+
+/*
+Setup a basic body
+*/
+
+
+/*
+Header is relative so z-index: 1 guarantees always displayed on top
+*/
+#main-nav  li a{color:#0099A8 !important; font-size: 16px;}
+header {
+    background-color: #fff;
+    padding: 11px 10px;
+    text-decoration: none;
+    position: fixed;
+    width: 43px;
+    z-index: 9;
+    
+}
+
+/*
+using background color is important to cover the menu
+position absolute isset to cover the whole viewport
+*/
+#contentrmenu {
+    background-color: #FFFFFF;
+    /*padding: 52px 10px 10px 10px;*/
+    position: relative;
+    width: auto;
+    height: 100%;
+    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+}
+
+/*
+the hamburger button with a little gradient effekt
+*/
+#hamburger {
+   
+       cursor: pointer;
+    display: block;
+    height: 24px;
+    padding: 3px 4px 3px;
+    position: relative;
+    width: 25px;
+    background-color: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4569b2', endColorstr='#4062a5', GradientType=0);
+}
+
+/*
+The white stripes in the hamburger button
+*/
+#hamburger div {
+    background-color: #0099A8;
+    border: 1px solid #0099A8;
+    border-radius: 2px 2px 2px 2px;
+    height: 2px;
+    margin-top: 3px;
+    width: 90%;
+}
+
+/*
+The navigation container in the background
+*/
+nav {
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 0;
+    width: 265px;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    }
+
+/*
+Style the navigation menu
+*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+
+nav li {
+    position: relative;
+    font-size: 1em;
+    font-weight: normal;
+    border-bottom:none;
+    
+    padding:5px 25px;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+.mobile_menu_title{background-color:#0099A8;font-size:30px;text-align:center;padding:40px 25px;font-weight:400;margin:0;color:inherit}
+#main-nav .button.menu-mobile{background-color: transparent;}
+/*
+The Layer that will be layed over the content
+so that the content is unclickable while menu is shown
+*/
+#contentLayer {
+    display: none;
+    height: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    width: 20px;
+    z-index: 9999999;
+    cursor: pointer;
+}
+
+
+#hamburger.closeicon div:nth-child(2) {
+  height: 2px;
+  position: relative;
+  top: -5px;
+  transform: rotate(-50deg);
+  /*transition: all 3s ease 0s;*/
+  width: 20px;
+}
+#hamburger.closeicon div:first-child {
+  transform: rotate(50deg);
+  /*transition: all 3s ease 0s;*/
+  width: 20px;
+}
+#hamburger.closeicon div:nth-child(3) {
+  display: none;
+}
+#hamburger.closeicon div {
+  height: auto;
+}
+.menu-container {
+  position: relative;    
+}
+h3.mobile_menu_title a:hover {
+  color: #343434 !important;
+}
+.sub_menu li {
+  font-weight: normal;
+  padding: 4px 25px;
+}
+#main-nav li ul li a {
+  text-transform: capitalize;
+}
+
