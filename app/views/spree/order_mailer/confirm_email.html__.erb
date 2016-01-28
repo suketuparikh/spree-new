@@ -1,0 +1,103 @@
+<table width="600">
+<tr>
+	<td style="word-wrap:normal;" width="600">
+		<p class="lede">
+			Dear Cyclist,
+			<% 
+			if false
+				Spree.t('order_mailer.confirm_email.dear_customer') 
+			end
+			%>
+		</p>
+		<p>
+			<%
+			if false
+				Spree.t('order_mailer.confirm_email.instructions') 
+			end
+			%>
+			Please review and retain the following order information for your records.
+		</p>
+		<p>
+			<%= Spree.t('order_mailer.confirm_email.order_summary') %>
+		</p>
+		<table width="100%">
+			<% @order.line_items.each do |item| %>
+				<tr>
+					<td width="15%" style="word-wrap:normal;"><%= item.variant.sku %></td>
+					<td width="35%" style="word-wrap:normal;">
+						<%= raw(item.variant.product.name) %><br />
+						<%= raw(item.variant.options_text) %>
+					</td>
+					<td width="50%" style="word-wrap:normal;">(<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %>
+					</td>
+				</tr>
+			<% end %>
+			<tr>
+				<td ></td>
+				<td style="word-wrap:normal;">
+					<%= Spree.t('order_mailer.confirm_email.subtotal') %>
+				</td>
+				<td style="word-wrap:normal;">
+					<%= @order.display_item_total %>
+				</td>
+			</tr>
+			<% if @order.line_item_adjustments.exists? %>
+				<% if @order.all_adjustments.promotion.eligible.exists? %>
+					<% @order.all_adjustments.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
+						<tr>
+							<td style="word-wrap:normal;"></td>
+							<td style="word-wrap:normal;"><%= Spree.t(:promotion) %> <%= label %>:</td>
+							<td style="word-wrap:normal;"><%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></td>
+						</tr>
+					<% end %>
+				<% end %>
+			<% end %>
+			<% @order.shipments.group_by { |s| s.selected_shipping_rate.try(:name) }.each do |name, shipments| %>
+				<tr>
+					<td></td>
+					<td style="word-wrap:normal;"><%= Spree.t(:shipping) %> <%= name %>:</td>
+					<td style="word-wrap:normal;"><%= Spree::Money.new(shipments.sum(&:discounted_cost), currency: @order.currency) %></td>
+				</tr>
+			<% end %>
+			<% if @order.all_adjustments.eligible.tax.exists? %>
+				<% @order.all_adjustments.eligible.tax.group_by(&:label).each do |label, adjustments| %>
+					<tr>
+						<td></td>
+						<td style="word-wrap:normal;"><%= Spree.t(:tax) %> <%= label %>:</td>
+						<td style="word-wrap:normal;"><%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></td>
+					</tr>
+				<% end %>
+			<% end %>
+			<% @order.adjustments.eligible.each do |adjustment| %>
+				<% next if (adjustment.source_type == 'Spree::TaxRate') and (adjustment.amount == 0) %>
+				<tr>
+					<td></td>
+					<td style="word-wrap:normal;"><%= adjustment.label %>:</td>
+					<td style="word-wrap:normal;"><%= adjustment.display_amount %></td>
+				</tr>
+			<% end %>
+			<tr>
+				<td></td>
+				<td style="word-wrap:normal;">
+					<%= Spree.t('order_mailer.confirm_email.total') %>
+				</td>
+				<td style="word-wrap:normal;">
+					<%= @order.display_total %>
+				</td>
+			</tr>
+		</table>
+		<p style="word-wrap:normal;">
+			<%
+			if false
+			 Spree.t('order_mailer.confirm_email.thanks') 
+			end
+			 %>
+			 POWERBEAT will be shipped to your home by the <strong>March of 2016</strong>.<br />
+			 We're excited to have you on board and thank you for your business. 
+		</p>
+		<h2>
+			Watteam
+		</h2>
+	</td>
+</tr>
+</table>
