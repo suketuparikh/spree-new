@@ -61,9 +61,18 @@ $(document).ready(function(){
 
     $(this).addClass('current');
     $("#"+tab_id).addClass('current-tab');
-  })
+  });
 
-})
+  $('#crank_list').click(function(e){
+    $.fancybox({
+        'type': 'inline',
+        'href': '#crank_support_content',
+        'width': '400px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+  });
+
+});
 </script>
 <ul class="tabs">
     <li class="tab-link current" data-tab="tab-1">Overview</li>
@@ -74,12 +83,11 @@ $(document).ready(function(){
 <div class="tab_data">
 <div id="tab-1" class="tab-content current-tab">
 <p><img src="<%= asset_path ('mid_banner.jpg') %>" alt="watteam banner" width="100%" /></p>
-<p><strong>With POWERBEAT, you can have it all.</strong>  The self-contained kit puts an end to factory installation and calibration. It's packed with two patent-pending mechanical sensors and intelligent processing units – that when attached to the cranks<sup>1</sup> deliver real (not estimated) left and right leg power metrics.  POWERBEAT is light-weight, durable and consistently accurate enough to be used by professional cyclists – yet affordable enough for amateur and unsponsored cyclists. It's also the first to come with an 80-hour rechargeable battery, and works with any BLE head unit<sup>2</sup>, even a BTE smartphone. <br />
-At last, a professional-grade power meter that anyone can afford!
-<br />
-Notes: 
-1)  POWERBEAT 1.0 supports hollow aluminum cranks only.  Future versions will support all additional cranks, including Carbon.
-2)  POWERBEAT 1.0 works with standard BLE head units, such as Suunto Ambit, or head units that support two sensor measurements, such as Polar V800.
+<p><strong>With POWERBEAT, you can have it all.</strong>  The self-contained kit puts an end to factory installation and calibration. It's packed with two patent-pending mechanical sensors and intelligent processing units – that when attached to the cranks<sup>1</sup> deliver real (not estimated) left and right leg power metrics.  POWERBEAT is light-weight, durable and consistently accurate enough to be used by professional cyclists – yet affordable enough for unsponsored cyclists. It's also the first to come with an 80-hour rechargeable battery, and works with ANT+ head units, as well as with Bluetooth Smart enabled smartphones. <br />
+At last, a professional-grade power meter that anyone can afford!<br />
+Notes:<br />
+1)  POWERBEAT supports hollow aluminum cranks only.  Future versions will support all additional cranks, including Carbon.<br />
+2)  POWERBEAT works with standard BLE head units, such as Suunto Ambit, or head units that support two sensor measurements, such as Polar V800.
 </p>
 </div>
 <div id="tab-2" class="tab-content">
@@ -98,7 +106,7 @@ There is no need for factory calibration or service centers.  Everything from in
 <p><strong>Weather resistant</strong><br />
 The device is durable enough to sustain dust and harsh weather conditions. It even has a built-in temperature compensation mechanism, so the power figures remain consistent regardless of the weather.</p>
 
-<p><strong>Weather resistant</strong><br />
+<p><strong>Rechargeable Battery</strong><br />
 POWERBEAT sports the industry's first ecological battery. It comes equipped with a charger and the battery lasts about 80 hours. A notification is sent to the head unit when the battery runs low.</p>
 
 </div>
@@ -112,7 +120,7 @@ POWERBEAT sports the industry's first ecological battery. It comes equipped with
     <td>Weight:</td><td>24 grams for each crank</td>
   </tr>
   <tr>
-    <td>Communication:</td><td>ANT+ and BLE</td>
+    <td>Communication:</td><td>ANT+ and BLUETOOTH SMART</td>
   </tr>
   <tr>
     <td>Rechargeable battery:</td><td>Lipo 3.6V; 80 hours of usage; 2 hours to recharge</td>
@@ -121,10 +129,13 @@ POWERBEAT sports the industry's first ecological battery. It comes equipped with
     <td>Waterproof:</td><td>IP64 certified</td>
   </tr>
   <tr>
-    <td>Compatible cranks:</td><td>Hollow aluminum (Click here for full list)</td>
+    <td>Compatible cranks:</td><td>Hollow aluminum <a href="#" id="crank_list" >(Click here for full list)</a></td>
   </tr>
   <tr>
     <td>Mobile apps:</td><td>iOS and Android</td>
+  </tr>
+  <tr>
+    <td>FCC ID:</td><td>2AFE52475402</td>
   </tr>
 </table>
     
@@ -147,8 +158,36 @@ POWERBEAT sports the industry's first ecological battery. It comes equipped with
 1 User's Manual<br />
 <br />
 Box size:   27*22.5*7 cm<br />
-Box weight: 700 grams<br />
+Box weight: 700 grams (24.7 ounces)<br />
 </p>
 </div>
 </div>
-  </div>
+</div>
+<div class="dnone">
+<div id="crank_support_content">
+<p>
+<strong>Shimano:</strong><br />
+Dura Ace FC 7700<br />
+Dura Ace FC 7800<br />
+Dura Ace FC 7900<br />
+Dura Ace FC 9000<br />
+Ultegra FC 6600<br />
+Ultegra FC 6700<br />
+Ultegra FC 6750<br />
+Ultegra FC 6800<br />
+105 FC 5600<br />
+105 FC 5700<br />
+105 FC 5750<br />
+105 FC 5800<br />
+FC 6650<br />
+FC R700<br />
+<br />
+<strong>FSA:</strong><br />
+Energy<br />
+<br />
+<strong>Rotor:</strong><br />
+3D<br />
+3D+<br />
+</p>
+</div>
+</div>

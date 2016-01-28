@@ -56,6 +56,7 @@ gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: 
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: '2-4-stable'
 gem 'spree_social', github: 'spree-contrib/spree_social', branch: '2-4-stable'
 gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: '2-4-stable'
+gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
 
 #Wombat Integration
 gem 'spree_wombat', github: 'spree/spree_wombat', branch: '2-4-stable'
@@ -72,6 +73,21 @@ gem 'rails_12factor', group: :production
 #  # asset_sync is required as needed by application.rb
 #  gem 'asset_sync', :require => nil
 #end
+#https://github.com/stephskardal/spree-advanced-reporting.git
+
+#gem 'order_export', github: '3months/spree-order-export'
+
+#gem 'ruport'
+#gem 'ruport-util'
+#gem "advanced_reporting", :path => "vendor/extensions/advanced_reporting"
+
+#gem "advanced_reporting", github: 'stephskardal/spree-advanced-reporting', branch: 'master'
+#gem 'spree-advanced-reporting', :git => 'git://github.com/stephskardal/spree-advanced-reporting.git'
+gem 'spree_orders_csv_export', :path => 'vendor/extensions/spree_orders_csv_export'
+
+gem "memcachier"
+gem 'rack-cache'
+gem 'dalli'
 
 group :development do
   gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git'

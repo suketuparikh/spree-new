@@ -348,13 +348,14 @@
     }
 
     .progress-steps {
-      position: absolute;
-      top: 20px;
+      position: relative;
+      top: 30px;
       margin-left: 0;
+      list-style:none;
 
       li {
         &, &.current, &.current-first, &.current-last {
-          padding: 0 5px !important;
+          padding: 0px !important;
           margin-right: 0px;
           margin-bottom: 0;
           text-transform: none;
@@ -365,8 +366,8 @@
         }
 
         span {
-          padding: 0;
-          padding-top: 10px;
+          padding: 10px 10px 20px;
+          display:block;
         }
         &.current, &.current-first, &.current-last {
           @include box-shadow(none);

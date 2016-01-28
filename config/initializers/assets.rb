@@ -33,6 +33,7 @@ Rails.application.config.assets.precompile += %w( mid_banner.jpg )
 Rails.application.config.assets.precompile += %w( popup_bg.png )
 Rails.application.config.assets.precompile += %w( popup_main_bg.jpg )
 Rails.application.config.assets.precompile += %w( doted.png )
+Rails.application.config.assets.precompile += %w( menu.png )
 
 Rails.application.config.assets.precompile += %w( f_facebook.png )
 Rails.application.config.assets.precompile += %w( f_linkedin.png )

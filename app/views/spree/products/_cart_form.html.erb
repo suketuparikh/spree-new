@@ -29,12 +29,16 @@
     <% end %>
 
     <div class="crank_selector">
+      <p class="crank_description">POWERBEAT is currently compatible with hollow aluminum cranks only. The below list includes all the crank manufacturers and models that are tested and supported at this stage:</p>
+      <p class="crank_description"><strong>Please choose your crank manufacturer and model below to proceed</strong></p>
   <label>Crank Manufacturer:</label>
       <select name="crank_manufacturer" id="crank_manufacturer">
         <option value="">Please select</option>
         <option value="Shimano">Shimano</option>
         <option value="FSA">FSA</option>
         <option value="Rotor">Rotor</option>
+        <option value="Cannondale">Cannondale</option>
+        <option value="Crank_Mfg_Not_Available">Crank Manufacturer Not Listed</option>
       </select> 
 <br clear="both" />
 <label>Crank Model:</label>
@@ -42,8 +46,8 @@
         <option value="">Please select</option>
      </select>
      <br clear="both" />
-     <div>
-      <a href="#" id="crank_not_listed">My crank manufacturer and model aren't listed here</a>
+     <div >
+      <a href="#" id="crank_not_listed" class="dnone">My crank manufacturer and model aren't listed here</a>
      </div>
 </div>
 <p>&nbsp;</p>
@@ -72,7 +76,7 @@
   <div id="out-of-stock-popup">
   <div class="cart-popup-content">
   <div>
-  We're sorry but the first batch of POWRBEATs has sold out more quickly than expected. The next batch will be shipped by Spring 2016.<br />  
+  We're sorry but the first batch of POWRBEATs has sold out more quickly than expected. The next batch will be shipped by March 2016.<br />  
   You may make your order now to secure a unit, or simply sign up to receive updates.
   </div>
   <div class="cart-popup-btn">
@@ -95,7 +99,7 @@ $( document ).ready(function() {
         'autoDimensions': true,
         'modal': true
     });
-
+  $('.fancybox-type-inline').css('z-index','10000');
 });
 </script>
           <% end %>
@@ -116,12 +120,9 @@ $( document ).ready(function() {
 			  <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
       </span>
 
-
-        <% if session[:valid_sitelogin] == true %>
-  			  <%= button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do  %>
+  			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
   			  <% end %>
-        <% end %>  
 			<% else %>
 				<h4>Already added in <a href="/cart">cart</a>.</h4>
 			<% end %>
@@ -136,23 +137,20 @@ $( document ).ready(function() {
     <% end %>
   </div>
 <% end %>
-<% if !session[:valid_sitelogin] || session[:valid_sitelogin]==false %>
-<!-- load popup for password -->
-<%= render :partial => 'sitelogin/new' %>
-<% end %>
 
 <div style="display:none;" class="main-cart-popup">
   <div id="addtocart-popup">
   <div class="cart-popup-content">
   <div>Dear cyclist,<br />
-  Watteam has leveled the playing field with the first pro-level power meter that won't break the bank. We were able to achieve that using smart built-in technology that allows the biker to entirely self-install and calibrate the PowerBeat device. By pioneering this new era with us, we ask that early adopters have some basic technical skills:</div>
+    <br />
+  Watteam has leveled the playing field with the first pro-level power meter that won't break the bank. We were able to achieve that using smart built-in technology that allows the biker to entirely self-install and calibrate the PowerBeat device. By pioneering this new era with us, we ask that early adopters have some basic technical skills:<br /><br /></div>
   <ul>
     <li>Removing the pedals</li>
     <li>Gluing the sensors</li>
     <li>Installing the comp units</li>
     <li>Calibrating the device</li>
   </ul>
-  <div>The installation process takes about 30 minutes and is done using the app, which has embedded videos that clearly explain every step.  You may refer to our <a href="http://watteam.com/support/">Support page</a> to view the installation videos.</div>
+  <div>The installation process takes about 30 minutes and is done using the app, which has embedded videos that clearly explain every step.  You may refer to our <a href="http://watteam.com/video-gallery/" class="support" target="_parent">Support page</a> to view the installation videos.</div>
   <div>Before purchasing POWERBEAT, please make sure that you possess the required technical skills.</div>
   </div>
   <div class="cart-popup-btn">
@@ -162,18 +160,25 @@ $( document ).ready(function() {
   </div>
     </div>
 </div>
+<div class="dnone">
+  <div id="crank_not_listed_content">
+<p>We're sorry but your crank type is not compatible with POWERBEAT, which currently supports only hollow aluminum cranks.</p>
+  </div>
+</div>
 <script>
 jQuery( document ).ready(function($) {
+
 $("#add-to-cart-button").click(function(event){
   event.preventDefault();
   $.fancybox({
         'type': 'inline',
-        'href': '#addtocart-popup'
+        'href': '#addtocart-popup',
     });
+  $('.fancybox-type-inline').css('z-index','10000');
 });
 
 $("#add-to-cart-btn").click(function(event){
-$( "#cartform" ).submit();
+  $( "#cartform" ).submit();
 });
 
 $("#no-thanks-btn").click(function(event){
@@ -194,22 +199,36 @@ $.fancybox.close();
   });
 
 
-$('#crank_manufacturer').change(function(e){
+$('body').on('change','#crank_manufacturer',function(e){
 var sel_mfg = $(this).find('option:selected').val();
-console.log(sel_mfg);
+//console.log(sel_mfg);
 switch(sel_mfg){
   default:
+  $('#crank_not_listed').show();
   $('#crank_model').html('<option value="">Please select</option>');
+  if($(this).val()=="Crank_Mfg_Not_Available"){
+    $.fancybox({
+        'type': 'inline',
+        'href': '#crank_not_listed_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+    $('#add-to-cart-button').attr('disabled','disabled');
+    $('#add-to-cart-button').addClass('gray');
+  }
   break;
   case 'Shimano':
   $('#crank_model').html('<option value="">Please select</option>' +
  '<option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>' +
+ '<option value="Dura Ace FC 7800" class="Shimano">Dura Ace FC 7800</option>' +
  '<option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>' +
  '<option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>' +
  '<option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>' +
  '<option value="Ultegra FC 6700" class="Shimano">Ultegra FC 6700</option>' +
+ '<option value="Ultegra FC 6750" class="Shimano">Ultegra FC 6750</option>' +
  '<option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>' +
  '<option value="105 FC 5600" class="Shimano">105 FC 5600</option>' +
+ '<option value="105 FC 5750" class="Shimano">105 FC 5750</option>' +
  '<option value="105 FC 5800" class="Shimano">105 FC 5800</option>' +
  '<option value="FC 6650" class="Shimano">FC 6650</option>' +
  '<option value="FC R700" class="Shimano">FC R700</option>');
@@ -220,13 +239,43 @@ switch(sel_mfg){
   break;
   case 'Rotor':
   $('#crank_model').html('<option value="">Please select</option>' +
- '<option value="3D" class="Rotor">Rotor</option>');
+ '<option value="3D" class="Rotor">3D</option>'+
+ '<option value="3DPlus" class="Rotor">3D+</option>');
+  break;
+  case 'Cannondale':
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="Hollowgram SI" class="Cannodale">Hollowgram SI</option>'+
+ '<option value="Hollowgram SiSL2" class="Cannodale">Hollowgram SiSL2</option>');
   break;
 }
+  $('#crank_model').append('<option value="CRANK_NOT_LISTED">Crank model not listed</option>');
+});
+$('body').on('change','#crank_model',function(e){
+  if($(this).val()!="" && $(this).val()!="CRANK_NOT_LISTED"){
+    $('#add-to-cart-button').removeAttr('disabled');
+    $('#add-to-cart-button').removeClass('gray');
+  }
+  if($(this).val()=="CRANK_NOT_LISTED"){
+    $('#crank_not_listed').show();
+    $.fancybox({
+        'type': 'inline',
+        'href': '#crank_not_listed_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+    $('#add-to-cart-button').attr('disabled','disabled');
+    $('#add-to-cart-button').addClass('gray');
+  }
+
 });
 
-$('#crank_not_listed').click(function(e){
-
+$('body').on('click','#crank_not_listed',function(e){
+  $.fancybox({
+        'type': 'inline',
+        'href': '#crank_not_listed_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
 });
 
 

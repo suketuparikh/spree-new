@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Newstore
   class Application < Rails::Application
+    config.cache_store = :dalli_store
     config.serve_static_assets = false
 	config.assets.initialize_on_precompile = false
     config.to_prepare do
