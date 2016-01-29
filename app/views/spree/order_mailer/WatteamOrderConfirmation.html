@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Watteam</title>  
+    <!--[if mso]>
+        <style type="text/css">
+        body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+    <![endif]-->
+    
+</head>
+
+<body style="background-color: #ffffff; font-family:'arial',sans-serif;background:#fff;margin: 0;">
+    <center>
+        <table style="padding:2%; max-width:600px;">   
+            <tr>
+                <td style="padding:10px;">
+                    <span style="font-size: 16px;">
+                        Dear Cyclist,
+                            %% 
+                            if false
+                            Spree.t('order_mailer.confirm_email.dear_customer') 
+                            end
+                            %>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:10px;">
+                        %%
+                        if false
+                            Spree.t('order_mailer.confirm_email.instructions') 
+                        end
+                        %>
+                        Please review and retain the following order information for your records.
+                        <br/>
+
+                        %%= Spree.t('order_mailer.confirm_email.order_summary') %>
+                  
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <table width="100%" style="font-size: 12px;">
+                        <tbody>
+                            %% @order.line_items.each do |item| %>
+                            <tr>
+                                <td width="14%" align="left" style="padding:10px;"><span>%%= item.variant.sku %></span>
+                                </td>
+                                <td width="34%" align="center"  style="padding:10px;">
+                                    <span>
+                                        %%= raw(item.variant.product.name) %><br />
+                                        %%= raw(item.variant.options_text) %>
+                                    </span>
+                                </td>
+                                <td width="50%" align="right" style="padding:10px;"><span>(%%=item.quantity%>) @ %%= item.single_money %> = %%= item.display_amount %></span>
+                                </td>
+                            </tr>
+                            %% end %>
+                            
+                            <tr>
+                                <td width="14%"></td>
+                                <td width="34%" align="center" style="padding:10px;">
+                                    %%= Spree.t('order_mailer.confirm_email.subtotal') %>
+                                </td>
+                                <td width="50%" align="right" style="padding:10px;">
+                                    %%= @order.display_item_total %>
+                                </td>
+                            </tr>
+                            %% if @order.line_item_adjustments.exists? %>
+                                %% if @order.all_adjustments.promotion.eligible.exists? %>
+                                    %% @order.all_adjustments.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
+                            
+                            <tr>
+                                <td width="14%" align="left" style="padding:10px;"></td>
+                                <td  style="padding:10px;">%%= Spree.t(:promotion) %> %%= label %>:
+                                </td>
+                                <td width="50%" align="right" style="padding:10px;">%%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %>
+                                </td>
+                            </tr>
+                            %% end %>
+                                %% end %>
+                            %% end %>
+                            %% @order.shipments.group_by { |s| s.selected_shipping_rate.try(:name) }.each do |name, shipments| %>
+                            
+                            <tr>
+                                <td width="14%" align="left"></td>
+                                <td width="34%" align="center" style="padding:10px;">%%= Spree.t(:shipping) %> %%= name %>:
+                                </td>
+                                <td width="50%" align="right" style="padding:10px;">%%= Spree::Money.new(shipments.sum(&:discounted_cost), currency: @order.currency) %>
+                                </td>
+                            </tr>
+                            %% end %>
+                            %% if @order.all_adjustments.eligible.tax.exists? %>
+                                %% @order.all_adjustments.eligible.tax.group_by(&:label).each do |label, adjustments| %>
+
+                            <tr>
+                                <td width="14%" align="left"></td>
+                                <td width="34%" align="center" style="padding:10px;">%%= Spree.t(:tax) %> %%= label %>:
+                                </td>
+                                <td width="50%" align="right" style="padding:10px;">%%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %>
+                                </td>
+                            </tr>
+                            %% end %>
+                            %% end %>
+                            %% @order.adjustments.eligible.each do |adjustment| %>
+                                %% next if (adjustment.source_type == 'Spree::TaxRate') and (adjustment.amount == 0) %>
+                            
+                            <tr>
+                                <td width="14%" align="left"></td>
+                                <td style="padding:10px;">%%= adjustment.label %>:
+                                </td>
+                                <td style="padding:10px;">%%= adjustment.display_amount %>
+                                </td>
+                            </tr>
+                            %% end %>
+
+                            <tr>
+                                <td width="14%" align="left"></td>
+                                <td width="34%" align="center" style="padding:10px;">
+                                    %%= Spree.t('order_mailer.confirm_email.total') %>
+                                </td>
+                                <td width="50%" align="right" style="padding:10px;">
+                                    %%= @order.display_total %>
+                                </td>
+                            </tr>
+
+                      
+                            
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="padding:10px;">
+                        %%
+                        if false
+                         Spree.t('order_mailer.confirm_email.thanks') 
+                        end
+                         %>
+                         POWERBEAT will be shipped to your home by the <strong>March of 2016</strong>.<br />
+                         We're excited to have you on board and thank you for your business. 
+                    </span>
+                    <h3>Watteam</h3>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

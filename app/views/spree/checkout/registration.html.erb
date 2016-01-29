@@ -2,7 +2,7 @@
 <h1><%= Spree.t(:registration) %></h1>
 <div id="registration row" data-hook>
   <% if Spree::Config[:allow_guest_checkout] %>
-    <div id="guest_checkout" data-hook class="col-md-6 border-account">
+    <div id="guest_checkout" data-hook class="col-md-6 border-account ">
       <h6><%= Spree.t(:guest_user_account) %></h6>
       <% if flash[:registration_error] %>
         <div class='flash error'><%= flash[:registration_error] %></div>
@@ -16,7 +16,7 @@
       <% end %>
     </div>
   <% end %>
-  <div id="account" class="col-md-6 dnone">
+  <div id="account" class="col-md-6 ">
     <%= render template: 'spree/user_sessions/new' %>
   </div>
 </div>
