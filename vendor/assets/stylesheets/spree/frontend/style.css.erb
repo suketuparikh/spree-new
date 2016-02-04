@@ -152,6 +152,12 @@ h6 {
 
 .clear{clear: both;}
 /*.....21_jan.....*/
+
+body #home-slider, .bx-wrapper
+{
+	height: 500px;
+}
+
 #tab-1 > p {font-family: raleway-regular;}
 .page-wrapper {background: none repeat scroll 0 0 #F5F5F5;}
 .footer-title {color: #000000;font-family: 'Raleway-Regular';font-size: 14px!important;font-weight: normal;letter-spacing: 1px;margin: 0;}
@@ -202,7 +208,8 @@ a {text-decoration: none !important;}
 
 
 .scrollableArea .media-grid li{width: 170px !important;}
-
+#product-thumbnails li{margin-top: 4px!important;}
+.product-main-image.eight.columns {    width: 78%;}
 /*.....21_jan.....*/
 /*.....22_jan.....*/
 .clearfix{clear: both;}
@@ -269,8 +276,9 @@ a {text-decoration: none !important;}
     background-size: cover!important;
     background-position: center center;
     right: 30px!important;
-    top: -396px !important;
+    top: -506px !important;
 }
+#product-thumbnails li a{border:none!important; }
 
 .product-thumb-image .bx-wrapper .bx-prev:hover,
 .product-thumb-image .bx-wrapper .bx-prev:focus {
@@ -293,7 +301,7 @@ a {text-decoration: none !important;}
     background-size: cover!important;
     background-position: center center;
     right: 30px!important;
-    top: -396px !important;
+    top: -506px !important;
 }
 ul.tabs li.tab-link.current {
         background-image: url(<%= asset_path 'arrow_tab.png' %>)!important;
@@ -418,11 +426,11 @@ ul.tabs li.tab-link{color: #0099a8;cursor: pointer;float: left;font-size: 18px!i
 #main-image img{border: none !important;}
 .company_sub_menu .container ul{text-align: right;padding-right: 10%;}
 .support_sub .container ul{text-align: right;padding-right: 10%;}
-h3.product-title1 {text-transform: uppercase;    font-size: 24px!important;font-family: Raleway-Light;    color: #52514f;}
-div[data-hook=description] p{font-family: Raleway-Light;color: #272727!important;font-size: 16px;}
-.crank_selector label {font-size: 16px!important ;font-family: Raleway-regular!important;text-transform: uppercase;margin-top: 12px;width: 210px!important;}
+h3.product-title1 {text-transform: uppercase;    font-size: 22px!important;font-family: Raleway-Light;    color: #52514f;}
+div[data-hook=description] p{font-family: Raleway-Light;color: #272727!important;font-size: 14px;}
+.crank_selector label { font-size: 14px!important ;font-family: Raleway-regular!important;text-transform: uppercase;margin-top: 12px;width: 210px!important;}
 .tmb-all.tmb-12 img {width: 100%;}
-
+div[data-hook=product_price]{margin-top: 10px;} 
 
 /*.......29jan......*/
 
@@ -443,9 +451,9 @@ div[data-hook=description] p{font-family: Raleway-Light;color: #272727!important
 	margin-top: 20px;
 	padding-top: 20px;
 }
-p {
+/*p {
 	margin-bottom: 20px;
-}
+}*/
 a {
 	color: #e84c3d;
 	-webkit-transition: all 0.2s ease-in-out;

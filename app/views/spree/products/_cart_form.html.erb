@@ -72,7 +72,7 @@
       <a href="#" id="crank_not_listed" class="dnone">My crank manufacturer and model aren't listed here</a>
      </div>
 </div>
-<p>&nbsp;</p>
+
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
 		
