@@ -1,0 +1,11 @@
+Spree::Order.class_eval do
+include User
+  state_machine do
+    after_transition :to => :complete, :do => :add_user_guest
+  end
+
+  def add_user_guest        
+   @user = User.new(:email => 'testhh999rakesg@example.com', :password => 'password', :password_confirmation => 'password')
+@user.save
+  end
+end

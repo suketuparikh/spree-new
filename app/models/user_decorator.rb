@@ -1,5 +1,5 @@
 module Spree
-class User < Spree::Base
+class User < ActiveRecord::Base
 include UserAddress
 include UserPaymentSource
 devise :database_authenticatable, :registerable, :recoverable,
@@ -22,6 +22,14 @@ protected
 def password_required?
 !persisted? || password.present? || password_confirmation.present?
 end
+
+#@user = User.new(:email => 'master@exampldddde.com', :password => 'password', :password_confirmation => 'password')
+
+
+
+#@user.save
+
+
 private
 def set_login
 # for now force login to be same as email, eventually we will make this configurable, etc.
