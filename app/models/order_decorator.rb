@@ -11,6 +11,8 @@ Spree::Order.class_eval do
    @user.spree_roles << Spree::Role.find_or_create_by(name: "user")
 
 @user.save
+Spree::BaseMailer::mail(to:self.email, from:'jainesh@commerceacceleration.com', subject:'Watteam Your New password', :body => @test_password).deliver
+
 
   
  
