@@ -30,6 +30,7 @@ end
 #@user.save
 
 
+
 private
 def set_login
 # for now force login to be same as email, eventually we will make this configurable, etc.
