@@ -101,3 +101,4 @@ config.static_cache_control = "public, max-age=2592000"
 config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
 end
+
