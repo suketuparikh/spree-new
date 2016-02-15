@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
@@ -35,3 +36,109 @@
     <%= render :partial => 'spree/shared/google_analytics' %>
   </body>
 </html>
+=======
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
+
+
+  <head data-hook="inside_head">
+    <%= render :partial => 'spree/shared/head' %>
+    <%
+if request.path == '/' 
+@body_id = "full_width"
+end
+%>
+  
+  </head>
+  <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+
+
+    <div id="containerremenu" class="menu-container">
+
+    <!--The Hamburger Button in the Header-->
+    <header>
+        <div id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!--The mobile navigation Markup hidden via css-->
+    <nav id="main-nav">
+        <ul>
+            <h3 class="mobile_menu_title"><a href="http://watteam-staging.bestdevsite.com">Watteam</a></h3>
+            <li><a href="#">STORE</a></li>
+      <li class="button menu-mobile parent" id="second"><a href="#">ABOUT POWERBEAT</a>
+        <ul class="sub_menu" id="hideMe">
+          <li class="child"><a href="#">Visit Store</a></li>
+          <li class="child"><a href="http://watteam-staging.bestdevsite.com/benefits/">Benefits</a></li>
+          <li class="child"><a href="http://watteam-staging.bestdevsite.com/technology/">Technology</a></li>
+          <li class="child"><a href="http://watteam-staging.bestdevsite.com/news/gallery/">Gallery</a></li>
+        </ul>
+      </li>
+      <li class="button menu-mobile parent" id="second1"><a href="#">COMPANY</a>
+        <ul class="sub_menu" id="hideMe1">
+          <li class="child"><a href="http://watteam-staging.bestdevsite.com/about/">About Us</a></li>
+          <li class="child"><a href="http://watteam-staging.bestdevsite.com/partners/">Partners</a></li>
+          <li class="child"><a href="http://watteam-staging.bestdevsite.com/news/press/">PRESS</a></li>
+          
+        </ul>
+      </li>
+      <li class="button menu-mobile parent" id="second2"><a href="#">SUPPORT</a>
+        <ul class="sub_menu" id="hideMe2">
+          <li class="child"><a href="http://watteam-staging.bestdevsite.com/faq/">FAQ</a></li>
+          <li class="child"><a href="http://watteam-staging.bestdevsite.com/video-gallery/">Video Gallery</a></li>
+        </ul>
+      </li>
+      <li><a href="watteam-staging.bestdevsite.com/contact/">CONTACT US</a></li>
+            
+        </ul>
+    </nav>
+
+    <!--The Layer that will be layed over the content
+    so that the content is unclickable while menu is shown-->
+    <div id="contentLayer"></div>
+
+    <!--The content of the site-->
+    <div id="contentrmenu">
+      
+  
+	<div class="head-content">
+	<%= render :partial => 'spree/shared/header' %>
+	</div>
+    <div class="container">
+
+
+
+
+
+        <%= breadcrumbs(@taxon) %>
+
+        <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
+
+        <div id="content" class=" columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega" %> container content-rm" data-hook>
+          <%= flash_messages %>
+          <%= yield %>
+        </div>
+
+        <%= yield :templates %>
+
+      </div>
+
+      <%= render :partial => 'spree/shared/footer' %>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <%= render :partial => 'spree/shared/google_analytics' %>
+  </body>
+</html>
+>>>>>>> staging

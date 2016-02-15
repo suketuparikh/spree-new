@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= form_for :order, :url => populate_orders_path, :html => {:id => "cartform"} do |f| %>
   <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
@@ -282,3 +283,313 @@ $('body').on('click','#crank_not_listed',function(e){
 
 });
 </script>
+=======
+<%= form_for :order, :url => populate_orders_path, :html => {:id => "cartform"} do |f| %>
+  <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+    <% if @product.variants_and_option_values(current_currency).any? %>
+      <div id="product-variants" class="columns five alpha">
+        <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
+        <ul>
+          <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
+            <li>
+              <%= radio_button_tag "variant_id", variant.id, index == 0, 'data-price' => variant.price_in(current_currency).money  %>
+              <%= label_tag "variant_id_#{ variant.id }" do %>
+                <span class="variant-description">
+                  <%= variant_options variant %>
+                </span>
+                <% if variant_price variant %>
+                  <span class="price diff"><%= variant_price variant %></span>
+                <% end %>
+
+                <% unless variant.can_supply? %>
+                  <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
+                <% end %>
+              <% end %>
+            </li>
+          <% end%>
+        </ul>
+      </div>
+    <% else %>
+      <%= hidden_field_tag "variant_id", @product.master.id %>
+    <% end %>
+
+     <div class="dollar">
+            
+            <!-- <span class="only">only</span> -->
+            <span class="price selling" itemprop="price">
+              <%= display_price(@product) %>
+            </span>
+            <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
+          </div>
+<div class="clearfix"></div>
+
+    <div class="crank_selector">
+      <div class="crank_description">
+        <div id="product-description" data-hook="product_description">
+
+         
+
+          <div itemprop="description" data-hook="description">
+            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+          </div>
+
+        </div>  
+
+
+      </div>
+      <p class="crank_description"><span>Please choose your crank manufacturer and model below to proceed</span></p>
+  <label>Crank Manufacturer:</label>
+      <select name="crank_manufacturer" id="crank_manufacturer">
+        <option value="">Please select</option>
+        <option value="Shimano">Shimano</option>
+        <option value="FSA">FSA</option>
+        <option value="Rotor">Rotor</option>
+        <option value="Cannondale">Cannondale</option>
+        <option value="Crank_Mfg_Not_Available">Crank Manufacturer Not Listed</option>
+      </select> 
+<br clear="both" />
+<label>Crank Model:</label>
+      <select name="crank_model" id="crank_model">
+        <option value="">Please select</option>
+     </select>
+     <br clear="both" />
+     <div >
+      <a href="#" id="crank_not_listed" class="dnone">My crank manufacturer and model aren't listed here</a>
+     </div>
+</div>
+
+    <% if @product.price_in(current_currency) and !@product.price.nil? %>
+      <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
+		
+        <div id="product-price">
+          <h6 class="product-section-title"><%= Spree.t(:price) %></h6>
+         
+          <% if @product.master.can_supply? %>
+            <link itemprop="availability" href="http://schema.org/InStock" />
+          <% elsif @product.variants.empty? %>
+            <% if false %>
+            <br />
+            <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
+            <% end %>
+             <div style="display:none;" class="out-of-stock-popup">
+  <div id="out-of-stock-popup">
+  <div class="cart-popup-content">
+  <div>
+  We're sorry but the first batch of POWRBEATs has sold out more quickly than expected. The next batch will be shipped by March 2016.<br />  
+  You may make your order now to secure a unit, or simply sign up to receive updates.
+  </div>
+  <div class="cart-popup-btn">
+  <button onclick="window.location.href='/products/powerbeat-pro-level-power-meter-spring-2016'" class="large primary">Pre-order now</button>
+  <span style="float:left; font-size:14px; font-weight:bold; padding:10px 10px 0px;"> or </span>
+  <button id="invite_phase2" class="large primary" >Receive updates</button>
+  </div>
+    </div>
+</div>
+</div>
+<script>
+/*$( document ).ready(function() {
+  $.fancybox({
+        'padding': 10,
+        'margin': 10,
+        'type': 'inline',
+        'href': '#out-of-stock-popup',
+        'width': '720px',
+        'centerOnScroll': true,
+        'autoDimensions': true,
+        'modal': true
+    });
+  $('.fancybox-type-inline').css('z-index','10000');
+});*/
+
+</script>
+          <% end %>
+        
+		
+		<% disable_cart_btn = true %>
+		<% if current_order %>
+			<% current_order.line_items.each do |line_item| %>
+				<% if (line_item.variant_id == @product.id || line_item.variant_id == @product.master.id ) && line_item.quantity > 1 %>
+				<% disable_cart_btn = false %>
+				<% end %>
+ 			<% end %>
+ 		<% end %>
+		
+        <div class="add-to-cart">	
+			<% if disable_cart_btn == true %>
+      <span class="dnone">
+			  <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
+      </span>
+<!--editing  developer this if condition add top   buy now button then acessories  functionality working-->
+     <% if true 
+     #(@product.id == 23 || spree_current_user) %>
+  			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
+  				Buy Now
+
+
+    <% end %>
+
+
+  			  <% end %>
+			<% else %>
+				<h4>Already added in <a href="/cart">cart</a>.</h4>
+			<% end %>
+        </div>
+		
+      </div>
+    <% else %>
+        <div id="product-price">
+          <br>
+          <div><span class="price selling" itemprop="price"><%= Spree.t('product_not_available_in_this_currency') %></span></div>
+        </div>
+    <% end %>
+  </div>
+<% end %>
+
+<div style="display:none;" class="main-cart-popup">
+  <div id="addtocart-popup">
+  <div class="cart-popup-content">
+  <div>Dear cyclist,<br />
+    <br />
+  Watteam has leveled the playing field with the first pro-level power meter that won't break the bank. We were able to achieve that using smart built-in technology that allows the biker to entirely self-install and calibrate the PowerBeat device. By pioneering this new era with us, we ask that early adopters have some basic technical skills:<br /><br /></div>
+  <ul>
+    <li>Removing the pedals</li>
+    <li>Gluing the sensors</li>
+    <li>Installing the comp units</li>
+    <li>Calibrating the device</li>
+  </ul>
+  <div>The installation process takes about 30 minutes and is done using the app, which has embedded videos that clearly explain every step.  You may refer to our <a href="http://watteam.com/video-gallery/" class="support" target="_parent">Support page</a> to view the installation videos.</div>
+  <div>Before purchasing POWERBEAT, please make sure that you possess the required technical skills.</div>
+  </div>
+  <div class="cart-popup-btn">
+  <button class="large primary" id="add-to-cart-btn" name="button" type="button">Agree &amp; Continue</button>
+  <span class="" style="float:left; display:inline-block; padding: 0px 10px;padding-top:10px;font-size:14px;font-weight:bold;" > or </span>
+  <button class="large primary" id="no-thanks-btn" name="button" type="button">No thanks</button>
+  </div>
+    </div>
+</div>
+<div class="dnone">
+  <div id="crank_not_listed_content">
+<p>We're sorry but your crank type is not compatible with POWERBEAT, which currently supports only hollow aluminum cranks.</p>
+  </div>
+</div>
+<script>
+jQuery( document ).ready(function($) {
+
+$("#add-to-cart-button").click(function(event){
+
+
+  event.preventDefault();
+  $.fancybox({
+        'type': 'inline',
+        'href': '#addtocart-popup',
+    });
+  $('.fancybox-type-inline').css('z-index','10000');
+});
+
+$("#add-to-cart-btn").click(function(event){
+  $( "#cartform" ).submit();
+});
+
+$("#no-thanks-btn").click(function(event){
+$.fancybox.close();
+});
+
+  $("#invite_phase2").click(function(event){
+    event.preventDefault();
+    $.fancybox.close();
+    $.fancybox({
+        'type': 'iframe',
+        'href': '/newsletter',
+        'width': '720px',
+        'modal': true
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+    $('.fancybox-type-iframe').css('z-index','10000');
+  });
+
+
+$('body').on('change','#crank_manufacturer',function(e){
+var sel_mfg = $(this).find('option:selected').val();
+//console.log(sel_mfg);
+switch(sel_mfg){
+  default:
+  $('#crank_not_listed').show();
+  $('#crank_model').html('<option value="">Please select</option>');
+  if($(this).val()=="Crank_Mfg_Not_Available"){
+    $.fancybox({
+        'type': 'inline',
+        'href': '#crank_not_listed_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+    $('#add-to-cart-button').attr('disabled','disabled');
+    $('#add-to-cart-button').addClass('gray');
+  }
+  break;
+  case 'Shimano':
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="Dura Ace FC 7700" class="Shimano">Dura Ace FC 7700</option>' +
+ '<option value="Dura Ace FC 7800" class="Shimano">Dura Ace FC 7800</option>' +
+ '<option value="Dura Ace FC 7900" class="Shimano">Dura Ace FC 7900</option>' +
+ '<option value="Dura Ace FC 9000" class="Shimano">Dura Ace FC 9000</option>' +
+ '<option value="Ultegra FC 6600" class="Shimano">Ultegra FC 6600</option>' +
+ '<option value="Ultegra FC 6700" class="Shimano">Ultegra FC 6700</option>' +
+ '<option value="Ultegra FC 6750" class="Shimano">Ultegra FC 6750</option>' +
+ '<option value="Ultegra FC 6800" class="Shimano">Ultegra FC 6800</option>' +
+ '<option value="105 FC 5600" class="Shimano">105 FC 5600</option>' +
+ '<option value="105 FC 5750" class="Shimano">105 FC 5750</option>' +
+ '<option value="105 FC 5800" class="Shimano">105 FC 5800</option>' +
+ '<option value="FC 6650" class="Shimano">FC 6650</option>' +
+ '<option value="FC R700" class="Shimano">FC R700</option>');
+  break;
+  case 'FSA':
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="Energy" class="FSA">Energy</option>');
+  break;
+  case 'Rotor':
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="3D" class="Rotor">3D</option>'+
+ '<option value="3DPlus" class="Rotor">3D+</option>');
+  break;
+  case 'Cannondale':
+  $('#crank_model').html('<option value="">Please select</option>' +
+ '<option value="Hollowgram SI" class="Cannodale">Hollowgram SI</option>'+
+ '<option value="Hollowgram SiSL2" class="Cannodale">Hollowgram SiSL2</option>');
+  break;
+}
+  $('#crank_model').append('<option value="CRANK_NOT_LISTED">Crank model not listed</option>');
+});
+$('body').on('change','#crank_model',function(e){
+  if($(this).val()!="" && $(this).val()!="CRANK_NOT_LISTED"){
+    $('#add-to-cart-button').removeAttr('disabled');
+    $('#add-to-cart-button').removeClass('gray');
+  }
+  if($(this).val()=="CRANK_NOT_LISTED"){
+    $('#crank_not_listed').show();
+    $.fancybox({
+        'type': 'inline',
+        'href': '#crank_not_listed_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+    $('#add-to-cart-button').attr('disabled','disabled');
+    $('#add-to-cart-button').addClass('gray');
+  }
+
+});
+
+$('body').on('click','#crank_not_listed',function(e){
+  $.fancybox({
+        'type': 'inline',
+        'href': '#crank_not_listed_content',
+        'width': '300px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+});
+
+
+
+});
+</script>
+>>>>>>> staging

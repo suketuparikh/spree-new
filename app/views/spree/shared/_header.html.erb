@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 	
@@ -83,3 +84,244 @@ $('#mobile-menu-open').click(function() {
   </div>
   	<div class="claer"></div>
 </header>
+=======
+	<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.css" rel="stylesheet">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.js" ></script>
+<%
+if request.path == '/' 
+@body_id = "full_width"
+end
+%>
+	
+	
+<script>
+$( document ).ready(function() {
+  $('body#full_width .content-rm').removeClass('container');
+$('#mobile-menu-open').click(function() {
+  $( ".togle_menu_mobile" ).toggle('slide');
+
+});
+});
+</script>
+<script>
+  
+
+  
+$(document).ready(function(){
+
+   $(".sub_menu").hide();
+   $(".menu-mobile").click(function(){
+  var d = $(this).attr('id'); 
+        $('#'+ d).find('.sub_menu').toggle(1000);
+    });
+    });
+  
+</script>
+
+
+
+<div id="header1" class="row" data-hook>
+<div class="header-top header_bg_top">
+ <div class="top_header">
+  <div class="container">
+    <div class="row">
+      <div class="header_left"> 
+        <!-- logo -->
+        <div class="logo"> <a href="index.html"><%= link_to image_tag("logo.png", :alt => "user"), 'http://watteam-staging.bestdevsite.com/' %></a> </div>
+      </div>
+      <div class="header_middle">
+        <!--<div class="site-nub"> Order online or call 1.800.000.0000 </div>-->
+      </div>
+      <div class="header_right">
+        <div class="top-manu">
+          <ul>
+            <li id=""><a href="/cart">cart (<%= current_order.nil? ? '0' : current_order.item_count %>)
+             
+           </a></li>
+           <!-- <li><a href="#">wishlist</a></li>-->
+            <li><a href="/account">account</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="desc_menu">
+    <div class="container">
+      <div class="menu_nev">
+        <ul class="menu_ul">
+          <li><a href="http://watteam-staging.herokuapp.com/products/powerbeat-pro-level-power-meter-spring-2016">store</a></li>
+          <li class="power_beat"><a href="#">About Powerbeat<i class="fa fa-angle-down"></i></a>
+            <div class="bet_sub_menu">
+            <div class="mega_abt" style="background:#dddddf"> 
+                <div class="container">
+                  <div class="store_left">
+                    <div class="go_to_store">
+                    <%= image_tag("item-3.png", :alt => "slider1_img") %>
+                    <span>visit store</span>
+                  </div>
+                  </div>
+                  <div class="abt_right">
+                    <div class="sub_abt">
+                      <span><a href="http://watteam-staging.bestdevsite.com/benefits/"> benefits  </a></span>
+                      <%= image_tag("menu1.jpg", :alt => "slider1_img") %>
+                    </div>
+                    <div class="sub_abt">
+                      <span><a href="http://watteam-staging.bestdevsite.com/technology/">  technology </a></span>
+
+                      <%= image_tag("menu2.jpg", :alt => "slider1_img") %>
+                    </div>
+                    <div class="sub_abt">
+                      <span><a href="http://watteam-staging.bestdevsite.com/news/gallery/">    gallery </a></span>
+                      <%= image_tag("menu3.jpg", :alt => "slider1_img") %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </li>
+          <li class="company_sub"><a href="#">Company<i class="fa fa-angle-down"></i></a>
+            <div class="company_sub_menu">
+                <div class="mega_company" style="background:#ccc"> 
+                    <div class="container">
+                      <ul>
+                        <li><a href="http://watteam-staging.bestdevsite.com/about/">ABOUT US </a> </li>
+                        <li><a href="http://watteam-staging.bestdevsite.com/partners/">PARTNERS </a> </li>
+                        <li><a href="http://watteam-staging.bestdevsite.com/news/press/">press </a> </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+
+
+          </li>
+          <li class="support_sub"><a href="#">Support<i class="fa fa-angle-down"></i></a>
+              <div class="support_sub_menu">
+                <div class="mega_support" style="background:#ccc"> 
+                    <div class="container">
+                      <ul>
+                        <li><a href="http://watteam-staging.bestdevsite.com/faq/">faq </a> </li>
+                        <li><a href="http://watteam-staging.bestdevsite.com/video-gallery/">Video Gallery</a> </li>
+                        
+                      </ul>
+                    </div>
+                </div>
+            </div>
+
+
+          </li>
+          <li><a href="http://watteam-staging.bestdevsite.com/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="mobile_menu">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>            
+          </div>
+          <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider" role="separator"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+
+  </div>
+  
+  
+
+  <!-- <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class=""><a href="#myPage">Shop Now</a></li>
+        <li class=""><a href="#band">About Powerbeat <i class="fa fa-angle-down"></i></a> </li>
+        <li class=""><a href="#tour">Company <i class="fa fa-angle-down"></i></a></li>
+        <li class="active"><a href="#contact">Support  <i class="fa fa-angle-down"></i></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
+          </a>
+          
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+              <!-- <div class="mega_abt" style="background:#ccc"> 
+                <div class="container">
+                  <div class="store_left">
+                    <div class="go_to_store">
+                    <%= image_tag("item-3.png", :alt => "slider1_img") %>
+                    <span>visit store</span>
+                  </div>
+                  </div>
+                  <div class="abt_right">
+                    <div class="sub_abt">
+                      <span>visit store</span>
+                      <%= image_tag("menu1.jpg", :alt => "slider1_img") %>
+                    </div>
+                    <div class="sub_abt">
+                      <span>visit store</span>
+
+                      <%= image_tag("menu2.jpg", :alt => "slider1_img") %>
+                    </div>
+                    <div class="sub_abt">
+                      <span>visit store</span>
+                      <%= image_tag("menu3.jpg", :alt => "slider1_img") %>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+ 
+  
+</div>
+</div>
+
+<div class="top_banner_1">
+ <%= image_tag("benifits_banner.jpg", :alt => "slider1_img", :class =>"topbanner") %>
+</div>
+>>>>>>> staging
