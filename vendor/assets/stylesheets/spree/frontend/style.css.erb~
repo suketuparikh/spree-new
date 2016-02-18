@@ -1058,21 +1058,9 @@ header {padding-top: 14px;}
 .links.columns.sixteen.alpha.omega > #order_coupon_code{width:60%;display:block;text-align:left;margin-bottom:10px;}
 #update-cart .links.columns.sixteen.alpha.omega{margin:10px auto !important}
 #email #mce-EMAIL{width:64% !important;}
-#mc-embedded-subscribe-form .required.email.form-control.mc-email-border{width: 65% !important;}
 }
-@media (max-width: 360px) {
 
- #mc-embedded-subscribe-form .required.email.form-control.mc-email-border
-    {width: 100% !important;margin-bottom: 10px;}
-}
-@media (max-width: 320px) {
 
-#empty-cart p {
-    text-align: left !important;
-}
-#empty-cart #clear_cart_link{margin-bottom: 10px !important;}
-#empty-cart .button.gray{margin-bottom: 10px;}
-}
 
 
 
