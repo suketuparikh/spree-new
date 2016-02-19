@@ -91,12 +91,35 @@
    <li><a href="http://watteam.com/partners/">Partners</a>|</li>
    <li><a href="http://watteam.com/news/press/">PRESS </a>|</li>
    <li><a href="http://watteam.com/faq/">FAQ</a>|</li>
-   <li><a href="http://watteam.com/contact/">Contact</a></li>
-   
+   <li><a href="http://watteam.com/contact/">Contact</a>|</li>
+   <li><a href="http://watteam.com/privacy-policy/">PRIVACY POLICY</a>|</li>
+   <li><a href="http://watteam.com/terms-of-use/">TERMS OF USE</a></li>   
    </ul>
    <div class="clear"> </div>
    </div>
    <div class="clear"> </div>
-
+<script>
+$( document ).ready(function() {
+  $('.line_item_quantity').removeAttr('readonly');
+  $qnt = $(".line_item_quantity").val();
+if($qnt > 2){
+  $(".line_item_quantity").val('2');
+  
+  $('#update-button').click();
+  $('#checkout-link').prop('disabled', true);
+  
+}
+$(".line_item_quantity").change(function() { 
+$qnt = $(this).val();
+if($qnt > 2){
+  $('#update-button').prop('disabled', true);
+  $('#checkout-link').prop('disabled', true);
+  alert('Please select a value that is no more than 2.');
+}else{$('#update-button').prop('disabled', false);
+  $('#checkout-link').prop('disabled', false);
+}  
+}); 
+}); 
+</script>
 
 </footer>
