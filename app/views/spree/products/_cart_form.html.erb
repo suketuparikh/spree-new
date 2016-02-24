@@ -53,6 +53,7 @@
 
 
       </div>
+    <% if  (@product.id == 23) %>
       <p class="crank_description"><span>Please choose your crank manufacturer and model below to proceed</span></p>
   <label>Crank Manufacturer:</label>
       <select name="crank_manufacturer" id="crank_manufacturer">
@@ -68,7 +69,7 @@
       <select name="crank_model" id="crank_model">
         <option value="">Please select</option>
      </select>
-     <br clear="both" />
+     <br clear="both" /><% end %>
      <div >
       <a href="#" id="crank_not_listed" class="dnone">My crank manufacturer and model aren't listed here</a>
      </div>
@@ -137,7 +138,7 @@
       </span>
 <!--editing  developer this if condition add top   buy now button then acessories  functionality working-->
      <% if true 
-     #(@product.id == 23 || spree_current_user) %>
+     #(@product.id == 33 || spree_current_user) %>
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
 
@@ -190,7 +191,7 @@
 </div>
 <script>
 jQuery( document ).ready(function($) {
-
+ $('#add-to-cart-button').removeAttr('disabled');
 $("#add-to-cart-button").click(function(event){
 
 
