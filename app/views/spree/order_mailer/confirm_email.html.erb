@@ -36,7 +36,7 @@ table[class=w280], td[class=w280]{
             <tr>
                 <td style="padding:10px;">
                     <span style="font-size: 16px;">
-                        <b>Dear Cyclist,</b>
+                        <b>Dear <%=  @order.bill_address.firstname %>,</b>
                             <% 
                             if false
                             Spree.t('order_mailer.confirm_email.dear_customer') 
@@ -162,7 +162,7 @@ table[class=w280], td[class=w280]{
                          Spree.t('order_mailer.confirm_email.thanks') 
                         end
                          %>
-                         POWERBEAT will be shipped to your home by the <strong>April of 2016</strong>.<br />
+                         POWERBEAT will be shipped to your home by <strong>April of 2016</strong>.<br />
                          We're excited to have you on board and thank you for your business. 
                     </span>
                     <h3>Watteam</h3>
