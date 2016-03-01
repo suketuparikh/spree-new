@@ -1020,9 +1020,11 @@ header {padding-top: 14px;}
     .dl-horizontal dt {max-width: 120px;}	
     .img img {width: 100%;}	
     .desc_menu{display: block;}
-
+    #product-details .container .eleven.columns {width: 640px;}
 }
 @media (max-width: 766px) {
+    #product-details .container .two.columns{    width: 100px;}
+    #product-details ul.tabs li.tab-link{padding: 7px!important;}
 	.desc_menu{display: none;}
 	.mobile_menu{display: none;}
 	.header_left {margin-left: 20px;}
@@ -1039,6 +1041,7 @@ header {padding-top: 14px;}
     .caption-wrper{bottom: 0px;}
     .banner-title{font-size: 14px;}
     .btn-shop{font-size: 14px;}
+    #product-details ul.tabs li.tab-link{font-size: 12px!important}
     
 }
 
@@ -1054,9 +1057,14 @@ header {padding-top: 14px;}
     .footer-title{ width: 100%;    padding: 10px;}
 }
 
+@media (max-width:568px){
+#product-details .page-wrapper {padding-top: 0!important;}
+}
 
 @media (max-width:500px){
-.footer-navi-bar li {
+
+    
+    .footer-navi-bar li {
     color: rgba(0, 0, 0, 0);
     display: inline-block;
     font-family: "Raleway-SemiBold";
@@ -1082,6 +1090,7 @@ header {padding-top: 14px;}
 
 
 @media(max-width:420px){
+.container {margin: 0 auto;width: 97%;}
 .carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {display: block;height: 250px;max-width: 100%;}    
 .header_left .logo img {display: block;height: auto;max-width: 80%;padding-left: 20px;}
 .our-team-v-2 .text-heading {   color: #0099a8;   font-family: "Raleway-Light";    font-size: 24px;    margin: 0;    padding: 34px 0 24px;}    
@@ -1089,6 +1098,9 @@ header {padding-top: 14px;}
 
 
 @media (max-width: 375px) {
+    #product-images #main-image img {    min-height: 170px;    max-width: 70%;}
+    #product-details .container .two.columns {    width: 80px;}
+    #product-details ul.tabs li.tab-link {    padding: 0px!important;}
 /*#content div{margin:0 auto;display:block;text-align:left !important;width:100%;margin-top:20px;}*/
 .links.columns.sixteen.alpha.omega > #order_coupon_code{width:60%;display:block;text-align:left;margin-bottom:10px;}
 #update-cart .links.columns.sixteen.alpha.omega{margin:10px auto !important}
@@ -1105,15 +1117,10 @@ header {padding-top: 14px;}
 
 
 @media (max-width: 360px) {
-
- #mc-embedded-subscribe-form .required.email.form-control.mc-email-border
-    {width: 100% !important;margin-bottom: 10px;}
+ #mc-embedded-subscribe-form .required.email.form-control.mc-email-border{width: 100% !important;margin-bottom: 10px;}
 }
 @media (max-width: 320px) {
-
-#empty-cart p {
-    text-align: left !important;
-}
+#empty-cart p {text-align: left !important;}
 #empty-cart #clear_cart_link{margin-bottom: 10px !important;}
 #empty-cart .button.gray{margin-bottom: 10px;}
 }
