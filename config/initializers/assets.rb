@@ -52,6 +52,8 @@ Rails.application.config.assets.precompile += %w( arrow_tab.png )
 Rails.application.config.assets.precompile += %w( arrow.png )
 Rails.application.config.assets.precompile += %w( down_a.jpg )
 Rails.application.config.assets.precompile += %w( silde-1_res.jpg )
+Rails.application.config.assets.precompile += %w( technology_menu.jpg )
+Rails.application.config.assets.precompile += %w( store-item.jpg )
 
 
 

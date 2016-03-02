@@ -222,10 +222,21 @@ $.fancybox.close();
     $('.fancybox-type-inline').css('z-index','10000');
     $('.fancybox-type-iframe').css('z-index','10000');
   });
+$('body').on('change','#crank_model',function(e){
+var model_val = $(this).find('option:selected').val();
+if(model_val == ""){
+  $('#add-to-cart-button').attr('disabled','disabled');
+    $('#add-to-cart-button').addClass('gray');
+  }
 
+});
 
 $('body').on('change','#crank_manufacturer',function(e){
 var sel_mfg = $(this).find('option:selected').val();
+if(sel_mfg == ""){
+  $('#add-to-cart-button').attr('disabled','disabled');
+    $('#add-to-cart-button').addClass('gray');
+  }
 //console.log(sel_mfg);
 switch(sel_mfg){
   default:
