@@ -22,7 +22,35 @@ paginated_products ||= products
 <div id="products1" class="inline product-listing1" data-hook>
 <% products.each do |product| %>
 <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
+<% if  (product.id == 33) || (product.id == 22) %>
+<div  class="col-md-12 test" data-hook="products_list_item1" itemscope itemtype="http://schema.org/Product">
+	<div class="main_product_title">
+		<h2>Watteam POWERBEAT</h2>
+	</div>
+
+	<div class="product-image test">
+<%= link_to small_image(product, :itemprop => "image"), url, :itemprop => 'url' %>
+	</div>
+	<div class="myimgname">
+<%= link_to truncate(product.name, :length => 50), url, :class => 'info', :itemprop => "name", :title => product.name %>
+<span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+	<span class="price selling" itemprop="price"><%= display_price(product) %></span>
+</span>
+</div>
+</div>
+<% end %>
+<% end %>
+<div class="clear"></div>
+<div class="accessories_title">
+	<h2>Accessories & Replacement Parts
+	</h2>
+</div>
+<% products.each do |product| %>
+<% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
+<% if  !(product.id == 33) || !(product.id == 22) %>
+
 <div  class="col-xs-12 col-sm-6 col-md-4" data-hook="products_list_item1" itemscope itemtype="http://schema.org/Product">
+
 <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
 <div class="product-image">
 <%= link_to small_image(product, :itemprop => "image"), url, :itemprop => 'url' %>
@@ -31,7 +59,7 @@ paginated_products ||= products
 <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 <span class="price selling" itemprop="price"><%= display_price(product) %></span>
 </span>
-<% end %>
+<% end %><% end %>
 </div>
 <% end %>
 <% reset_cycle("classes") %>
