@@ -47,7 +47,7 @@ paginated_products ||= products
 </div>
 <% products.each do |product| %>
 <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
-<% if  !(product.id == 33) && !(product.id == 22) %>
+<% if  (product.id != 33) && (product.id != 22) %>
 
 <div  class="col-xs-12 col-sm-6 col-md-4" data-hook="products_list_item1" itemscope itemtype="http://schema.org/Product">
 
@@ -59,8 +59,8 @@ paginated_products ||= products
 <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 <span class="price selling" itemprop="price"><%= display_price(product) %></span>
 </span>
-<% end %><% end %>
-</div>
+<% end %>
+</div><% end %>
 <% end %>
 <% reset_cycle("classes") %>
 </div>
