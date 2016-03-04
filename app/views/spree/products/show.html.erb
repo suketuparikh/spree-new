@@ -91,7 +91,7 @@ $(document).ready(function(){
 <div class="shipping_info_2015 clearfix">
 <strong>Shipping will be available in April 2016 (Currently available in the US only)</strong>
 </div>
- <% if (@product.id == 33 && @product.id == 22 || spree_current_user) %>
+ <% if (@product.id == 33 || @product.id == 22 || spree_current_user) %>
 <ul class="tabs">
     <li class="tab-link current" data-tab="tab-1">Overview</li>
     <li class="tab-link" data-tab="tab-2">Benefits</li>
