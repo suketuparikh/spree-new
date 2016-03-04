@@ -137,7 +137,7 @@
 			  <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
       </span>
 <!--editing  developer this if condition add top   buy now button then acessories  functionality working-->
-     <% if (@product.id == 33 && @product.id == 22 || spree_current_user) %>
+     <% if (@product.id == 33 || @product.id == 22 || spree_current_user) %>
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
 
