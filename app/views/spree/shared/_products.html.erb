@@ -48,7 +48,7 @@ paginated_products ||= products
 </div>
 <% products.each do |product| %>
 <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
-<% if  (product.id != 23) && (product.id != 22) %>
+<% if  (product.id != 23) && (product.id != 22) && spree_current_user %>
 
 <div  class="col-xs-12 col-sm-6 col-md-4" data-hook="products_list_item1" itemscope itemtype="http://schema.org/Product">
 
@@ -62,6 +62,11 @@ paginated_products ||= products
 </span>
 <% end %>
 </div><% end %>
+<% end %>
+<% if(!spree_current_user) %>
+<div class="col-md-12">
+<p>"Accessories and replacement parts are currently only available to existing customers. Please login to the site to complete checkout. If you’re an existing customer and don’t have an account please create one via the account screen https://watteam.herokuapp.com/account"</p>
+</div>
 <% end %>
 <% reset_cycle("classes") %>
 </div>
