@@ -23,7 +23,7 @@ paginated_products ||= products
 <% products.each do |product| %>
 <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
 
-<% if  (product.id == 33) || (product.id == 22) %>
+<% if  (product.id == 23) || (product.id == 22) %>
 <div  class="col-md-12 test" data-hook="products_list_item1" itemscope itemtype="http://schema.org/Product">
 	<div class="main_product_title">
 		<h2>Watteam POWERBEAT</h2>
@@ -48,7 +48,7 @@ paginated_products ||= products
 </div>
 <% products.each do |product| %>
 <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
-<% if  (product.id != 33) && (product.id != 22) %>
+<% if  (product.id != 23) && (product.id != 22) %>
 
 <div  class="col-xs-12 col-sm-6 col-md-4" data-hook="products_list_item1" itemscope itemtype="http://schema.org/Product">
 
@@ -56,7 +56,7 @@ paginated_products ||= products
 <div class="product-image">
 <%= link_to small_image(product, :itemprop => "image"), url, :itemprop => 'url' %>
 </div>
-<%= link_to truncate(product.name, :length => 50), url, :class => 'info', :itemprop => "name", :title => product.id %>
+<%= link_to truncate(product.name, :length => 50), url, :class => 'info', :itemprop => "name", :title => product.name %>
 <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 <span class="price selling" itemprop="price"><%= display_price(product) %></span>
 </span>
