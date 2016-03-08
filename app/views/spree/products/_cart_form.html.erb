@@ -39,6 +39,8 @@
           </div>
 <div class="clearfix"></div>
 
+<div style="display:none;" class="access" <% if  (@product.id != 23) %> id="data" <% end %> > </div>
+
     <div class="crank_selector">
       <div class="crank_description">
         <div id="product-description" data-hook="product_description">
@@ -141,7 +143,6 @@
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
 
-
     <% end %>
 
 
@@ -191,9 +192,17 @@
 <script>
 jQuery( document ).ready(function($) {
  
-$("#add-to-cart-button").click(function(event){
+ var data = $('.access').attr('id');
+    if(data == 'data'){
+      $('#add-to-cart-button').removeAttr('disabled','disabled');
+      $('#add-to-cart-button').removeClass('gray');
+      $('#add-to-cart-button').addClass('popup_close');
+    }
+    if(data != 'data'){
+      $('#add-to-cart-button').addClass('popup_open');
+    }
 
-
+$(".popup_open").click(function(event){
   event.preventDefault();
   $.fancybox({
         'type': 'inline',
