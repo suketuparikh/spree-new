@@ -54,7 +54,13 @@ $(document).ready(function(){
              
            </a></li>
            <!-- <li><a href="#">wishlist</a></li>-->
-            <li><a href="/account">account</a></li>
+            <!-- <li><a href="/account">account</a></li> -->
+            <% if spree_current_user %>
+              <li><%= link_to 'Account', spree.account_path %></li>
+              <li><%= link_to 'Logout', spree.logout_path %></li>
+            <% else %>
+            <li id="link-to-login"><%= link_to 'Login',spree.login_path %></li>
+            <% end %>
           </ul>
         </div>
       </div>
