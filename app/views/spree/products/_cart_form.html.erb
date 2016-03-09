@@ -63,7 +63,6 @@
         <option value="Shimano">Shimano</option>
         <option value="FSA">FSA</option>
         <option value="Rotor">Rotor</option>
-        <option value="Cannondale">Cannondale</option>
         <option value="Crank_Mfg_Not_Available">Crank Manufacturer Not Listed</option>
       </select> 
 <br clear="both" />
@@ -286,11 +285,6 @@ switch(sel_mfg){
   $('#crank_model').html('<option value="">Please select</option>' +
  '<option value="3D" class="Rotor">3D</option>'+
  '<option value="3DPlus" class="Rotor">3D+</option>');
-  break;
-  case 'Cannondale':
-  $('#crank_model').html('<option value="">Please select</option>' +
- '<option value="Hollowgram SI" class="Cannodale">Hollowgram SI</option>'+
- '<option value="Hollowgram SiSL2" class="Cannodale">Hollowgram SiSL2</option>');
   break;
 }
   $('#crank_model').append('<option value="CRANK_NOT_LISTED">Crank model not listed</option>');
