@@ -5,6 +5,14 @@
     <% if @product.variants_and_option_values(current_currency).any? %>
       <div id="product-variants" class="columns five alpha">
         <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
+
+        <% @options.each do |option_type, option_values| %>
+        <%= content_tag :h2, option_type.presentation %>
+        <%= collection_select :variants, option_type.name, option_values, :id, :presentation %>
+        <% end %>
+
+        <br />
+
         <%= select_tag "products[#{@product.id}]",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["#{variant_options(v)}  #{variant_price(v)}", v.id]}) %>
         <% if false %>
         <ul>
