@@ -11,7 +11,9 @@
 			<%= collection_select :variants, option_type.name, option_values, :id, :presentation %>
 			<% end %>
         <% end %>
-        <%= select_tag "products[#{@product.id}]",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["#{variant_options(v)}  #{variant_price(v)}", v.id]}) %>
+        <%= select_tag "variant_id",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["#{variant_options(v)}  #{variant_price(v)}", v.id]}) %>
+
+        <% if false %>
         <ul>
           <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
             <li>
@@ -31,11 +33,11 @@
             </li>
           <% end%>
         </ul>
+        <% end %>
       </div>
     <% else %>
       <%= hidden_field_tag "variant_id", @product.master.id %>
     <% end %>
-
      <div class="dollar">
             
             <!-- <span class="only">only</span> -->
