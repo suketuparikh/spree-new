@@ -12,7 +12,7 @@
 			<% end %>
         <% end %>
         <div style="display:none">
-        <%= select_tag "variant_id",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["1#{variant_options(v)}  #{variant_price(v)}", v.id]}) %>
+        <%= select_tag "variant_id",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["#{variant_options(v)}  #{variant_price(v)}", v.id]}) %>
     	</div>
 
         <% if false %>
