@@ -11,6 +11,7 @@
 			<%= collection_select :variants, option_type.name, option_values, :id, :presentation %>
 			<% end %>
         <% end %>
+
         <%= select_tag "variant_id",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["#{variant_options(v)}  #{variant_price(v)}", v.id]}) %>
 
         <% if false %>
@@ -39,7 +40,7 @@
       <%= hidden_field_tag "variant_id", @product.master.id %>
     <% end %>
      <div class="dollar">
-            
+            <%= hidden_field_tag "product_id", @product.id %>
             <!-- <span class="only">only</span> -->
             <span class="price selling" itemprop="price">
               <%= display_price(@product) %>

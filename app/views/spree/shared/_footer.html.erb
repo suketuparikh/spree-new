@@ -100,25 +100,32 @@
    <div class="clear"> </div>
 <script>
 $( document ).ready(function() {
-  $('.line_item_quantity').removeAttr('readonly');
-  $qnt = $(".line_item_quantity").val();
-if($qnt > 2){
-  $(".line_item_quantity").val('2');
+ 
+  $(".line_item_quantity").each(function() {
+   $('.line_item_quantity').prop('readonly','readonly');
+    if($(this).val() == 0){
+      $('#update-button').click();
+    }
+});
+//  $('.line_item_quantity').prop('readonly','readonly');
+ //$qnt = $(".line_item_quantity:nth-child(1)").val(); alert($qnt);
+// if($qnt == 0){
+//   $(".line_item_quantity").val('2');
   
-  $('#update-button').click();
-  $('#checkout-link').prop('disabled', true);
+  // $('#update-button').click();
+ 
   
-}
-$(".line_item_quantity").change(function() { 
-$qnt = $(this).val();
-if($qnt > 2){
-  $('#update-button').prop('disabled', true);
-  $('#checkout-link').prop('disabled', true);
-  alert('Please select a value that is no more than 2.');
-}else{$('#update-button').prop('disabled', false);
-  $('#checkout-link').prop('disabled', false);
-}  
-}); 
+ //}
+// $(".line_item_quantity").change(function() { 
+// $qnt = $(this).val();
+// if($qnt > 2){
+//   $('#update-button').prop('disabled', true);
+//   $('#checkout-link').prop('disabled', true);
+//   alert('Please select a value that is no more than 2.');
+// }else{$('#update-button').prop('disabled', false);
+//   $('#checkout-link').prop('disabled', false);
+// }  
+// }); 
 }); 
 </script>
 
