@@ -11,8 +11,9 @@
 			<%= collection_select :variants, option_type.name, option_values, :id, :presentation %>
 			<% end %>
         <% end %>
-
-        <%= select_tag "variant_id",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["#{variant_options(v)}  #{variant_price(v)}", v.id]}) %>
+        <div style="display:none">
+        <%= select_tag "variant_id",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["1#{variant_options(v)}  #{variant_price(v)}", v.id]}) %>
+    	</div>
 
         <% if false %>
         <ul>
@@ -315,9 +316,25 @@ $('body').on('change','#crank_model',function(e){
     $('#add-to-cart-button').attr('disabled','disabled');
     $('#add-to-cart-button').addClass('gray');
   }
-  console.log("Crank Model: " + $(this).val() + ", Crank Manufacturer: " + $('#crank_manufacturer').find('option:selected').val() + "  " );
-  console.log("Crank Manufacturer: " + $('#crank_manufacturer').find('option:selected').val() + ", Crank Model: " + $(this).val() + "  " );
+	var strCheck1 = "Crank Model: " + $(this).val() + ", Crank Manufacturer: " + $('#crank_manufacturer').find('option:selected').val() + "  ";
+	var strCheck2 = "Crank Manufacturer: " + $('#crank_manufacturer').find('option:selected').val() + ", Crank Model: " + $(this).val() + "  ";
 
+	//Check if option is available:
+	var result1 = $("#variant_id option:contains('" + strCheck1 + "')")
+	.filter(function(i){
+		return $(this).text() === strCheck1;
+	});
+    var result2 = $("#variant_id option:contains('" + strCheck2 + "')")
+	.filter(function(i){
+		return $(this).text() === strCheck2;
+	});
+
+	if(result1.length > 0){
+		result1.attr("selected", true);
+	}
+	if(result2.length > 0){
+		result2.attr("selected", true);
+	}
 });
 
 $('body').on('click','#crank_not_listed',function(e){
