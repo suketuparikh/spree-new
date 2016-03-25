@@ -16,7 +16,7 @@
     	</div>
 
         <% if false %>
-        <ul>
+        <ul style="display:none;">
           <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
             <li>
               <%= radio_button_tag "variant_id", variant.id, index == 0, 'data-price' => variant.price_in(current_currency).money  %>
