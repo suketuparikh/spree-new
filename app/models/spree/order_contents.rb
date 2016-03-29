@@ -3,10 +3,11 @@ module Spree
     attr_accessor :order, :currency
     attr_reader :errors
 
+
     def initialize(order)
       @order = order
       @errors = ActiveModel::Errors.new(self)
-     
+      
     end
 
     def add(variant, quantity = 1, options = {})
