@@ -40,7 +40,7 @@ def populate
 #Cart limit set
 @powerbeat_qty = 0
 @variant = Spree::Product.find(23).variants
-
+if(current_order)
 current_order.line_items.each do |linevalidate|
     @variant.each do |linevariants|
         if (linevariants.id == linevalidate.variant_id)
@@ -51,6 +51,7 @@ current_order.line_items.each do |linevalidate|
               end
     	end
  	end 
+end
 end
 	
 
