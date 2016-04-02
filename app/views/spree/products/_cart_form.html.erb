@@ -143,7 +143,15 @@
 				<% end %>
  			<% end %>
  		<% end %>
-		
+		<%
+      @hide_cart_btn = false
+      @product.taxons.each do |taxon_lineitem| 
+      if taxon_lineitem.name == 'Hide Button'
+        @hide_cart_btn = true
+      end
+    end
+    %>
+    
         <div class="add-to-cart">	
 			<% if disable_cart_btn == true %>
       <span class="dnone">
@@ -151,9 +159,10 @@
       </span>
 <!--editing  developer this if condition add top   buy now button then acessories  functionality working-->
      <% if (@product.id == 23 || @product.id == 22 || spree_current_user) %>
+     <% if(@hide_cart_btn == false) %>
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
-
+          <% end %>
     <% end %>
 
 
