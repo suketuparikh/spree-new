@@ -7,7 +7,7 @@
 <%= f.error_message_on :name %>
 <% end %>
 </div>
-<% if false %>
+
 <div data-hook="admin_product_form_ordering">
 <%= f.field_container :ordering do %>
 <%= f.label :ordering, raw(Spree.t(:ordering) + content_tag(:span, ' *', :class => 'required')) %>
@@ -15,7 +15,7 @@
 <%= f.error_message_on :ordering %>
 <% end %>
 </div>
-<% end %>
+
 
 
 
