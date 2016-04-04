@@ -172,9 +172,7 @@
 			<% else %>
 				<h4>Already added in <a href="/cart">cart</a>.</h4>
 			<% end %>
-      <% if(@hide_cart_btn == true) %>
-    <p class="additional">Additional sensors are not available for purchase at this point. If you have a problem and need a replacement, please contact <a href="mailto:support@watteam.com">support@watteam.com</a></p>
-         <% end %>
+     
         </div>
 		
       </div>
@@ -186,7 +184,9 @@
     <% end %>
   </div>
 <% end %>
-
+ <% if(@hide_cart_btn == true) %>
+    <p class="additional">Additional sensors are not available for purchase at this point. If you have a problem and need a replacement, please contact <b><a href="mailto:support@watteam.com">support@watteam.com</a></b></p>
+         <% end %>
 <div style="display:none;" class="main-cart-popup">
   <div id="addtocart-popup">
   <div class="cart-popup-content">
