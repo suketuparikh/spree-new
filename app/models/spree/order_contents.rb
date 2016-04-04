@@ -42,6 +42,7 @@ module Spree
         shipment = options[:shipment]
         shipment.present? ? shipment.update_amounts : order.ensure_updated_shipments
         PromotionHandler::Cart.new(order, line_item).activate
+
          if @powerbeat_qty <= 2
         ItemAdjustments.new(line_item).update
       end
@@ -104,7 +105,10 @@ module Spree
 	          	line_item.quantity -= quantity.to_i
 	          	#errors.add(:base, "You are not allowed to buy more than 2 quantity of this product")
 	          	#raise ("You are not allowed to buy more than 2 quantity of this product")
-	         end
+	         else
+              line_item.quantity += quantity.to_i
+            end
+           
           line_item.currency = currency unless currency.nil?
           line_item.target_shipment = options[:shipment] if options.has_key? :shipment
         line_item.save!
