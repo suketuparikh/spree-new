@@ -163,6 +163,8 @@
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
           <% end %>
+
+         
     <% end %>
 
 
@@ -170,6 +172,9 @@
 			<% else %>
 				<h4>Already added in <a href="/cart">cart</a>.</h4>
 			<% end %>
+      <% if(@hide_cart_btn == true) %>
+    <p class="additional">Additional sensors are not available for purchase at this point. If you have a problem and need a replacement, please contact <a href="mailto:support@watteam.com">support@watteam.com</a></p>
+         <% end %>
         </div>
 		
       </div>
