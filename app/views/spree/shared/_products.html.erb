@@ -45,7 +45,7 @@ paginated_products ||= products
 	<h2>Accessories & Replacement Parts
 	</h2>
 </div>
-<% products.each do |product| %>
+<% products.ascend_by_ordering.each do |product| %>
 <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
 <% if  (product.id != 23) && (product.id != 22) && (spree_current_user && spree_current_user.orders.complete.count > 0) %>
 

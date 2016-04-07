@@ -12,7 +12,8 @@ def self.simple_scopes
 :ascend_by_updated_at,
 :descend_by_updated_at,
 :ascend_by_name,
-:descend_by_name
+:descend_by_name,
+:ascend_by_ordering
 ]
 end
 def self.add_simple_scopes(scopes)
