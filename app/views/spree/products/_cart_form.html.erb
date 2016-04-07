@@ -138,7 +138,7 @@
 		<% disable_cart_btn = true %>
 		<% if current_order %>
 			<% current_order.line_items.each do |line_item| %>
-				<% if (line_item.variant_id == @product.id || line_item.variant_id == @product.master.id ) && line_item.quantity > 1 %>
+      		<% if (line_item.variant_id == @product.id || line_item.variant_id == @product.master.id ) && line_item.quantity > 1 %>
 				<% disable_cart_btn = false %>
 				<% end %>
  			<% end %>
@@ -158,14 +158,32 @@
 			  <%= number_field_tag :quantity, 1, :class => 'title', :min => 1,:max=>1,:readonly => true %>
       </span>
 <!--editing  developer this if condition add top   buy now button then acessories  functionality working-->
+<% 
+@qnt = 0
+@var = Spree::Product.find(23).variants
+ current_order.line_items.each do |line_item| 
+   
+ @var.each do |linevariants1|
+ 
+          if (linevariants1.id == line_item.variant_id)
+            @qnt += line_item.quantity 
+        
+            end
+          end %>
+      <% end %>
+     
      <% if (@product.id == 23 || @product.id == 22 || spree_current_user) %>
      <% if(@hide_cart_btn == false) %>
+        <% if(@qnt >= 2) %>
+        <h4>Already added in <a href="/cart">cart</a>.</h4>
+        <% else %>
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
   				Buy Now
           <% end %>
+          <% end %>
 
          
-    <% end %>
+         <% end %>
 
 
   			  <% end %>
@@ -209,11 +227,13 @@
   </div>
     </div>
 </div>
+
 <div class="dnone">
   <div id="crank_not_listed_content">
 <p>We're sorry but your crank type is not compatible with POWERBEAT, which currently supports only hollow aluminum cranks.</p>
   </div>
 </div>
+
 <script>
 jQuery( document ).ready(function($) {
  
