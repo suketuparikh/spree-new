@@ -174,7 +174,7 @@
      
      <% if (@product.id == 23 || @product.id == 22 || spree_current_user) %>
      <% if(@hide_cart_btn == false) %>
-        <% if(@qnt >= 2) %>
+        <% if(@qnt >= 2) && (@product.id == 23) %>
         <h4>Already added in <a href="/cart">cart</a>.</h4>
         <% else %>
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
