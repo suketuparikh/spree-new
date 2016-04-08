@@ -102,7 +102,7 @@ module Spree
             if @powerbeat_qty >=2 
         	   line_item.quantity += quantity.to_i
 	          
-	          	line_item.quantity -= quantity.to_i
+	          	#line_item.quantity -= quantity.to_i
 	          	#errors.add(:base, "You are not allowed to buy more than 2 quantity of this product")
 	          	#raise ("You are not allowed to buy more than 2 quantity of this product")
 	         else
