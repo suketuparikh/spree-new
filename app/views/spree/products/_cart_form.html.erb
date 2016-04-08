@@ -159,6 +159,7 @@
       </span>
 <!--editing  developer this if condition add top   buy now button then acessories  functionality working-->
 <% 
+if(current_order)
 @qnt = 0
 @var = Spree::Product.find(23).variants
  current_order.line_items.each do |line_item| 
@@ -171,10 +172,10 @@
             end
           end %>
       <% end %>
-     
+     <% end %>
      <% if (@product.id == 23 || @product.id == 22 || spree_current_user) %>
      <% if(@hide_cart_btn == false) %>
-        <% if(@qnt >= 2) && (@product.id == 23) %>
+        <% if (@qnt) && (@qnt >= 2) && (@product.id == 23) %>
         <h4>Already added in <a href="/cart">cart</a>.</h4>
         <% else %>
   			  <%= button_tag :class => 'large primary button gray', :id => 'add-to-cart-button', :type => :submit, :disabled=> "disabled" do  %>
