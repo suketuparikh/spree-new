@@ -38,21 +38,22 @@ def populate
 
 
 #Cart limit set
-@powerbeat_qty = 0
-@variant = Spree::Product.find(23).variants
-if(current_order)
-current_order.line_items.each do |linevalidate|
-    @variant.each do |linevariants|
-        if (linevariants.id == linevalidate.variant_id)
-              @powerbeat_qty += linevalidate.quantity
-              #raise ("Powerbeat_Qty: " << @powerbeat_qty.to_yaml)
-		      if(@powerbeat_qty >=2 )
-                flash.notice = 'You can not add more than 2 Powerbeat product'
-              end
-    	end
- 	end 
-end
-end
+
+# @powerbeat_qty = 0
+# @variant = Spree::Product.find(23).variants
+# if(current_order)
+# current_order.line_items.each do |linevalidate|
+#     @variant.each do |linevariants|
+#         if (linevariants.id == linevalidate.variant_id)
+#               @powerbeat_qty += linevalidate.quantity
+#               #raise ("Powerbeat_Qty: " << @powerbeat_qty.to_yaml)
+# 		      if(@powerbeat_qty >=2 )
+#                 flash.notice = 'You can not add more than 2 Powerbeat product'
+#               end
+#     	end
+#  	end 
+# end
+# end
 	
 
 populator = Spree::OrderPopulator.new(current_order(create_order_if_necessary: true), current_currency)

@@ -96,13 +96,15 @@ module Spree
         
             end
           end 
-        #raise (@variant.to_yaml)
+        
         if line_item 
             #raise ("Powerbeat_Qty: " << @powerbeat_qty.to_yaml)
             if @powerbeat_qty >=2 
-        	   line_item.quantity += quantity.to_i
-	          
-	          	line_item.quantity -= quantity.to_i
+        	   line_item.quantity += 1
+             
+	          if variant.id == 23
+	          	line_item.quantity -= 1
+            end
 	          	#errors.add(:base, "You are not allowed to buy more than 2 quantity of this product")
 	          	#raise ("You are not allowed to buy more than 2 quantity of this product")
 	         else
