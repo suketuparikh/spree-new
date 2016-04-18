@@ -107,6 +107,24 @@ $( document ).ready(function() {
       $('#update-button').click();
     }
 });
+  var test = 0;
+  $(".product_id").each(function() {
+   var qnt = $(this).text();
+    if(qnt == '23'){
+      var valqnt =  parseInt($(this).parent().parent().find('.cart-item-quantity .line_item_quantity').attr('value'));
+     
+test = parseInt(test + valqnt);
+    }
+ 
+    if(test > 2){
+      var fin = parseInt(valqnt - 1);
+      $(this).parent().parent().find('.cart-item-quantity .line_item_quantity').attr('value', fin );
+      $('#update-button').click();
+     }
+   });
+
+
+  
 //  $('.line_item_quantity').prop('readonly','readonly');
  //$qnt = $(".line_item_quantity:nth-child(1)").val(); alert($qnt);
 // if($qnt == 0){
