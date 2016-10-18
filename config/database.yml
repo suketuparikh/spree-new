@@ -8,7 +8,7 @@ default: &default
   adapter: postgresql
   timeout: 5000
   encoding: unicode
-  database: spreecommercetest
+  database: watteam
   pool: 5
   user: postgres
   password: postgres
