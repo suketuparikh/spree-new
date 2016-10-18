@@ -394,9 +394,8 @@ switch(sel_mfg){
   break;
   case 'FSA':
   $('#crank_model').html('<option value="">Please select</option>' +
- '<option value="Energy" class="FSA">Energy</option>'+
- '<option value="SL-K (2012 and newer)" class="SL-K">SL-K (2012 and newer)</option>'+
- '<option value="K-Force (2012 and newer)" class="K-Force">K-Force (2012 and newer)</option>');
+ '<option value="Energy" class="FSA">Energy</option>'
+ );
   break;
   case 'Rotor':
   $('#crank_model').html('<option value="">Please select</option>' +
@@ -404,9 +403,7 @@ switch(sel_mfg){
  '<option value="3DPlus" class="Rotor">3D+</option>');
   break;
   case 'SRAM':
-  $('#crank_model').html('<option value="">Please select</option>' +
- '<option value="Red (2012 and newer)" class="Red">Red (2012 and newer)</option>'+
- '<option value="Force (2012 and newer)" class="Force">Force (2012 and newer)</option>');
+  $('#crank_model').html('<option value="">Please select</option>');
   break;
 }
   $('#crank_model').append('<option value="CRANK_NOT_LISTED">Crank model not listed</option>');
