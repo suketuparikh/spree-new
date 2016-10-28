@@ -1,0 +1,222 @@
+<!--
+<div class="top_banner_1">
+ <%= image_tag("benifits_banner.jpg", :alt => "slider1_img", :class =>"topbanner") %>
+</div> 
+-->
+ <div class="container">
+    <h2 class="shop_header">SHOP</h2>
+  <div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
+    <% @body_id = 'product-details' %>
+
+    <div class="columns eleven alpha" data-hook="product_left_part">
+      <div class="row" data-hook="product_left_part_wrap">
+
+        <div id="product-images" data-hook="product_images" class="columns eleven">
+	 <div id="thumbnails" class="product-thumb-image two columns" data-hook>
+            <%= render :partial => 'thumbnails' %>
+          </div>          
+	<div id="main-image" class="product-main-image eight columns" data-hook>
+            <%= render :partial => 'image' %>
+          </div>
+         
+        </div>
+
+        <% if false %>
+        <!-- commented out -->
+        <div data-hook="product_properties">
+          <%= render :partial => 'properties' %>
+        </div>
+
+        <div data-hook="promotions">
+          <%= render :partial => 'promotions' %>
+        </div>
+        <% end %>
+
+      </div>
+    </div>
+
+    <div class="columns five omega" data-hook="product_right_part">
+      <div class="row1" data-hook="product_right_part_wrap">
+ <h3 class="product-title1" itemprop="name"><%= @product.name %></h3>
+      
+
+        <div id="cart-form" data-hook="cart_form">
+            <%= render :partial => 'cart_form' %>
+        </div>
+
+        <% if false %>
+        <%= render :partial => 'taxons' %>
+        <% end %>
+      </div>
+    </div>
+
+    <script>
+$(document).ready(function(){
+  
+  $('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current-tab');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current-tab');
+  });
+
+  $('#crank_list').click(function(e){
+    $.fancybox({
+        'type': 'inline',
+        'href': '#crank_support_content',
+        'width': '400px'
+    });
+    $('.fancybox-type-inline').css('z-index','10000');
+  });
+
+
+  $(document).ready(function(){
+	  $('#thumbnails ul').bxSlider({
+	    slideWidth: 200,
+	   
+	    minSlides: 7,
+	    maxSlides: 10,
+	    mode: 'vertical',
+	    moveSlides: 1,
+	    pager: false,	   
+    	slideMargin: 0
+  });
+});
+
+});
+</script>
+
+<% if (@product.id == 23 || @product.id == 22 ) %>
+<div class="shipping_info_2015 clearfix">
+<strong>Shipping will be available in May 2016 (Currently available in the US only)</strong>
+</div>
+ 
+<ul class="tabs">
+    <li class="tab-link current" data-tab="tab-1">Overview</li>
+    <li class="tab-link" data-tab="tab-2">Benefits</li>
+    <li class="tab-link" data-tab="tab-3">Specs</li>
+    <li class="tab-link" data-tab="tab-4">In the box</li>
+</ul>
+<div class="tab_data">
+<div id="tab-1" class="tab-content current-tab">
+
+<p><img src="<%= asset_path ('mid_banner.jpg') %>" alt="watteam banner" width="100%" /></p>
+<p><strong>With POWERBEAT, you can have it all.</strong>  The self-contained kit puts an end to factory installation and calibration. It's packed with two patent-pending mechanical sensors and intelligent processing units – that when attached 
+	to the cranks deliver real (not estimated) left and right leg power metrics.  POWERBEAT is light-weight, durable and consistently accurate enough to be used by professional cyclists – yet affordable enough for unsponsored cyclists. It's also the first to come with an 80-hour rechargeable battery, and works with ANT+ head units, as well as with Bluetooth Smart enabled smartphones. <br />
+At last, a professional-grade power meter that anyone can afford!<br />
+Notes:<br />
+
+1)  POWERBEAT supports hollow aluminum cranks and in the near future, carbon cranks as well. Future versions will support additional cranks models.<br />
+
+2)  POWERBEAT works with standard BLE head units, such as Suunto Ambit, or head units that support two sensor measurements, such as Polar V800.
+</p>
+</div>
+<div id="tab-2" class="tab-content">
+<p><strong>Real left &amp; right power measurement</strong><br />
+The sensors attach independently to each crank arm. You receive actual (not estimated) left and right leg power metrics, which help in identifying weaknesses, correcting them, and training to your full potential.</p>
+
+<p><strong>Light weight</strong><br />
+The mechanical sensor and its processing comp unit weigh less than 20 grams when attached to each of the crank arms – about the weight of a large bite of an apple!</p>
+
+<p><strong>Self-install</strong><br />
+Installation requires only basic technical skills. All the necessary tools are included in the box, with the exception of the Allen key or wrench necessary for removing the pedals. The downloadable app has clear instructional videos that will guide you every step of the way. The entire installation takes about 30 minutes, though the sensors need to dry for 24 hours after they're glued.</p>
+
+<p><strong>Low maintenance</strong><br />
+There is no need for factory calibration or service centers.  Everything from installation to calibration and firmware updates is done through the user-friendly app.</p>
+
+<p><strong>Weather resistant</strong><br />
+The device is durable enough to sustain dust and harsh weather conditions. It even has a built-in temperature compensation mechanism, so the power figures remain consistent regardless of the weather.</p>
+
+<p><strong>Rechargeable Battery</strong><br />
+POWERBEAT sports the industry's first ecological battery. It comes equipped with a charger and the battery lasts about 80 hours. A notification is sent to the head unit when the battery runs low.</p>
+
+</div>
+<div id="tab-3" class="tab-content">
+<p>Below are the technical specifications of POWERBEAT 1.0:</p>
+<table>
+  <tr>
+    <td>Power metrics:</td><td>Both right and left leg data</td>
+  </tr>
+  <tr>
+    <td>Weight:</td><td>18.9g for each crank</td>
+  </tr>
+  <tr>
+    <td>Communication:</td><td>ANT+ and BLUETOOTH SMART</td>
+  </tr>
+  <tr>
+    <td>Rechargeable battery:</td><td>Lipo 3.6V; 80 hours of usage; 2 hours to recharge</td>
+  </tr>
+  <tr>
+    <td>Waterproof:</td><td>IP64 certified</td>
+  </tr>
+  <tr>
+    <td>Compatible cranks:</td><td>HOLLOW ALUMINUM <a href="#" id="crank_list" >(Click here for full list)</a></td>
+  </tr>
+  <tr>
+    <td>Mobile apps:</td><td>iOS and Android</td>
+  </tr>
+  
+</table>
+    
+</div>
+<div id="tab-4" class="tab-content">
+<p>Below is a list of components that are included in the box:</p>
+<p>
+2  Comp Units<br/> 
+2  Sensors <br/>
+1  Gluing Tool <br/>
+1  Charger with cable<br/> 
+1  User’s Manual <br/>
+1  USB cable <br/>
+2  Adhesive rubber strips <br/>
+4  Washers (spacers) <br/>
+1  Pair of protective rubber gloves <br/>
+1  Bottle of glue <br/>
+1  Bottle of glue remover<br/> 
+1  Primer pad <br/>
+2  Hooks<br/>
+4  Alcohol pads<br/> 
+2  Pieces of sandpaper<br/> 
+2  Water bags <br/>
+3 Safety data sheets - Primer\Remover\Glue<br/>
+<br />
+Box size:   27*22.5*7 cm<br />
+Box weight: 850 grams (29.9 ounces)<br />
+</p>
+</div>
+</div> <% end %>
+</div>
+<div class="dnone">
+<div id="crank_support_content">
+<p>
+<strong>Shimano:</strong><br />
+Dura Ace FC 7700<br />
+Dura Ace FC 7800<br />
+Dura Ace FC 7900<br />
+Dura Ace FC 9000<br />
+Ultegra FC 6600<br />
+Ultegra FC 6700<br />
+Ultegra FC 6750<br />
+Ultegra FC 6800<br />
+105 FC 5600<br />
+105 FC 5700<br />
+105 FC 5750<br />
+105 FC 5800<br />
+FC 6650<br />
+FC R700<br />
+<br />
+<strong>FSA:</strong><br />
+Energy<br />
+
+<br />
+<strong>Rotor:</strong><br />
+3D<br />
+3D+<br /><br/>
+<strong>SRAM:</strong><br/>
+</p>
+</div>
+</div>
+</div>
